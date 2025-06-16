@@ -2,7 +2,6 @@
 
 # [1chooo.com](https://1chooo.com) &middot; [![1chooo.com GitHub license](https://img.shields.io/github/license/1chooo/1chooo.com?style=for-the-badge&labelColor=000)](https://github.com/facebook/react/blob/main/LICENSE) [![1chooo.com built with Next.js](https://img.shields.io/badge/Next.js-000000.svg?style=for-the-badge&logo=Next.js&labelColor=000)](https://nextjs.org/) [![1chooo.com GitHub Stargazers](https://img.shields.io/github/stars/1chooo/1chooo.com?style=for-the-badge&labelColor=000)](https://github.com/1chooo/portfolio/stargazers) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge&labelColor=000)](https://docs.1chooo.com/contributing)
 
-
 Welcome to the monorepo of my personal website! 👋
 
 A fast, responsive, and SEO-friendly portfolio + blog site to share your work, ideas, and projects -- all built with Next.js, TypeScript, and Tailwind CSS.
@@ -109,7 +108,7 @@ Additionally, I drew inspiration from several incredible projects, including:
 
 ## Authors
 
-- **Chun-Ho (Hugo) Lin** <sup>[Website](https://1chooo.com) | [GitHub](https://github.com/1chooo) | [E-mail](mailto:hugo970217@gmail.com)</sup>
+- **Chun-Ho (Hugo) Lin** <sup>[Website](https://1chooo.com) | [GitHub](https://github.com/1chooo) | [E-mail](mailto:hugo@1chooo.com)</sup>
 
 ## Deploy on Vercel
 

@@ -5,9 +5,7 @@ interface ArticleTitileProps {
 }
 
 function ArticleTitile({ title }: ArticleTitileProps) {
-  return (
-    <h2 className="h2 article-title">{title}</h2>
-  );
+  return <h2 className="h2 article-title">{title}</h2>;
 }
 
 export default ArticleTitile;

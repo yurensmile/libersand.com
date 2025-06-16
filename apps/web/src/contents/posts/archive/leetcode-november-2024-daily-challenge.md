@@ -18,7 +18,7 @@ Hey there 👋! This is Hugo. This is my first time participating in the LeetCod
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/delete-characters-to-make-fancy-string
  * Runtime: 15ms (93.51%)
  */
@@ -54,7 +54,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/circular-sentence
  * Runtime: 0ms (100.00%)
  */
@@ -87,7 +87,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/rotate-string
  * Runtime: 0ms (100.00%)
  */
@@ -119,7 +119,7 @@ public:
 };
 
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/rotate-string
  * Runtime: 0ms (100.00%)
  */
@@ -147,7 +147,7 @@ public:
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/string-compression-iii
  * Runtime: 11ms (94.02%)
  */
@@ -189,7 +189,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/minimum-number-of-changes-to-make-binary-string-beautiful
  * Runtime: 0ms (100.00%)
  */
@@ -218,7 +218,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/find-if-array-can-be-sorted
  * Runtime: 0ms (100.00%)
  */
@@ -256,7 +256,7 @@ public:
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero
  * Runtime: 15ms (92.54%)
  */
@@ -287,7 +287,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/maximum-xor-for-each-query
  * Runtime: 0ms (100.00%)
  * Reference: https://leetcode.com/problems/maximum-xor-for-each-query/solutions/6021112/beats-100-very-short-simple-solution/
@@ -319,7 +319,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/minimum-array-end
  * Runtime: 0ms (100.00%)
  */
@@ -353,7 +353,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/
  * Runtime: 47ms (79.12%)
  */
@@ -403,7 +403,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/prime-subtraction-operation
  * Runtime: 0ms (100.00%)
  */
@@ -459,7 +459,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/most-beautiful-item-for-each-query/
  * Runtime: 46ms (84.43%)
  */
@@ -507,7 +507,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/count-the-number-of-fair-pairs
  * Runtime: 27ms (94.05%)
  */
@@ -544,7 +544,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store
  * Runtime: 21ms (93.63%)
  */
@@ -587,7 +587,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted
  * Runtime: 0ms (100.00%)
  */
@@ -637,7 +637,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/find-the-power-of-k-size-subarrays-i
  * Runtime: 0ms (100.00%)
  */
@@ -681,7 +681,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k
  * Runtime: 19ms (97.68%)
  */
@@ -725,7 +725,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/defuse-the-bomb
  * Runtime: 0ms (100.00%)
  */
@@ -769,7 +769,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k
  * Runtime: 4ms (98.55%)
  */
@@ -811,7 +811,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/take-k-of-each-character-from-left-and-right/
  * Runtime: 8ms (79.02%)
  */
@@ -878,7 +878,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/count-unguarded-cells-in-the-grid/
  * Runtime: 52ms (77.32%)
  */
@@ -935,7 +935,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/flip-columns-for-maximum-number-of-equal-rows
  * Runtime: 12ms (89.13%)
  */
@@ -978,7 +978,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/rotating-the-box
  * Runtime: 131ms (100.00%)
  */
@@ -1023,7 +1023,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/maximum-matrix-sum/
  * Runtime: 0ms (100.00%)
  */
@@ -1061,7 +1061,7 @@ public:
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/sliding-puzzle/
  * Runtime: 3ms (92.73%)
  * https://leetcode.com/problems/sliding-puzzle/solutions/6080339/easy-to-understand-using-bfs/
@@ -1126,7 +1126,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/find-champion-ii/
  * Runtime: 0ms (100.00%)
  */
@@ -1164,7 +1164,7 @@ class Solution {
 
 ```cpp
 /**
- * Author: 1chooo<hugo970217@gmail.com>
+ * Author: 1chooo<hugo@1chooo.com>
  * Problem: https://leetcode.com/problems/shortest-distance-after-road-addition-queries-i/
  * Runtime: 157ms (58.57%)
  */

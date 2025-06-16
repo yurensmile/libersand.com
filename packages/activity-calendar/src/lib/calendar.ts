@@ -11,11 +11,7 @@ import {
   subWeeks,
 } from "date-fns";
 import { NAMESPACE } from "@1chooo/activity-calendar/constants";
-import type {
-  Activity,
-  DayIndex,
-  Week,
-} from "@1chooo/activity-calendar/types";
+import type { Activity, DayIndex, Week } from "@1chooo/activity-calendar/types";
 
 export function validateActivities(
   activities: Array<Activity>,

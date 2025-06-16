@@ -1,10 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
+import React from "react";
+import Head from "next/head";
 
 type TwitterCardMetaProps = {
-	url: string;
-	title?: string;
-	description?: string;
+  url: string;
+  title?: string;
+  description?: string;
 };
 
 /**
@@ -13,26 +13,34 @@ type TwitterCardMetaProps = {
  * @todo integrate with config
  */
 export default function TwitterCardMeta({
-	url,
-	title,
-	description,
+  url,
+  title,
+  description,
 }: TwitterCardMetaProps) {
-	return (
-		<Head>
-			<meta property="twitter:card" content="summary_large_image" />
-			<meta
-				property="twitter:site"
-				content={"@1chooo___"}
-			/>
-			<meta property="twitter:url" content={"https://1chooo.com" + url} />
-			<meta
-				property="twitter:title"
-				content={title ? [title, "Chun-Ho (Hugo) Lin - 1chooo | Open Source Enthusiast"].join(' | ') : ''}
-			/>
-			<meta
-				property="twitter:description"
-				content={description ? description : "I'm Chun-Ho (Hugo) Lin, an incoming student at University of Southern California (USC) ✌️. Previously, I obtained my Bachelor's degree from National Central University (NCU) 🐿️."}
-			/>
-		</Head>
-	);
+  return (
+    <Head>
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:site" content={"@1chooo___"} />
+      <meta property="twitter:url" content={"https://1chooo.com" + url} />
+      <meta
+        property="twitter:title"
+        content={
+          title
+            ? [
+                title,
+                "Chun-Ho (Hugo) Lin - 1chooo | Open Source Enthusiast",
+              ].join(" | ")
+            : ""
+        }
+      />
+      <meta
+        property="twitter:description"
+        content={
+          description
+            ? description
+            : "I'm Chun-Ho (Hugo) Lin, an incoming student at University of Southern California (USC) ✌️. Previously, I obtained my Bachelor's degree from National Central University (NCU) 🐿️."
+        }
+      />
+    </Head>
+  );
 }

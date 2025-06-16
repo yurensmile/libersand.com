@@ -1,4 +1,4 @@
-import "@/styles/preview.css"
+import "@/styles/preview.css";
 export * from "./parse-headings";
 export * from "./parse-italic";
 export * from "./parse-bold";

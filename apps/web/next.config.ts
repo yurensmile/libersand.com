@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
   transpilePackages: [
     "@1chooo/ui",
     "@1chooo/activity-calendar",
-    "@1chooo/github-calendar"
+    "@1chooo/github-calendar",
   ],
 };
 

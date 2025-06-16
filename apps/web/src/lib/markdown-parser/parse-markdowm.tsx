@@ -11,7 +11,7 @@ import {
   parseLinks,
   parseImages,
   parseUnorderedList,
-} from "@/lib/markdown-parser"
+} from "@/lib/markdown-parser";
 
 /**
  * @see https://github.com/1chooo/tools/blob/main/src/app/markdown-previewer/page.tsx
@@ -19,28 +19,28 @@ import {
  * const previewMarkdownText = `# Heading 1
  * ## Heading 2
  * ### Heading 3
- * 
+ *
  * **Bold text**
- * 
+ *
  * *Italic text*
- * 
+ *
  * ~~Strikethrough text~~
- * 
+ *
  * \`Inline code\`
- * 
+ *
  * > Blockquote text
- * 
+ *
  * ---
- * 
+ *
  * ![Image alt text](https://1chooo.com/og)
- * 
+ *
  * [Link text](https://1chooo.com)
- * 
+ *
  * - Unordered list item 1
  * - Unordered list item 2
  * - Unordered list item 3
  * `;
- * 
+ *
  * parseMarkdown(previewMarkdownText);
  */
 
@@ -60,14 +60,11 @@ export function parseMarkdowm({ markdownText }: MarkdownParserProps) {
       line.startsWith("</ul>") ||
       line.startsWith("<ul>")
     ) {
-      return <div key={key} dangerouslySetInnerHTML={{ __html: line }
-      } />;
+      return <div key={key} dangerouslySetInnerHTML={{ __html: line }} />;
     }
 
     const element =
-      parseHorizontalRule(line) ||
-      parseBlockquote(line) ||
-      parseHeadings(line);
+      parseHorizontalRule(line) || parseBlockquote(line) || parseHeadings(line);
 
     if (element) {
       return React.cloneElement(element, { key });
@@ -81,7 +78,6 @@ export function parseMarkdowm({ markdownText }: MarkdownParserProps) {
     parsedLine = parseImages(parsedLine);
     parsedLine = parseLinks(parsedLine);
 
-    return <p key={key} dangerouslySetInnerHTML={{ __html: parsedLine }
-    } />;
+    return <p key={key} dangerouslySetInnerHTML={{ __html: parsedLine }} />;
   });
-};
+}

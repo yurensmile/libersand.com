@@ -5,7 +5,7 @@ export const GITHUB_USERNAME = "1chooo";
 export const MEDIUM_USERNAME = "1chooo";
 export const TWITTER_USERNAME = "1chooo___";
 export const LINKEDIN_USERNAME = "1chooo";
-export const EMAIL = "hugo970217@gmail.com";
+export const EMAIL = "hugo@1chooo.com";
 
 export const POSTS_PER_PAGE = 8;
 export const BUILD_TIME = moment().format("MMMM Do YYYY");

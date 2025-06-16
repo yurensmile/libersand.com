@@ -48,8 +48,8 @@ const config: Config = {
     {
       icon: ICON_NAMES.MAIL_LU,
       title: "Email",
-      link: "mailto:hugo970217@gmail.com",
-      content: "hugo970217@gmail.com",
+      link: "mailto:hugo@1chooo.com",
+      content: "hugo@1chooo.com",
     },
     {
       icon: ICON_NAMES.GITHUB_LU,

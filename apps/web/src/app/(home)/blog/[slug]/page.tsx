@@ -37,7 +37,8 @@ export default async function Post(props: Params) {
       <article>
         <section>
           <ArticleTitile title="Hugo's Blog" />
-          <h1 className="font-semibold text-4xl text-white-2 max-w-[650px]">{post.title}
+          <h1 className="font-semibold text-4xl text-white-2 max-w-[650px]">
+            {post.title}
           </h1>
           <div className="flex items-center justify-between mt-4 text-sm w-full text-neutral-600 dark:text-neutral-400">
             <div className="flex items-center space-x-2">
@@ -72,7 +73,9 @@ export default async function Post(props: Params) {
           <div className="separator"></div>
           <div className="flex justify-center">
             <div
-              className={cn("markdown text-light-gray w-[90%] sm:w-[90%] md:w-[90%] lg:w-[80%] xl:w-[80%]")}
+              className={cn(
+                "markdown text-light-gray w-[90%] sm:w-[90%] md:w-[90%] lg:w-[80%] xl:w-[80%]",
+              )}
               dangerouslySetInnerHTML={{ __html: content }}
             />
           </div>
