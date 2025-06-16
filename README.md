@@ -97,7 +97,7 @@ The project also incorporates and adapts various open-source projects, including
 
 Additionally, I drew inspiration from several incredible projects, including:
 
-- [honghong.me](https://honghong.me)
+- [nelsonlai.me](https://nelsonlai.me)
 - [leerob.com](https://leerob.com)
 - [bntw.dev](https://bntw.dev)
 - [webtech-note.com](https://webtech-note.com)
