@@ -1,6 +1,6 @@
 # Contributing to `1chooo.com`<!-- omit in toc -->
 
-Welcome to the [1chooo.com](https://github.com/1chooo/1chooo.com) repository! We're glad you're interested in contributing to our `React` portfolio project. By contributing, you help make our project better and more useful for everyone. Below are some guidelines to get you started.
+Welcome to the [1chooo.com](https://github.com/1chooo/portfolio) repository! We're glad you're interested in contributing to our `React` portfolio project. By contributing, you help make our project better and more useful for everyone. Below are some guidelines to get you started.
 
 ## Table of Contents<!-- omit in toc -->
 
@@ -22,11 +22,11 @@ Welcome to the [1chooo.com](https://github.com/1chooo/1chooo.com) repository! We
 
 ## Issues
 
-If you encounter any issues, have suggestions, or want to report a bug, feel free to [create an issue](https://github.com/1chooo/1chooo.com/issues). When creating an issue, please include a clear and descriptive title, along with relevant details about the problem or suggestion. This will help us understand and address the issue more effectively.
+If you encounter any issues, have suggestions, or want to report a bug, feel free to [create an issue](https://github.com/1chooo/portfolio/issues). When creating an issue, please include a clear and descriptive title, along with relevant details about the problem or suggestion. This will help us understand and address the issue more effectively.
 
 ## Pull Requests
 
-We welcome contributions through [pull requests](https://github.com/1chooo/1chooo.com/pulls)! If you're working on a bug fix, new feature, or improvements, follow these steps:
+We welcome contributions through [pull requests](https://github.com/1chooo/portfolio/pulls)! If you're working on a bug fix, new feature, or improvements, follow these steps:
 
 1. Fork the repository.
 2. Create a new branch with a descriptive name:
@@ -41,7 +41,7 @@ We welcome contributions through [pull requests](https://github.com/1chooo/1choo
 
 ### Forking this Repository:
 
-Fork the [`1chooo/1chooo.com`](https://github.com/1chooo/1chooo.com) repository into your own workspace.
+Fork the [`1chooo/1chooo.com`](https://github.com/1chooo/portfolio) repository into your own workspace.
 
 ### Cloning the Repository to Your Workspace:
 

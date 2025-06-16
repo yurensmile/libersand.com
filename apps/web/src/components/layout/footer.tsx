@@ -14,7 +14,7 @@ function Footer() {
       <div className="footer-links">
         <Link
           className="footer-link"
-          href="https://github.com/1chooo/1chooo.com"
+          href="https://github.com/1chooo/portfolio"
           target="_blank"
           rel="noopener noreferrer"
         >

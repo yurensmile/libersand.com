@@ -35,7 +35,7 @@ Here is the link: [Material Icons for GitHub]
 
 ![Add to Chrome-based browser](/images/posts/give-your-github-repos-a-makeover-with-vscodes-material-icons/add-to-your-chrmoe-based-browser.png)
 
-You then go back to your GitHub page, let's take my website repo-[1chooo.com](https://github.com/1chooo/1chooo.com) as an example. You can see the file icon has been changed.
+You then go back to your GitHub page, let's take my website repo-[1chooo.com](https://github.com/1chooo/portfolio) as an example. You can see the file icon has been changed.
 
 ![Demo of Material Icons for GitHub](/images/posts/give-your-github-repos-a-makeover-with-vscodes-material-icons/final.png)
 

@@ -12,7 +12,7 @@ alt: "Built a 500 commits GitHub Repository: 10 essential steps you can't miss"
 
 > A 500 commits Side Project is born, let's dive into how Hugo did it!
 
-Hey everyone! I'm Hugo, and I’ve just graduated from National Central University. As I embark on my gap year, I now have ample time to focus on maintaining my side projects, writing articles, and pursuing personal growth. Today, I want to share a significant milestone with you all—my personal website, [1chooo.com](https://1chooo.com), has reached [500 commits](https://github.com/1chooo/1chooo.com/commit/b01a0417642b3679ec87427f0c783bcaafe5e7c1) on its [GitHub repository](https://github.com/1chooo/1chooo.com) 🥳.
+Hey everyone! I'm Hugo, and I’ve just graduated from National Central University. As I embark on my gap year, I now have ample time to focus on maintaining my side projects, writing articles, and pursuing personal growth. Today, I want to share a significant milestone with you all—my personal website, [1chooo.com](https://1chooo.com), has reached [500 commits](https://github.com/1chooo/portfolio/commit/b01a0417642b3679ec87427f0c783bcaafe5e7c1) on its [GitHub repository](https://github.com/1chooo/portfolio) 🥳.
 
 While 500 commits might seem trivial for large-scale projects, it’s a major accomplishment for a personal side project like mine. Keeping this project alive has been a challenge—one that requires continuously introducing new features, setting new goals, and tackling technical debt. In this post, I want to reflect on the efforts that went into reaching this milestone, share the invaluable lessons I’ve learned along the way, and discuss some of the challenges I encountered.
 
@@ -145,4 +145,4 @@ Throughout this project, I’ve profoundly experienced the myths surrounding sof
 
 Moving forward, I will continue to update and maintain this project, as it represents my personal brand and serves as a testament to my technical pursuits. It encapsulates my commitment to excellence in technology, and I anticipate reaching more milestones of **500 commits** in the future. I invite you to follow my journey and share in the challenges I encounter and the solutions I devise.
 
-Please feel free to click "Follow" to stay updated on my latest developments, and visit my GitHub repository—[1chooo.com](https://github.com/1chooo/1chooo.com)—to give it a star ⭐️ in support. Thank you all! Until next time! 👋🏻
+Please feel free to click "Follow" to stay updated on my latest developments, and visit my GitHub repository—[1chooo.com](https://github.com/1chooo/portfolio)—to give it a star ⭐️ in support. Thank you all! Until next time! 👋🏻

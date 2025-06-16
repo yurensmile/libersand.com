@@ -17,7 +17,7 @@ const banner = (
 const navbar = (
   <Navbar
     logo={<img src="/favicon.ico" alt="Logo" width={40} height={40} />}
-    projectLink="https://github.com/1chooo/1chooo.com"
+    projectLink="https://github.com/1chooo/portfolio"
   />
 );
 const footer = <Footer>2024 - {new Date().getFullYear()} © 1chooo.</Footer>;

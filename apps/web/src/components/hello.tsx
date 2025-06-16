@@ -16,7 +16,7 @@ function Hello() {
 
 Hi There 👋 This is Hugo!
 
-Love the design? Star ✨ on https://github.com/1chooo/1chooo.com
+Love the design? Star ✨ on https://github.com/1chooo/portfolio
 `);
   }, []);
 

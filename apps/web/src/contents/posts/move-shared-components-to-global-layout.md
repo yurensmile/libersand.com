@@ -22,7 +22,7 @@ In this post, I’ll walk through the improvements I’ve made to address these 
 
 ![Improve Next.js Performance: Move Shared Components to Global Layout by Hugo](/images/banner/posts/move-shared-components-to-global-layout.webp)
 
-Since I am currently using [Next.js](https://nextjs.org/) as my front-end framework alongside [React](https://react.dev/) to develop the page components, I’ve made some observations about the project structure within Next.js (using my own [project](https://github.com/1chooo/1chooo.com) as an example):
+Since I am currently using [Next.js](https://nextjs.org/) as my front-end framework alongside [React](https://react.dev/) to develop the page components, I’ve made some observations about the project structure within Next.js (using my own [project](https://github.com/1chooo/portfolio) as an example):
 
 ```ts
 ...
@@ -211,6 +211,6 @@ const Portfolio = () => {
 
 ### Final Thoughts
 
-With this refactor, I've successfully moved the `NavBar` and `SideBar` into `layout.tsx`, ensuring they only load once across all pages. Additionally, the dynamic content for each page is now wrapped in the reusable `PageContent` component, reducing the need for repetitive code. If you’d like to explore the detailed changes, feel free to check out the [PR](https://github.com/1chooo/1chooo.com/pull/114).
+With this refactor, I've successfully moved the `NavBar` and `SideBar` into `layout.tsx`, ensuring they only load once across all pages. Additionally, the dynamic content for each page is now wrapped in the reusable `PageContent` component, reducing the need for repetitive code. If you’d like to explore the detailed changes, feel free to check out the [PR](https://github.com/1chooo/portfolio/pull/114).
 
-Thank you all for following along as I continue to refine my front-end skills! For more technical details on my implementation, you can check out my website’s GitHub repository—[1chooo.com](https://github.com/1chooo/1chooo.com). Stay tuned for more updates!
+Thank you all for following along as I continue to refine my front-end skills! For more technical details on my implementation, you can check out my website’s GitHub repository—[1chooo.com](https://github.com/1chooo/portfolio). Stay tuned for more updates!
