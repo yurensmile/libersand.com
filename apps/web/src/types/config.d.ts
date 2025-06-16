@@ -1,5 +1,4 @@
 import type { About } from "@/types/about";
-import type { Resume } from "@/types/resume";
 import type { NavigationLink } from "@/types/nav-bar";
 import { OpenGraph } from "./open-graph";
 import type { GiscusProps } from "@giscus/react";
