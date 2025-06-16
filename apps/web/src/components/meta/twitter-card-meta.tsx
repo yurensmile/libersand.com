@@ -28,7 +28,7 @@ export default function TwitterCardMeta({
           title
             ? [
                 title,
-                "Chun-Ho (Hugo) Lin - 1chooo | Open Source Enthusiast",
+                "Chun-Ho (Hugo) Lin - 1chooo",
               ].join(" | ")
             : ""
         }

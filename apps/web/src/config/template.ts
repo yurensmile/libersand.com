@@ -4,7 +4,7 @@ import { Config } from "@/types/config";
 
 const config: Config = {
   avatar: "/images/profile.webp",
-  title: "Chun-Ho (Hugo) Lin - 1chooo | Open Source Enthusiast",
+  title: "Chun-Ho (Hugo) Lin - 1chooo",
   description:
     "I'm Chun-Ho (Hugo) Lin, an incoming student at University of Southern California (USC) ✌️. Previously, I obtained my Bachelor's degree from National Central University (NCU) 🐿️.",
   author: "Chun-Ho (Hugo) Lin - 1chooo",
@@ -20,8 +20,8 @@ const config: Config = {
   openGraph: {
     url: "https://1chooo.com/",
     type: "website",
-    siteName: "Chun-Ho (Hugo) Lin - 1chooo | Open Source Enthusiast",
-    title: "Chun-Ho (Hugo) Lin - 1chooo | Open Source Enthusiast",
+    siteName: "Chun-Ho (Hugo) Lin - 1chooo",
+    title: "Chun-Ho (Hugo) Lin - 1chooo",
     description:
       "I'm Chun-Ho (Hugo) Lin, an incoming student at University of Southern California (USC) ✌️. Previously, I obtained my Bachelor's degree from National Central University (NCU) 🐿️.",
     images: [
@@ -92,7 +92,7 @@ const config: Config = {
   ],
   homeMetaData: {
     metadataBase: new URL("https://1chooo.com"),
-    title: "Chun-Ho (Hugo) Lin - 1chooo | Open Source Enthusiast",
+    title: "Chun-Ho (Hugo) Lin - 1chooo",
     description:
       "I'm Chun-Ho (Hugo) Lin, an incoming student at University of Southern California (USC) ✌️. Previously, I obtained my Bachelor's degree from National Central University (NCU) 🐿️.",
     authors: [{ name: "Chun-Ho (Hugo) Lin" }],
@@ -107,8 +107,8 @@ const config: Config = {
     openGraph: {
       url: "https://1chooo.com/",
       type: "website",
-      siteName: "Chun-Ho (Hugo) Lin - 1chooo | Open Source Enthusiast",
-      title: "Chun-Ho (Hugo) Lin - 1chooo | Open Source Enthusiast",
+      siteName: "Chun-Ho (Hugo) Lin - 1chooo",
+      title: "Chun-Ho (Hugo) Lin - 1chooo",
       description:
         "I'm Chun-Ho (Hugo) Lin, an incoming student at University of Southern California (USC) ✌️. Previously, I obtained my Bachelor's degree from National Central University (NCU) 🐿️.",
       images: [
@@ -123,7 +123,7 @@ const config: Config = {
     manifest: "/manifest.json",
     twitter: {
       card: "summary_large_image",
-      title: "Chun-Ho (Hugo) Lin - 1chooo | Open Source Enthusiast",
+      title: "Chun-Ho (Hugo) Lin - 1chooo",
       description:
         "I'm Chun-Ho (Hugo) Lin, an incoming student at University of Southern California (USC) ✌️. Previously, I obtained my Bachelor's degree from National Central University (NCU) 🐿️.",
       images: "https://docs.1chooo.com/images/cover-with-1chooo-com.png",
