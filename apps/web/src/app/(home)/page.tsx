@@ -11,7 +11,6 @@ import config from "@/config";
 
 import { cn } from "@1chooo/ui/lib/utils";
 
-import "react-loading-skeleton/dist/skeleton.css";
 import "@/styles/markdown-styles.css";
 
 const { about, web3formsAccessKey } = config;
