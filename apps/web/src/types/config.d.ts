@@ -37,7 +37,6 @@ export type Config = {
   keywords: string[];
   status: string;
   siteURL: string;
-  openGraph: OpenGraph;
   navigationLinks: NavigationLink[];
   contacts: Contact[];
   socialLinks: SocialLink[];

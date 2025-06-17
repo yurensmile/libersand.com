@@ -4,7 +4,8 @@ import { getBlogPosts } from "@/lib/db/v1/post";
 import { getPortfolioPosts } from "@/lib/db/v1/portfolio";
 import config from "@/config";
 
-const { title, description, author, siteURL, openGraph } = config;
+const { title, description, author, siteURL, homeMetaData } = config;
+const { openGraph } = homeMetaData;
 const { images } = openGraph;
 const { url } = images[0];
 const imageUrl = url;

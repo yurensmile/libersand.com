@@ -17,22 +17,6 @@ const config: Config = {
   ],
   status: "Dive Deep. 🤿",
   siteURL: "https://1chooo.com",
-  openGraph: {
-    url: "https://1chooo.com/",
-    type: "website",
-    siteName: "Chun-Ho (Hugo) Lin - 1chooo",
-    title: "Chun-Ho (Hugo) Lin - 1chooo",
-    description:
-      "I'm Chun-Ho (Hugo) Lin, an incoming student at University of Southern California (USC) ✌️. Previously, I obtained my Bachelor's degree from National Central University (NCU) 🐿️.",
-    images: [
-      {
-        url: "https://docs.1chooo.com/images/cover-with-1chooo-com.png",
-        width: 1200,
-        height: 630,
-        alt: "Chun-Ho (Hugo) Lin - 1chooo Cover Image",
-      },
-    ],
-  },
   navigationLinks: [
     { path: "/", label: "About" },
     { path: "/resume", label: "Resume" },
