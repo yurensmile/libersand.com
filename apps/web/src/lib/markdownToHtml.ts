@@ -8,6 +8,10 @@ import { unified } from "unified";
 import rehypePrettyCode from "rehype-pretty-code";
 import { transformerCopyButton } from "@rehype-pretty/transformers";
 
+import config from "@/config";
+
+const { shikiTheme } = config;
+
 const cache = new Map<string, string>();
 
 export default async function markdownToHtml(markdown: string) {
@@ -30,7 +34,11 @@ export default async function markdownToHtml(markdown: string) {
     })
     .use(rehypeStringify)
     .use(rehypeShiki, {
-      theme: "github-dark",
+      themes: {
+        light: shikiTheme.light,
+        dark: shikiTheme.dark,
+      },
+      defaultColor: shikiTheme.defaultColor,
     })
     .use(rehypeStringify)
     .process(markdown);

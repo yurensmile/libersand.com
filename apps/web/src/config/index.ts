@@ -361,6 +361,11 @@ I'm an incoming student at [University of Southern California](https://usc.edu) 
       ],
     },
   },
+  shikiTheme: {
+    defaultColor: "dark",
+    light: "github-dark",
+    dark: "github-dark",
+  },
   jsonLdPerson: {
     "@context": "http://schema.org",
     "@type": "Person",

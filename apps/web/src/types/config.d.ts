@@ -22,6 +22,13 @@ export type Contact = {
   link?: string;
 };
 
+type ShikiTheme = {
+  defaultColor?: string;
+  light: string;
+  dark: string;
+  dim?: string;
+};
+
 export type Config = {
   avatar: string;
   title: string;
@@ -37,6 +44,12 @@ export type Config = {
   homeMetaData: Metadata;
   about: About;
   resumes: Resumes;
+  /**
+   * @see https://shiki.matsu.io/themes for available themes.
+   *
+   * If you still want to custom your own theme, you can refer the [following guide](https://github.com/1chooo/portfolio)
+   */
+  shikiTheme: ShikiTheme;
   jsonLdPerson: Person;
   giscusConfig: GiscusProps;
   googleAnalyticId: string;
