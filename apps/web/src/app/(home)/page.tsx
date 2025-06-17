@@ -5,7 +5,7 @@ import { LatestArticles } from "@/components/about/latest-articles";
 import TalkToHugo from "@/components/about/talk-to-hugo";
 
 import markdownToHtml from "@/lib/markdownToHtml";
-import { getAllPosts } from "@/lib/api";
+import { getBlogPosts } from "@/lib/api/blog";
 
 import config from "@/config";
 
@@ -24,7 +24,7 @@ const {
 } = about;
 
 async function About() {
-  const allPosts = getAllPosts();
+  const allPosts = getBlogPosts();
 
   let title = preferredName
     ? `About ${preferredName} 👨🏻‍💻`

@@ -4,7 +4,7 @@ import Image from "next/image";
 import ArticleTitile from "@/components/article-title";
 import { ProgressBarLink } from "@/components/progress-bar";
 
-import { getAllPosts } from "@/lib/api";
+import { getBlogPosts } from "@/lib/api/blog";
 
 import config from "@/config";
 import { Post } from "@/interfaces/post";
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 };
 
 export default function Blog() {
-  const allPosts = getAllPosts();
+  const allPosts = getBlogPosts();
 
   return (
     <article>

@@ -9,7 +9,7 @@ import ArticleTitile from "@/components/article-title";
 import Comments from "@/components/comments";
 
 import { CMS_NAME } from "@/lib/constants";
-import { getAllPosts, getPostBySlug } from "@/lib/api";
+import { getBlogPosts, getBlogPostBySlug } from "@/lib/api/blog";
 import markdownToHtml from "@/lib/markdownToHtml";
 
 import config from "@/config";
@@ -22,7 +22,7 @@ const { giscusConfig } = config;
 
 export default async function Post(props: Params) {
   const params = await props.params;
-  const post = getPostBySlug(params.slug);
+  const post = getBlogPostBySlug(params.slug);
   const shareUrl = `https://1chooo.com/blog/${post.slug}`;
   const shareText = `Check out this post:`;
 
@@ -100,7 +100,7 @@ type Params = {
 
 export async function generateMetadata(props: Params): Promise<Metadata> {
   const params = await props.params;
-  const post = getPostBySlug(params.slug);
+  const post = getBlogPostBySlug(params.slug);
 
   if (!post) {
     return notFound();
@@ -118,7 +118,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const posts = getAllPosts();
+  const posts = getBlogPosts();
 
   return posts.map((post) => ({
     slug: post.slug,

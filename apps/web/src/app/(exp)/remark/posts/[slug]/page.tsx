@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllPosts, getPostBySlug } from "@/lib/api";
+import { getBlogPosts, getBlogPostBySlug } from "@/lib/api/blog";
 import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
 import Container from "@/app/(exp)/remark/_components/container";
@@ -11,7 +11,7 @@ import ArticleTitile from "@/components/article-title";
 
 export default async function Post(props: Params) {
   const params = await props.params;
-  const post = getPostBySlug(params.slug);
+  const post = getBlogPostBySlug(params.slug);
 
   if (!post) {
     return notFound();
@@ -44,7 +44,7 @@ type Params = {
 
 export async function generateMetadata(props: Params): Promise<Metadata> {
   const params = await props.params;
-  const post = getPostBySlug(params.slug);
+  const post = getBlogPostBySlug(params.slug);
 
   if (!post) {
     return notFound();
@@ -62,7 +62,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const posts = getAllPosts();
+  const posts = getBlogPosts();
 
   return posts.map((post) => ({
     slug: post.slug,
