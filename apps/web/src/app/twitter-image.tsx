@@ -1,4 +1,6 @@
 import { ImageResponse } from "next/og";
+import { join } from "node:path";
+import { readFile } from "node:fs/promises";
 
 export const alt = "Chun-Ho (Hugo) Lin - 1chooo";
 export const size = {
@@ -8,6 +10,11 @@ export const size = {
 export const contentType = "image/png";
 
 export default async function Image() {
+  const logoData = await readFile(
+    join(process.cwd(), "public", "images", "opengraph-image.png"),
+  );
+  const imagePath = `data:image/png;base64,${logoData.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -16,10 +23,12 @@ export default async function Image() {
           width: "100%",
           display: "flex",
           flexDirection: "column",
-          alignItems: "flex-start",
+          alignItems: "center",
           justifyContent: "center",
-          backgroundImage:
-            "url(https://docs.1chooo.com/images/cover-with-1chooo-com.png)",
+          backgroundImage: `url(${imagePath})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       ></div>
     ),

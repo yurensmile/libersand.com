@@ -25,12 +25,7 @@ export default function TwitterCardMeta({
       <meta
         property="twitter:title"
         content={
-          title
-            ? [
-                title,
-                "Chun-Ho (Hugo) Lin - 1chooo",
-              ].join(" | ")
-            : ""
+          title ? [title, "Chun-Ho (Hugo) Lin - 1chooo"].join(" | ") : ""
         }
       />
       <meta
