@@ -126,8 +126,8 @@ export default function ResumeCard({ resumeCard }: ResumeCardProps) {
             <div className="resume-card-modal-img-wrapper">
               <figure className="resume-card-modal-avatar-box">
                 <Image
-                  src={activeResumeCard.institutionImage || "/favicon.ico"}
-                  alt={activeResumeCard.institution}
+                  src={resumeCard.institutionImage || "/favicon.ico"}
+                  alt={resumeCard.institution}
                   width={80}
                   height={80}
                   className="resume-card-modal-avatar"
@@ -141,15 +141,15 @@ export default function ResumeCard({ resumeCard }: ResumeCardProps) {
 
             <div>
               <h1 className="font-semibold text-white-1 text-2xl mb-1">
-                {activeResumeCard.institution}
+                {resumeCard.institution}
               </h1>
               <h2 className="text-lg text-light-gray mb-4">
-                {activeResumeCard.title}
+                {resumeCard.title}
               </h2>
 
               <div className="mb-6">
                 <div className="flex flex-wrap gap-2">
-                  {activeResumeCard.tags.map((tag, index) => {
+                  {resumeCard.tags.map((tag, index) => {
                     const TagIcon = getIcon(tag.icon) || BriefcaseIcon;
                     return (
                       <span
@@ -166,7 +166,7 @@ export default function ResumeCard({ resumeCard }: ResumeCardProps) {
 
               <div className="space-y-4">
                 <ul className="text-light-gray list-disc pl-5">
-                  {activeResumeCard.details.map((item, index) => (
+                  {resumeCard.details.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
