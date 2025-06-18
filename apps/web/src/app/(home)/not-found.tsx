@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 
@@ -26,7 +28,7 @@ function NotFound() {
             </div>
           </div>
           <h2 className="text-xl text-gray-500 dark:text-gray-400">
-            Oops! The page you're looking for seems to have wandered off.
+            Oops! The page you&apos;re looking for seems to have wandered off.
           </h2>
         </div>
 
@@ -35,20 +37,21 @@ function NotFound() {
             <div className="flex items-center justify-center">
               <Link
                 href="/"
-                className="flex items-center border-none px-4 py-2 mx-1 cursor-pointer text-base bg-border-gradient-onyx hover:scale-105 active:scale-95 rounded-xl shadow-lg hover:bg-orange-yellow-crayola-dark text-white-2 font-bold"
+                className="flex items-center border-none px-4 py-2 mx-1 cursor-pointer text-base bg-border-gradient-onyx hover:scale-105 active:scale-95 rounded-xl shadow-lg hover:bg-orange-yellow-crayola-dark duration-300 text-white-2 font-bold"
               >
                 <Home className="mr-2 h-4 w-4" />
                 <span>Return Home</span>
               </Link>
             </div>
             <div className="flex items-center justify-center">
-              <Link
-                href="javascript:history.back()"
-                className="flex items-center border-none px-4 py-2 mx-1 cursor-pointer text-base bg-border-gradient-onyx hover:scale-105 active:scale-95 rounded-xl shadow-lg hover:bg-orange-yellow-crayola-dark text-orange-yellow-crayola font-bold"
+              <button
+                type="button"
+                onClick={() => window.history.back()}
+                className="flex items-center border-none px-4 py-2 mx-1 cursor-pointer text-base bg-border-gradient-onyx hover:scale-105 active:scale-95 rounded-xl shadow-lg hover:bg-orange-yellow-crayola-dark duration-300 text-orange-yellow-crayola font-bold"
               >
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 <span>Go Back</span>
-              </Link>
+              </button>
             </div>
           </div>
         </div>
@@ -62,7 +65,7 @@ function NotFound() {
             >
               Contact me
             </Link>{" "}
-            and I'll help you find what you're looking for.
+            and I&apos;ll help you find what you&apos;re looking for.
           </p>
         </div>
       </div>
