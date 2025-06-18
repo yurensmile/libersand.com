@@ -28,7 +28,7 @@ export const VercelNavBar = ({ navigationLinks }: VercelNavBarProps) => {
   };
 
   useEffect(() => {
-    const activeLink = navigationLinks.find(link => isActive(link.path));
+    const activeLink = navigationLinks.find((link) => isActive(link.path));
     if (activeLink) {
       setActive(activeLink);
     }
@@ -46,15 +46,17 @@ export const VercelNavBar = ({ navigationLinks }: VercelNavBarProps) => {
               onMouseEnter={() => setIsHover(item)}
               onMouseLeave={() => setIsHover(null)}
               style={{
-                color: isActive(item.path) ? "#FFF" : "#888888"
+                color: isActive(item.path) ? "#FFF" : "#888888",
               }}
             >
               <ProgressBarLink
                 href={item.path}
+                className="text-sm md:text-base lg:text-base"
               >
                 <div
-                  className={`md:px-2 lg:px-2 px-4 py-2 relative ${active.label === item.label? "font-bold" : "font-medium"
-                    }`}
+                  className={`px-2 py-2 relative ${
+                    active.label === item.label ? "font-bold" : "font-medium"
+                  }`}
                 >
                   {item.label}
                   {isHover?.label === item.label && (
