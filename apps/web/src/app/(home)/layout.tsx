@@ -5,7 +5,7 @@ import { Roboto, Roboto_Mono } from "next/font/google";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 
-import HomeHeader from "@/components/layout/home-header";
+import { VercelNavBar } from "@/components/layout/vercel-navbar";
 import SideBar from "@/components/layout/side-bar";
 import Hello from "@/components/hello";
 import { ProgressBar } from "@/components/progress-bar";
@@ -73,7 +73,7 @@ function HomeLayout({ children }: { readonly children: React.ReactNode }) {
               contacts={contacts}
             />
             <div className="main-content">
-              <HomeHeader navigationLinks={navigationLinks} />
+              <VercelNavBar navigationLinks={navigationLinks} />
               {children}
             </div>
           </main>
