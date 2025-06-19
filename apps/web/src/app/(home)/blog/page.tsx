@@ -57,9 +57,6 @@ export default function Blog() {
                     </time>
                   </div>
                   <h3 className="blog-item-title">{post.title}</h3>
-                  <p className="blog-text overflow-hidden line-clamp-2">
-                    {post.excerpt}
-                  </p>
                 </div>
               </ProgressBarLink>
             </li>
