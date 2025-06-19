@@ -15,7 +15,7 @@ const config: Config = {
     "University of Southern California",
     "National Central University",
   ],
-  status: "Fight on ✌️. 🤿",
+  status: "Fight on ✌️",
   siteURL: "https://1chooo.com",
   navigationLinks: [
     { path: "/", label: "About" },
