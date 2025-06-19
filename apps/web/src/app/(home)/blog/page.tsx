@@ -46,6 +46,7 @@ export default function Blog() {
                 </figure>
                 <div className="blog-content">
                   <div className="blog-meta">
+                    <p className="blog-category">{post.category}</p>
                     <span className="dot"></span>
                     <time dateTime={post.publishedAt}>
                       {new Date(post.publishedAt).toLocaleDateString("en-us", {

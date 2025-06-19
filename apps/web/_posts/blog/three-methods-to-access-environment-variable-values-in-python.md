@@ -10,9 +10,7 @@ ogImage:
   url: "/images/banner/posts/three-methods-to-access-environment-variable-values-in-python.png"
 publishedAt: "2024-12-26"
 lastModifiedAt: "2024-12-26"
-categories:
-  - Python
-  - Backend
+category: "Python"
 tags:
   - Python
   - Environment

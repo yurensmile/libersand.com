@@ -10,8 +10,7 @@ ogImage:
   url: "/images/banner/posts/who-is-chun-ho-hugo-lin.webp"
 publishedAt: "2025-01-02"
 lastModifiedAt: "2025-01-02"
-categories:
-  - Life
+category: "Software Development"
 tags:
   - Introduction
   - Chun-Ho (Hugo) Lin
