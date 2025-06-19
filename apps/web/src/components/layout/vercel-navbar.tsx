@@ -69,18 +69,6 @@ export const VercelNavBar = ({ navigationLinks }: VercelNavBarProps) => {
                     />
                   )}
                 </div>
-                {active.label === item.label && (
-                  <motion.div
-                    layoutId="active"
-                    className="absolute bottom-0 left-0 right-0 w-full h-0.5 bg-orange-yellow-crayola"
-                  />
-                )}
-                {isHover?.label === item.label && (
-                  <motion.div
-                    layoutId="hover"
-                    className="absolute bottom-0 left-0 right-0 w-full h-0.5 bg-white"
-                  />
-                )}
               </ProgressBarLink>
             </button>
           ))}
