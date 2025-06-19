@@ -121,7 +121,7 @@ Check out [Next.js deployment documentation](https://nextjs.org/docs/app/buildin
 ## License
 
 > [!IMPORTANT]
-> This work is licensed under a [Creative Commons Attribution 4.0 International License][cc-by] by [Chun-Ho (Hugo) Lin][1chooo-com].
+> This [work](https://github.com/1chooo/portfolio) is licensed under [Creative Commons Attribution 4.0 International][cc-by] <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"> by [Chun-Ho (Hugo) Lin][1chooo-com].
 >
 > [cc-by]: http://creativecommons.org/licenses/by/4.0/
 >
