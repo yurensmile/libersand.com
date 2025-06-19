@@ -1,25 +1,25 @@
-import type { Metadata } from "next";
-import Image from "next/image";
+import type { Metadata } from "next"
+import Image from "next/image"
 
-import ArticleTitile from "@/components/article-title";
-import { ProgressBarLink } from "@/components/progress-bar";
+import ArticleTitile from "@/components/article-title"
+import { ProgressBarLink } from "@/components/progress-bar"
 
-import { getBlogPosts } from "@/lib/api/blog";
+import { getBlogPosts } from "@/lib/api/blog"
 
-import config from "@/config";
-import { BlogPost } from "@/types/blog";
+import config from "@/config"
+import type { BlogPost } from "@/types/blog"
 
-import "@/styles/blog.css";
+import "@/styles/blog.css"
 
-const { title } = config;
+const { title } = config
 
 export const metadata: Metadata = {
   title: `Blog | ${title}`,
   description: "Read my thoughts on software development, design, and more.",
-};
+}
 
 export default function Blog() {
-  const allPosts = getBlogPosts();
+  const allPosts = getBlogPosts()
 
   return (
     <article>
@@ -28,13 +28,10 @@ export default function Blog() {
         <ul className="blog-posts-list">
           {allPosts.map((post: BlogPost) => (
             <li key={post.slug} className="blog-post-item">
-              <ProgressBarLink
-                href={`/blog/${post.slug}`}
-                rel="noopener noreferrer"
-              >
+              <ProgressBarLink href={`/blog/${post.slug}`} rel="noopener noreferrer">
                 <figure className="blog-banner-box">
                   <Image
-                    src={post.coverImage}
+                    src={post.coverImage || "/placeholder.svg"}
                     alt={post.title || "Blog post image"}
                     width={1600}
                     height={900}
@@ -47,16 +44,15 @@ export default function Blog() {
                 <div className="blog-content">
                   <div className="blog-meta">
                     <p className="blog-category">{post.category}</p>
-                    <span className="dot"></span>
-                    <time dateTime={post.publishedAt}>
-                      {new Date(post.publishedAt).toLocaleDateString("en-us", {
-                        month: "long",
-                        day: "numeric",
-                        year: "numeric",
-                      })}
-                    </time>
+                    <h3 className="blog-item-title">{post.title}</h3>
                   </div>
-                  <h3 className="blog-item-title">{post.title}</h3>
+                  <time className="blog-time" dateTime={post.publishedAt}>
+                    {new Date(post.publishedAt).toLocaleDateString("en-us", {
+                      month: "long",
+                      day: "numeric",
+                      year: "numeric",
+                    })}
+                  </time>
                 </div>
               </ProgressBarLink>
             </li>
@@ -64,5 +60,5 @@ export default function Blog() {
         </ul>
       </section>
     </article>
-  );
+  )
 }
