@@ -1,7 +1,7 @@
 import { MarkdownAlert, Highlight } from "@/components/markdown-alert";
 import ArticleTitile from "@/components/article-title";
 
-export default function MarkdownAlertDemo() {
+export default function MarkdownAlertsDemo() {
   return (
     <article>
       <ArticleTitile title={"Markdown Alerts Demo"} />
