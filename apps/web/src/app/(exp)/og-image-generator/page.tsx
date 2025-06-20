@@ -1,4 +1,4 @@
-import OGImageGenerator from "./og-image-generator"
+import OGImageGenerator from "./og-image-generator";
 import ArticleTitile from "@/components/article-title";
 
 export const metadata = {
@@ -28,12 +28,13 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
-}
+};
 
 export default function Page() {
   return (
     <article>
       <ArticleTitile title={"OG Image Generator"} />
       <OGImageGenerator />
-    </article>)
+    </article>
+  );
 }

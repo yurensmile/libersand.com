@@ -99,7 +99,8 @@ export default function App() {
             >
               <motion.div className="flex flex-wrap gap-2">
                 {TAGS.filter(
-                  (tag) => !selecteds.some((selected) => selected.id === tag.id)
+                  (tag) =>
+                    !selecteds.some((selected) => selected.id === tag.id),
                 ).map((tag) => (
                   <motion.button
                     key={tag.id}

@@ -1,12 +1,18 @@
-import type { ReactNode } from "react"
-import { Lightbulb, Info, AlertTriangle, AlertCircle, MessageSquareWarning } from "lucide-react"
+import type { ReactNode } from "react";
+import {
+  Lightbulb,
+  Info,
+  AlertTriangle,
+  AlertCircle,
+  MessageSquareWarning,
+} from "lucide-react";
 
-import { cn } from "@1chooo/ui/lib/utils"
+import { cn } from "@1chooo/ui/lib/utils";
 
 interface MarkdownAlertProps {
-  type: "tip" | "info" | "warning" | "danger" | "important"
-  children: ReactNode
-  className?: string
+  type: "tip" | "info" | "warning" | "danger" | "important";
+  children: ReactNode;
+  className?: string;
 }
 
 const alertConfig = {
@@ -35,24 +41,36 @@ const alertConfig = {
     className: "border-red-500/20 bg-red-500/10 text-red-100",
     iconClassName: "text-red-400",
   },
-}
+};
 
-export function MarkdownAlert({ type, children, className }: MarkdownAlertProps) {
-  const config = alertConfig[type]
-  const Icon = config.icon
+export function MarkdownAlert({
+  type,
+  children,
+  className,
+}: MarkdownAlertProps) {
+  const config = alertConfig[type];
+  const Icon = config.icon;
 
   return (
-    <div className={cn("flex gap-3 rounded-xl border p-4 my-4", config.className, className)}>
-      <Icon className={cn("h-5 w-5 mt-0.5 flex-shrink-0", config.iconClassName)} />
+    <div
+      className={cn(
+        "flex gap-3 rounded-xl border p-4 my-4",
+        config.className,
+        className,
+      )}
+    >
+      <Icon
+        className={cn("h-5 w-5 mt-0.5 flex-shrink-0", config.iconClassName)}
+      />
       <div className="flex-1 space-y-2">{children}</div>
     </div>
-  )
+  );
 }
 
 // 用於高亮文本的組件
 interface HighlightProps {
-  children: ReactNode
-  variant?: "green" | "blue" | "yellow" | "red" | "purple"
+  children: ReactNode;
+  variant?: "green" | "blue" | "yellow" | "red" | "purple";
 }
 
 export function Highlight({ children, variant = "blue" }: HighlightProps) {
@@ -62,7 +80,7 @@ export function Highlight({ children, variant = "blue" }: HighlightProps) {
     yellow: "text-yellow-400 font-medium",
     red: "text-red-400 font-medium",
     purple: "text-purple-400 font-medium",
-  }
+  };
 
-  return <span className={variants[variant]}>{children}</span>
+  return <span className={variants[variant]}>{children}</span>;
 }

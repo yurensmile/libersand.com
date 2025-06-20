@@ -1,16 +1,21 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@1chooo/ui/components/card"
-import { Input } from "@1chooo/ui/components/input"
-import { Label } from "@1chooo/ui/components/label"
-import { Textarea } from "@1chooo/ui/components/textarea"
-import { Button } from "@1chooo/ui/components/button"
-import { Badge } from "@1chooo/ui/components/badge"
-import { Upload, Download, Eye } from "lucide-react"
-import Image from "next/image"
+import { useState } from "react";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@1chooo/ui/components/card";
+import { Input } from "@1chooo/ui/components/input";
+import { Label } from "@1chooo/ui/components/label";
+import { Textarea } from "@1chooo/ui/components/textarea";
+import { Button } from "@1chooo/ui/components/button";
+import { Badge } from "@1chooo/ui/components/badge";
+import { Upload, Download, Eye } from "lucide-react";
+import Image from "next/image";
 
 export default function OGImageGenerator() {
   const [formData, setFormData] = useState({
@@ -19,44 +24,47 @@ export default function OGImageGenerator() {
     description:
       "I'm Chun-Ho (Hugo) Lin, an incoming student at University of Southern California (USC) 🎓. Previously, I obtained my Bachelor's degree from National Central University (NCU) 🎓.",
     coverImage: "/images/opengraph-image.png",
-  })
+  });
 
-  const [previewMode, setPreviewMode] = useState(false)
+  const [previewMode, setPreviewMode] = useState(false);
 
   const handleInputChange = (field: string, value: string) => {
     setFormData((prev) => ({
       ...prev,
       [field]: value,
-    }))
-  }
+    }));
+  };
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0]
+    const file = event.target.files?.[0];
     if (file) {
-      const reader = new FileReader()
+      const reader = new FileReader();
       reader.onload = (e) => {
         setFormData((prev) => ({
           ...prev,
           coverImage: e.target?.result as string,
-        }))
-      }
-      reader.readAsDataURL(file)
+        }));
+      };
+      reader.readAsDataURL(file);
     }
-  }
+  };
 
   const generateOGImage = () => {
     // In a real implementation, this would call an API to generate the OG image
-    console.log("Generating OG image with:", formData)
-    alert("OG Image generation would be implemented here!")
-  }
+    console.log("Generating OG image with:", formData);
+    alert("OG Image generation would be implemented here!");
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 p-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-slate-900 mb-2">Open Graph Image Generator</h1>
+          <h1 className="text-4xl font-bold text-slate-900 mb-2">
+            Open Graph Image Generator
+          </h1>
           <p className="text-slate-600">
-            Customize your domain, name, description, and cover image to generate the perfect OG image
+            Customize your domain, name, description, and cover image to
+            generate the perfect OG image
           </p>
         </div>
 
@@ -85,7 +93,9 @@ export default function OGImageGenerator() {
                 <Input
                   id="fullName"
                   value={formData.fullName}
-                  onChange={(e) => handleInputChange("fullName", e.target.value)}
+                  onChange={(e) =>
+                    handleInputChange("fullName", e.target.value)
+                  }
                   placeholder="Your Full Name"
                 />
               </div>
@@ -95,7 +105,9 @@ export default function OGImageGenerator() {
                 <Textarea
                   id="description"
                   value={formData.description}
-                  onChange={(e) => handleInputChange("description", e.target.value)}
+                  onChange={(e) =>
+                    handleInputChange("description", e.target.value)
+                  }
                   placeholder="Tell people about yourself..."
                   rows={4}
                 />
@@ -104,7 +116,13 @@ export default function OGImageGenerator() {
               <div className="space-y-2">
                 <Label htmlFor="coverImage">Cover Image</Label>
                 <div className="flex items-center gap-4">
-                  <Input id="coverImage" type="file" accept="image/*" onChange={handleImageUpload} className="flex-1" />
+                  <Input
+                    id="coverImage"
+                    type="file"
+                    accept="image/*"
+                    onChange={handleImageUpload}
+                    className="flex-1"
+                  />
                   {formData.coverImage && (
                     <div className="w-16 h-16 rounded-lg overflow-hidden border">
                       <Image
@@ -120,7 +138,11 @@ export default function OGImageGenerator() {
               </div>
 
               <div className="flex gap-3 pt-4">
-                <Button onClick={() => setPreviewMode(!previewMode)} variant="outline" className="flex-1">
+                <Button
+                  onClick={() => setPreviewMode(!previewMode)}
+                  variant="outline"
+                  className="flex-1"
+                >
                   <Eye className="w-4 h-4 mr-2" />
                   {previewMode ? "Edit Mode" : "Preview"}
                 </Button>
@@ -137,21 +159,27 @@ export default function OGImageGenerator() {
             <CardHeader>
               <CardTitle>Preview</CardTitle>
               <p className="text-sm text-slate-600">
-                This is how your Open Graph image will appear when shared on social media
+                This is how your Open Graph image will appear when shared on
+                social media
               </p>
             </CardHeader>
             <CardContent>
               <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg overflow-hidden aspect-[1.91/1] p-8 text-white">
                 {/* Domain Badge */}
                 <div className="absolute top-6 left-1/2 transform -translate-x-1/2">
-                  <Badge variant="secondary" className="bg-slate-700/50 text-slate-200 px-4 py-1">
+                  <Badge
+                    variant="secondary"
+                    className="bg-slate-700/50 text-slate-200 px-4 py-1"
+                  >
                     {formData.domain}
                   </Badge>
                 </div>
 
                 {/* Main Content */}
                 <div className="flex flex-col items-center justify-center h-full text-center space-y-4">
-                  <h1 className="text-3xl lg:text-4xl font-bold leading-tight">{formData.fullName}</h1>
+                  <h1 className="text-3xl lg:text-4xl font-bold leading-tight">
+                    {formData.fullName}
+                  </h1>
 
                   <p className="text-slate-300 text-sm lg:text-base max-w-2xl leading-relaxed px-4">
                     {formData.description}
@@ -181,9 +209,12 @@ export default function OGImageGenerator() {
               {/* Meta Information */}
               <div className="mt-4 p-4 bg-slate-50 rounded-lg">
                 <div className="text-sm space-y-1">
-                  <div className="font-medium text-slate-900">Dimensions: 1200 × 630px</div>
+                  <div className="font-medium text-slate-900">
+                    Dimensions: 1200 × 630px
+                  </div>
                   <div className="text-slate-600">
-                    Optimized for Facebook, Twitter, LinkedIn, and other social platforms
+                    Optimized for Facebook, Twitter, LinkedIn, and other social
+                    platforms
                   </div>
                 </div>
               </div>
@@ -284,5 +315,5 @@ export const metadata = {
         </Card>
       </div>
     </div>
-  )
+  );
 }

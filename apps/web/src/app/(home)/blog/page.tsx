@@ -1,25 +1,25 @@
-import type { Metadata } from "next"
-import Image from "next/image"
+import type { Metadata } from "next";
+import Image from "next/image";
 
-import ArticleTitile from "@/components/article-title"
-import { ProgressBarLink } from "@/components/progress-bar"
+import ArticleTitile from "@/components/article-title";
+import { ProgressBarLink } from "@/components/progress-bar";
 
-import { getBlogPosts } from "@/lib/api/blog"
+import { getBlogPosts } from "@/lib/api/blog";
 
-import config from "@/config"
-import type { BlogPost } from "@/types/blog"
+import config from "@/config";
+import type { BlogPost } from "@/types/blog";
 
-import "@/styles/blog.css"
+import "@/styles/blog.css";
 
-const { title } = config
+const { title } = config;
 
 export const metadata: Metadata = {
   title: `Blog | ${title}`,
   description: "Read my thoughts on software development, design, and more.",
-}
+};
 
 export default function Blog() {
-  const allPosts = getBlogPosts()
+  const allPosts = getBlogPosts();
 
   return (
     <article>
@@ -28,7 +28,10 @@ export default function Blog() {
         <ul className="blog-posts-list">
           {allPosts.map((post: BlogPost) => (
             <li key={post.slug} className="blog-post-item">
-              <ProgressBarLink href={`/blog/${post.slug}`} rel="noopener noreferrer">
+              <ProgressBarLink
+                href={`/blog/${post.slug}`}
+                rel="noopener noreferrer"
+              >
                 <figure className="blog-banner-box">
                   <Image
                     src={post.coverImage || "/placeholder.svg"}
@@ -60,5 +63,5 @@ export default function Blog() {
         </ul>
       </section>
     </article>
-  )
+  );
 }

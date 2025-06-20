@@ -1,19 +1,31 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Search, ExternalLink, Star, Calendar, Tag } from "lucide-react"
-import { Input } from "@1chooo/ui/components/input"
-import { Button } from "@1chooo/ui/components/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@1chooo/ui/components/card"
-import { Badge } from "@1chooo/ui/components/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@1chooo/ui/components/tabs"
+import { useState } from "react";
+import { Search, ExternalLink, Star, Calendar, Tag } from "lucide-react";
+import { Input } from "@1chooo/ui/components/input";
+import { Button } from "@1chooo/ui/components/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@1chooo/ui/components/card";
+import { Badge } from "@1chooo/ui/components/badge";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@1chooo/ui/components/tabs";
 
 // Sample bookmark data
 const bookmarks = [
   {
     id: 1,
     title: "Figma",
-    description: "Collaborative interface design tool for creating beautiful user interfaces and prototypes.",
+    description:
+      "Collaborative interface design tool for creating beautiful user interfaces and prototypes.",
     url: "https://figma.com",
     category: "Design",
     tags: ["UI/UX", "Prototyping", "Collaboration"],
@@ -24,7 +36,8 @@ const bookmarks = [
   {
     id: 2,
     title: "Next.js Documentation",
-    description: "The React framework for production with built-in optimizations and best practices.",
+    description:
+      "The React framework for production with built-in optimizations and best practices.",
     url: "https://nextjs.org/docs",
     category: "Development",
     tags: ["React", "Framework", "Documentation"],
@@ -35,7 +48,8 @@ const bookmarks = [
   {
     id: 3,
     title: "Tailwind CSS",
-    description: "A utility-first CSS framework for rapidly building custom user interfaces.",
+    description:
+      "A utility-first CSS framework for rapidly building custom user interfaces.",
     url: "https://tailwindcss.com",
     category: "Development",
     tags: ["CSS", "Framework", "Styling"],
@@ -46,7 +60,8 @@ const bookmarks = [
   {
     id: 4,
     title: "Notion",
-    description: "All-in-one workspace for notes, tasks, wikis, and databases to organize your work and life.",
+    description:
+      "All-in-one workspace for notes, tasks, wikis, and databases to organize your work and life.",
     url: "https://notion.so",
     category: "Productivity",
     tags: ["Notes", "Organization", "Database"],
@@ -57,7 +72,8 @@ const bookmarks = [
   {
     id: 5,
     title: "GitHub",
-    description: "Platform for version control and collaboration, hosting millions of repositories.",
+    description:
+      "Platform for version control and collaboration, hosting millions of repositories.",
     url: "https://github.com",
     category: "Development",
     tags: ["Git", "Version Control", "Collaboration"],
@@ -68,7 +84,8 @@ const bookmarks = [
   {
     id: 6,
     title: "Unsplash",
-    description: "Beautiful free images and photos that you can download and use for any project.",
+    description:
+      "Beautiful free images and photos that you can download and use for any project.",
     url: "https://unsplash.com",
     category: "Design",
     tags: ["Photos", "Stock Images", "Free"],
@@ -79,7 +96,8 @@ const bookmarks = [
   {
     id: 7,
     title: "Linear",
-    description: "Issue tracking tool designed for modern software teams with a focus on speed and usability.",
+    description:
+      "Issue tracking tool designed for modern software teams with a focus on speed and usability.",
     url: "https://linear.app",
     category: "Productivity",
     tags: ["Project Management", "Issues", "Team"],
@@ -90,7 +108,8 @@ const bookmarks = [
   {
     id: 8,
     title: "Vercel",
-    description: "Platform for frontend frameworks and static sites, built to integrate with headless content.",
+    description:
+      "Platform for frontend frameworks and static sites, built to integrate with headless content.",
     url: "https://vercel.com",
     category: "Development",
     tags: ["Deployment", "Hosting", "Frontend"],
@@ -98,35 +117,40 @@ const bookmarks = [
     isFavorite: false,
     favicon: "▲",
   },
-]
+];
 
-const categories = ["All", "Design", "Development", "Productivity"]
+const categories = ["All", "Design", "Development", "Productivity"];
 
 export default function BookmarksPage() {
-  const [searchTerm, setSearchTerm] = useState("")
-  const [selectedCategory, setSelectedCategory] = useState("All")
-  const [showFavoritesOnly, setShowFavoritesOnly] = useState(false)
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
 
   const filteredBookmarks = bookmarks.filter((bookmark) => {
     const matchesSearch =
       bookmark.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       bookmark.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      bookmark.tags.some((tag) => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+      bookmark.tags.some((tag) =>
+        tag.toLowerCase().includes(searchTerm.toLowerCase()),
+      );
 
-    const matchesCategory = selectedCategory === "All" || bookmark.category === selectedCategory
-    const matchesFavorites = !showFavoritesOnly || bookmark.isFavorite
+    const matchesCategory =
+      selectedCategory === "All" || bookmark.category === selectedCategory;
+    const matchesFavorites = !showFavoritesOnly || bookmark.isFavorite;
 
-    return matchesSearch && matchesCategory && matchesFavorites
-  })
+    return matchesSearch && matchesCategory && matchesFavorites;
+  });
 
-  const favoriteBookmarks = bookmarks.filter((bookmark) => bookmark.isFavorite)
+  const favoriteBookmarks = bookmarks.filter((bookmark) => bookmark.isFavorite);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-2">My Bookmarks</h1>
+          <h1 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+            My Bookmarks
+          </h1>
           <p className="text-lg text-slate-600 dark:text-slate-400">
             A curated collection of tools and resources I use
           </p>
@@ -148,13 +172,19 @@ export default function BookmarksPage() {
             onClick={() => setShowFavoritesOnly(!showFavoritesOnly)}
             className="flex items-center gap-2"
           >
-            <Star className={`h-4 w-4 ${showFavoritesOnly ? "fill-current" : ""}`} />
+            <Star
+              className={`h-4 w-4 ${showFavoritesOnly ? "fill-current" : ""}`}
+            />
             Favorites Only
           </Button>
         </div>
 
         {/* Category Tabs */}
-        <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="mb-8">
+        <Tabs
+          value={selectedCategory}
+          onValueChange={setSelectedCategory}
+          className="mb-8"
+        >
           <TabsList className="grid w-full grid-cols-4">
             {categories.map((category) => (
               <TabsTrigger key={category} value={category}>
@@ -168,7 +198,9 @@ export default function BookmarksPage() {
               {/* Stats */}
               <div className="flex items-center gap-4 mb-6 text-sm text-slate-600 dark:text-slate-400">
                 <span>{filteredBookmarks.length} bookmarks</span>
-                {category === "All" && <span>{favoriteBookmarks.length} favorites</span>}
+                {category === "All" && (
+                  <span>{favoriteBookmarks.length} favorites</span>
+                )}
               </div>
 
               {/* Bookmarks Grid */}
@@ -190,18 +222,26 @@ export default function BookmarksPage() {
                               <Badge variant="secondary" className="text-xs">
                                 {bookmark.category}
                               </Badge>
-                              {bookmark.isFavorite && <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />}
+                              {bookmark.isFavorite && (
+                                <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                              )}
                             </div>
                           </div>
                         </div>
                       </div>
                     </CardHeader>
                     <CardContent className="pt-0">
-                      <CardDescription className="mb-4 line-clamp-2">{bookmark.description}</CardDescription>
+                      <CardDescription className="mb-4 line-clamp-2">
+                        {bookmark.description}
+                      </CardDescription>
 
                       <div className="flex flex-wrap gap-1 mb-4">
                         {bookmark.tags.map((tag) => (
-                          <Badge key={tag} variant="outline" className="text-xs">
+                          <Badge
+                            key={tag}
+                            variant="outline"
+                            className="text-xs"
+                          >
                             <Tag className="h-2 w-2 mr-1" />
                             {tag}
                           </Badge>
@@ -231,8 +271,12 @@ export default function BookmarksPage() {
               {filteredBookmarks.length === 0 && (
                 <div className="text-center py-12">
                   <div className="text-4xl mb-4">🔍</div>
-                  <h3 className="text-lg font-medium text-slate-900 dark:text-slate-100 mb-2">No bookmarks found</h3>
-                  <p className="text-slate-600 dark:text-slate-400">Try adjusting your search or filters</p>
+                  <h3 className="text-lg font-medium text-slate-900 dark:text-slate-100 mb-2">
+                    No bookmarks found
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-400">
+                    Try adjusting your search or filters
+                  </p>
                 </div>
               )}
             </TabsContent>
@@ -240,5 +284,5 @@ export default function BookmarksPage() {
         </Tabs>
       </div>
     </div>
-  )
+  );
 }
