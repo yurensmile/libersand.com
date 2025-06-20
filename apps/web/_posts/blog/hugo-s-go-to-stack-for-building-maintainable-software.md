@@ -10,7 +10,7 @@ ogImage:
   url: "/images/banner/posts/hugo-s-go-to-stack-for-building-maintainable-software.webp"
 publishedAt: "2025-01-09"
 lastModifiedAt: "2025-01-09"
-category: "Talk"
+category: "Software Development"
 tags:
   - React
   - Web Development

@@ -1,4 +1,3 @@
-import html from "remark-html";
 import rehypeShiki from "@shikijs/rehype";
 import rehypeStringify from "rehype-stringify";
 import remarkParse from "remark-parse";
@@ -7,6 +6,7 @@ import remarkGfm from "remark-gfm";
 import { unified } from "unified";
 import rehypePrettyCode from "rehype-pretty-code";
 import { transformerCopyButton } from "@rehype-pretty/transformers";
+import rehypeImageCaptions from "@/lib/rehype/image-captions";
 
 import config from "@/config";
 
@@ -20,7 +20,6 @@ export default async function markdownToHtml(markdown: string) {
   }
 
   const result = await unified()
-    .use(html)
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkRehype, { allowDangerousHtml: true })
@@ -32,7 +31,7 @@ export default async function markdownToHtml(markdown: string) {
         }),
       ],
     })
-    .use(rehypeStringify)
+    .use(rehypeImageCaptions)
     .use(rehypeShiki, {
       themes: {
         light: shikiTheme.light,

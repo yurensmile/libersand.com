@@ -32,6 +32,9 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@1chooo/activity-calendar": "workspace:*",
+    "@1chooo/github-calendar": "workspace:*",
+    "@1chooo/ui": "workspace:*",
     "@heroicons/react": "^2.2.0",
     "@next/third-parties": "15.3.3",
     "@primer/octicons-react": "^19.15.1",
@@ -41,9 +44,6 @@
     "@testing-library/user-event": "^14.6.1",
     "@types/node": "24.0.3",
     "@vercel/analytics": "^1.5.0",
-    "@1chooo/ui": "workspace:*",
-    "@1chooo/github-calendar": "workspace:*",
-    "@1chooo/activity-calendar": "workspace:*",
     "class-variance-authority": "^0.7.1",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
@@ -78,7 +78,8 @@
     "sharp": "^0.34.1",
     "shiki": "^3.6.0",
     "tailwind-merge": "^3.2.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "unist-util-visit": "^5.0.0"
   },
   "browserslist": {
     "production": [
@@ -93,13 +94,13 @@
     ]
   },
   "devDependencies": {
+    "@1chooo/eslint-config": "workspace:^",
+    "@1chooo/typescript-config": "workspace:*",
     "@giscus/react": "^3.1.0",
     "@shikijs/rehype": "^3.6.0",
     "@types/react": "19.1.0",
     "@types/react-dom": "19.1.0",
     "@types/react-syntax-highlighter": "^15.5.13",
-    "@1chooo/eslint-config": "workspace:^",
-    "@1chooo/typescript-config": "workspace:*",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
