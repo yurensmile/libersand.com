@@ -54,21 +54,29 @@ export const VercelNavBar = ({ navigationLinks }: VercelNavBarProps) => {
                 className="text-sm md:text-base lg:text-base"
               >
                 <div
-                  className={`px-2 py-2 relative ${
-                    active.label === item.label ? "font-bold" : "font-medium"
-                  }`}
+                  className={`px-2 py-2 relative ${active.label === item.label ? "font-bold" : "font-medium"
+                    }`}
                 >
                   {item.label}
                   {isHover?.label === item.label && (
                     <motion.div
                       layoutId="hover-bg"
-                      className="absolute bottom-0 left-0 right-0 w-full h-full bg-white/10"
-                      style={{
-                        borderRadius: 6,
-                      }}
+                      className="absolute bottom-0 left-0 right-0 w-full h-full bg-white/10 rounded-xl"
                     />
                   )}
                 </div>
+                {active.label === item.label && (
+                  <motion.div
+                    layoutId="active"
+                    className="absolute bottom-0 left-0 right-0 w-full h-0.5 bg-orange-yellow-crayola"
+                  />
+                )}
+                {isHover?.label === item.label && (
+                  <motion.div
+                    layoutId="hover"
+                    className="absolute bottom-0 left-0 right-0 w-full h-0.5 bg-white"
+                  />
+                )}
               </ProgressBarLink>
             </button>
           ))}
