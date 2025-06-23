@@ -2,19 +2,33 @@
 
 Here, we will document all the changes made to the [1chooo.com](https://1chooo.com) web app, including new features, bug fixes, and improvements.
 
+## [v0.11.6]
+
+### What's Changed
+* feat(web): add clean page animations via next-view-transitions (#295) by @1chooo in https://github.com/1chooo/portfolio/pull/1198
+* feat(web): implement analytics components for Umami, Vercel, and Google by @1chooo in https://github.com/1chooo/portfolio/pull/1200
+* feat(web): format published date and display post category by @1chooo in https://github.com/1chooo/portfolio/commit/5e210aecc5b2abff0e5c4de4e1d11cfe6f15378b
+* fix(web): correct spelling of ArticleTitle in component and interface by @1chooo in https://github.com/1chooo/portfolio/commit/23618426b0dd62ce0f133bbe002bb55708e68fa4
+* feat(web): add line numbering and styling for code blocks in markdown (https://github.com/1chooo/portfolio/issues/1197) by @1chooo in https://github.com/1chooo/portfolio/commit/95bccfdc065acdf1e3fe95d4775a44e599621e46
+* feat(web): add styles for highlighted characters and character IDs in markdown by @1chooo in https://github.com/1chooo/portfolio/commit/5ad864aa5770b89a4a4ccb8f766c7d4e3387ed4e
+* feat(web): add Umami analytics integration and update environment configuration (https://github.com/1chooo/portfolio/issues/1199) by @1chooo in https://github.com/1chooo/portfolio/commit/da8041fb9032b4af7eb28ab85ec3ca8597bab35c
+
+
+**Full Changelog**: https://github.com/1chooo/portfolio/compare/v0.11.5...v0.11.6
+
 ## [v0.11.5]
 
 ### What's Changed
 
-- feat(web): support react wrap balancer in blog (https://github.com/1chooo/portfolio/issues/1154) by @1chooo in https://github.com/1chooo/portfolio/commit/27a8c63c2e78e25dccec255799edc10c3ea90dff
-  - specify the react-wrap-balancer to 1.1.0 not ^1.1.0
-  - add balancer in the title of the blog
-  - remove redundant `<section>` tag in blog to prevent layout overwrap
-  - resolved: https://github.com/1chooo/portfolio/issues/1154
-- feat(web): remove copy button styles and enhance code line highlighting in markdown (https://github.com/1chooo/portfolio/issues/1194) by @1chooo in https://github.com/1chooo/portfolio/commit/8fa43b06fc04905591d04097a856ac5fa59bcbe5
-- revert(web): recover hover and active indicators from VercelNavBar by @1chooo in https://github.com/1chooo/portfolio/commit/e5ccfb644991b0b925db4d0001ea9e63dc66fd1e
-- feat(web): add hr styling in markdown styles (https://github.com/1chooo/portfolio/issues/1193) by @1chooo in https://github.com/1chooo/portfolio/commit/3a9be8551b9ae8770c51a87dd1b742bdaf645477
-- feat(web): enhance markdown image handling with captions (https://github.com/1chooo/portfolio/issues/1149) by @1chooo in https://github.com/1chooo/portfolio/commit/317cd79d741755a3be5700bdf39d40e11c95cb1b
+* feat(web): support react wrap balancer in blog (https://github.com/1chooo/portfolio/issues/1154) by @1chooo in https://github.com/1chooo/portfolio/commit/27a8c63c2e78e25dccec255799edc10c3ea90dff
+  * specify the react-wrap-balancer to 1.1.0 not ^1.1.0
+  * add balancer in the title of the blog
+  * remove redundant `<section>` tag in blog to prevent layout overwrap
+  * resolved: https://github.com/1chooo/portfolio/issues/1154
+* feat(web): remove copy button styles and enhance code line highlighting in markdown (https://github.com/1chooo/portfolio/issues/1194) by @1chooo in https://github.com/1chooo/portfolio/commit/8fa43b06fc04905591d04097a856ac5fa59bcbe5
+* revert(web): recover hover and active indicators from VercelNavBar by @1chooo in https://github.com/1chooo/portfolio/commit/e5ccfb644991b0b925db4d0001ea9e63dc66fd1e
+* feat(web): add hr styling in markdown styles (https://github.com/1chooo/portfolio/issues/1193) by @1chooo in https://github.com/1chooo/portfolio/commit/3a9be8551b9ae8770c51a87dd1b742bdaf645477
+* feat(web): enhance markdown image handling with captions (https://github.com/1chooo/portfolio/issues/1149) by @1chooo in https://github.com/1chooo/portfolio/commit/317cd79d741755a3be5700bdf39d40e11c95cb1b
 
 **Full Changelog**: https://github.com/1chooo/portfolio/compare/v0.11.4...v0.11.5
 
@@ -146,8 +160,8 @@ Here, we will document all the changes made to the [1chooo.com](https://1chooo.c
 
 ### What's Change
 
-- feat(web): implement contact form submission with feedback messages (https://github.com/1chooo/portfolio/issues/1091) by @1chooo 
-- fix(web): adjust styling in ResumeCard component for better layout (https://github.com/1chooo/portfolio/issues/1056) by @1chooo 
+* feat(web): implement contact form submission with feedback messages (https://github.com/1chooo/portfolio/issues/1091) by @1chooo 
+* fix(web): adjust styling in ResumeCard component for better layout (https://github.com/1chooo/portfolio/issues/1056) by @1chooo 
 
 **Full Changelog**: https://github.com/1chooo/portfolio/compare/v0.8.2...v0.9.0
 
@@ -169,7 +183,7 @@ Here, we will document all the changes made to the [1chooo.com](https://1chooo.c
 ## [v0.8.1]
 
 ### What's Changed
-- refactor(resume): streamline resume data structure and update type definitions (#98) (#1043) by @1chooo in https://github.com/1chooo/portfolio/commit/14787c1dca6a52b13a24d82b2fb44fafee17d775
+* refactor(resume): streamline resume data structure and update type definitions (#98) (#1043) by @1chooo in https://github.com/1chooo/portfolio/commit/14787c1dca6a52b13a24d82b2fb44fafee17d775
 
 **Full Changelog**: https://github.com/1chooo/portfolio/compare/v0.8.0...v0.8.1
 
@@ -414,10 +428,10 @@ Here, we will document all the changes made to the [1chooo.com](https://1chooo.c
 
 ### What's Changed
 
-- feat(resume): enhance CV download section with animated gradient text and update color variables in styles (#103) in https://github.com/1chooo/portfolio/commit/a86bc39dc6d73597cfb514c77745793e15af36b0 by @1chooo 
-- refactor(side-bar): integrate contacts from config (#695) by @1chooo in https://github.com/1chooo/portfolio/pull/696
-- refactor(types): unify icon type definitions across components (#671) by @1chooo in https://github.com/1chooo/portfolio/pull/697
-- fix(about): correct formatting of JSON-LD array (#685) by @1chooo in https://github.com/1chooo/portfolio/commit/154fcd90ee429b159ecc39fa94bfd4d15ef5a3c3
+* feat(resume): enhance CV download section with animated gradient text and update color variables in styles (#103) in https://github.com/1chooo/portfolio/commit/a86bc39dc6d73597cfb514c77745793e15af36b0 by @1chooo 
+* refactor(side-bar): integrate contacts from config (#695) by @1chooo in https://github.com/1chooo/portfolio/pull/696
+* refactor(types): unify icon type definitions across components (#671) by @1chooo in https://github.com/1chooo/portfolio/pull/697
+* fix(about): correct formatting of JSON-LD array (#685) by @1chooo in https://github.com/1chooo/portfolio/commit/154fcd90ee429b159ecc39fa94bfd4d15ef5a3c3
 
 **Full Changelog**: https://github.com/1chooo/portfolio/compare/v0.6.1...v0.6.2
 
@@ -447,9 +461,9 @@ We replace CV IconBox with the badge with MagicUI
 ## [v0.5.5]
 
 ### What's Changed
-- update Web Vitals, Section ID in About, simplify style of service-item. by @1chooo
-- docs(wiki): add structured data examples for improved SEO guidance (#657) by @1chooo in https://github.com/1chooo/portfolio/commit/42a8e0ec781e1bc1160809029bdbba401e5d1df2
-- chore(env): add example .env file and update Google Analytics and Tag Manager IDs to use environment variables (#668) by @1chooo in https://github.com/1chooo/portfolio/pull/670
+* update Web Vitals, Section ID in About, simplify style of service-item. by @1chooo
+* docs(wiki): add structured data examples for improved SEO guidance (#657) by @1chooo in https://github.com/1chooo/portfolio/commit/42a8e0ec781e1bc1160809029bdbba401e5d1df2
+* chore(env): add example .env file and update Google Analytics and Tag Manager IDs to use environment variables (#668) by @1chooo in https://github.com/1chooo/portfolio/pull/670
 
 
 **Full Changelog**: https://github.com/1chooo/portfolio/compare/v0.5.4...v0.5.5
