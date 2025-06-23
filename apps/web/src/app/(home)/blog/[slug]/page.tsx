@@ -42,12 +42,18 @@ export default async function Post(props: Params) {
         </h1>
         <div className="flex items-center justify-between mt-4 text-sm w-full text-neutral-600 dark:text-neutral-400">
           <div className="flex items-center space-x-2">
-            <span>{post.date}</span>
+            <span>
+              {new Date(post.publishedAt).toLocaleDateString("en-us", {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </span>
             <span
               className="w-1 h-1 bg-current rounded-full"
               aria-hidden="true"
             ></span>
-            {/* <span>{post.metadata.category}</span> */}
+            <span>{post.category}</span>
           </div>
           <div className="flex items-center space-x-2 ml-4">
             <Link
