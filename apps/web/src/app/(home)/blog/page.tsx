@@ -48,7 +48,7 @@ export default function Blog() {
                 </figure>
                 <div className="blog-content">
                   <div className="blog-meta">
-                    <p className="blog-category">{post.category}</p>
+                    <p className="blog-category">{post.category.toUpperCase()}</p>
                     <h3 className="blog-item-title">
                       <Balancer>{post.title}</Balancer>
                     </h3>

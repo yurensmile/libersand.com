@@ -59,7 +59,7 @@ export default async function Post(props: Params) {
               className="w-1 h-1 bg-current rounded-full"
               aria-hidden="true"
             ></span>
-            <span>{post.category}</span>
+            <span>{post.category.toUpperCase()}</span>
           </div>
           <div className="flex items-center space-x-2 ml-4">
             <Link
