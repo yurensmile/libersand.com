@@ -5,7 +5,7 @@ interface GoogleAnalyticProps {
   googleTagManagerId: string;
 }
 
-export default function GoogleAnalytic({ googleAnalyticId, googleTagManagerId }: GoogleAnalyticProps) {
+export function GoogleAnalytic({ googleAnalyticId, googleTagManagerId }: GoogleAnalyticProps) {
   return (
     <>
       <GoogleAnalytics gaId={googleAnalyticId} />

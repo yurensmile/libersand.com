@@ -1,6 +1,6 @@
 import Script from 'next/script'
 
-export default function UmamiAnalytic() {
+export function UmamiAnalytic() {
   return (
     <Script
       async

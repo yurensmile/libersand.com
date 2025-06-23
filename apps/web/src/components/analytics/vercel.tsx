@@ -1,5 +1,5 @@
 import { Analytics } from "@vercel/analytics/next";
 
-export default function VercelAnalytic() {
+export function VercelAnalytic() {
   return <Analytics />;
 }

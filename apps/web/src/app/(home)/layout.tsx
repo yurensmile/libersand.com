@@ -7,9 +7,11 @@ import { VercelNavBar } from "@/components/layout/vercel-navbar";
 import SideBar from "@/components/layout/side-bar";
 import Hello from "@/components/hello";
 import { ProgressBar } from "@/components/progress-bar";
-import UmamiAnalytic from "@/components/analytics/umami";
-import VercelAnalytic from "@/components/analytics/vercel";
-import GoogleAnalytic from "@/components/analytics/google";
+import {
+  GoogleAnalytic,
+  UmamiAnalytic,
+  VercelAnalytic
+} from "@/components/analytics";
 
 import config from "@/config";
 
