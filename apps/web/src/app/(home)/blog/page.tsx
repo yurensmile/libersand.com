@@ -6,6 +6,8 @@ import { ProgressBarLink } from "@/components/progress-bar";
 
 import { getBlogPosts } from "@/lib/api/blog";
 
+import Balancer from "react-wrap-balancer";
+
 import config from "@/config";
 import type { BlogPost } from "@/types/blog";
 
@@ -47,7 +49,7 @@ export default function Blog() {
                 <div className="blog-content">
                   <div className="blog-meta">
                     <p className="blog-category">{post.category}</p>
-                    <h3 className="blog-item-title">{post.title}</h3>
+                    <h3 className="blog-item-title"><Balancer>{post.title}</Balancer></h3>
                   </div>
                   <time className="blog-time" dateTime={post.publishedAt}>
                     {new Date(post.publishedAt).toLocaleDateString("en-us", {

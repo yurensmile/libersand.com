@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { LuFacebook, LuTwitter } from "react-icons/lu";
+import Balancer from "react-wrap-balancer";
 
 import ArticleTitile from "@/components/article-title";
 import Comments from "@/components/comments";
@@ -35,58 +36,54 @@ export default async function Post(props: Params) {
   return (
     <div>
       <article>
-        <section>
-          <ArticleTitile title="Hugo's Blog" />
-          <h1 className="font-semibold text-4xl text-white-2 max-w-[650px]">
-            {post.title}
-          </h1>
-          <div className="flex items-center justify-between mt-4 text-sm w-full text-neutral-600 dark:text-neutral-400">
-            <div className="flex items-center space-x-2">
-              <span>{post.date}</span>
-              <span
-                className="w-1 h-1 bg-current rounded-full"
-                aria-hidden="true"
-              ></span>
-              {/* <span>{post.metadata.category}</span> */}
-            </div>
-            <div className="flex items-center space-x-2 ml-4">
-              <Link
-                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-orange-yellow-crayola transition-colors"
-                aria-label="Share on Facebook"
-              >
-                <LuFacebook className="w-5 h-5" />
-              </Link>
-              <Link
-                href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-orange-yellow-crayola transition-colors"
-                aria-label="Share on Twitter"
-              >
-                <LuTwitter className="w-5 h-5" />
-              </Link>
-            </div>
+        <ArticleTitile title="Hugo's Blog" />
+        <h1 className="font-semibold text-4xl text-white-2 max-w-[650px]">
+          <Balancer>{post.title}</Balancer>
+        </h1>
+        <div className="flex items-center justify-between mt-4 text-sm w-full text-neutral-600 dark:text-neutral-400">
+          <div className="flex items-center space-x-2">
+            <span>{post.date}</span>
+            <span
+              className="w-1 h-1 bg-current rounded-full"
+              aria-hidden="true"
+            ></span>
+            {/* <span>{post.metadata.category}</span> */}
           </div>
-          <div className="separator"></div>
-          <div className="flex justify-center">
-            <div
-              className={cn(
-                "markdown text-light-gray w-[90%] sm:w-[90%] md:w-[90%] lg:w-[80%] xl:w-[80%]",
-              )}
-              dangerouslySetInnerHTML={{ __html: content }}
-            />
+          <div className="flex items-center space-x-2 ml-4">
+            <Link
+              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-orange-yellow-crayola transition-colors"
+              aria-label="Share on Facebook"
+            >
+              <LuFacebook className="w-5 h-5" />
+            </Link>
+            <Link
+              href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-orange-yellow-crayola transition-colors"
+              aria-label="Share on Twitter"
+            >
+              <LuTwitter className="w-5 h-5" />
+            </Link>
           </div>
-        </section>
+        </div>
+        <div className="separator"></div>
+        <div className="flex justify-center">
+          <div
+            className={cn(
+              "markdown text-light-gray w-[90%] sm:w-[90%] md:w-[90%] lg:w-[80%] xl:w-[80%]",
+            )}
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
+        </div>
       </article>
 
       <article style={{ marginTop: "1rem" }}>
-        <section className="blog-text">
-          <ArticleTitile title="Comments" />
-          <Comments giscusConfig={giscusConfig} />
-        </section>
+        <ArticleTitile title="Comments" />
+        <Comments giscusConfig={giscusConfig} />
       </article>
     </div>
   );
