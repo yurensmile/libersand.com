@@ -29,7 +29,7 @@ Hey there 👋 This is Hugo. Here's a quick summary of my go-to tech stack for S
 
 We only use `FC` type when we need to pass and extract children from props [^1]. Otherwise, we use the function declaration. Refer [here](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/function_components/) for a more extensive section explaining why `React.FC` should mostly be avoided.
 
-```tsx {5}
+```tsx {6}
 // Avoid
 interface Props {
   text?: string;
@@ -40,7 +40,7 @@ const Heading: React.FC<Props> = ({ text = "Hello, world!" }) => {
 };
 ```
 
-```tsx {5}
+```tsx {6}
 // Prefer
 interface Props {
   text?: string;

@@ -127,6 +127,11 @@
   font-style: normal;
 }
 
+[data-highlighted-line] {
+  background: rgba(200, 200, 255, 0.1);
+  @apply border-l-blue-400;
+}
+
 @media (min-width: 640px) {
   .image-with-caption img {
     max-height: 400px;
