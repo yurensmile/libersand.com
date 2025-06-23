@@ -1,10 +1,10 @@
 import { MarkdownAlert, Highlight } from "@/components/markdown-alert";
-import ArticleTitile from "@/components/article-title";
+import ArticleTitle from "@/components/article-title";
 
 export default function MarkdownAlertsDemo() {
   return (
     <article>
-      <ArticleTitile title={"Markdown Alerts Demo"} />
+      <ArticleTitle title={"Markdown Alerts Demo"} />
       <div className="min-h-screen p-8">
         <div className="max-w-4xl mx-auto space-y-6">
           <MarkdownAlert type="tip">

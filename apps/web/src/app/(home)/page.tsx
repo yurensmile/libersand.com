@@ -1,5 +1,5 @@
 import AnimatedSection from "@/components/animated-section";
-import ArticleTitile from "@/components/article-title";
+import ArticleTitle from "@/components/article-title";
 import CodingStats from "@/components/about/coding-stats";
 import { LatestArticles } from "@/components/about/latest-articles";
 import TalkToHugo from "@/components/about/talk-to-hugo";
@@ -37,7 +37,7 @@ async function About() {
   return (
     <article>
       <AnimatedSection id="about">
-        <ArticleTitile title={title} />
+        <ArticleTitle title={title} />
       </AnimatedSection>
       <AnimatedSection>
         {processedIntroduction && (

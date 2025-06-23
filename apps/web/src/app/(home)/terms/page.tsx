@@ -1,4 +1,4 @@
-import ArticleTitile from "@/components/article-title";
+import ArticleTitle from "@/components/article-title";
 import AnimatedSection from "@/components/animated-section";
 import markdownToHtml from "@/lib/markdownToHtml";
 
@@ -184,7 +184,7 @@ async function Terms() {
   return (
     <article>
       <AnimatedSection id="terms">
-        <ArticleTitile title="Terms of Service" />
+        <ArticleTitle title="Terms of Service" />
       </AnimatedSection>
       <div
         className={cn("markdown")}

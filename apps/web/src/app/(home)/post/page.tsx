@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import Image from "next/image";
 import Balancer from "react-wrap-balancer";
 import Loading from "@/components/loading";
-import ArticleTitile from "@/components/article-title";
+import ArticleTitle from "@/components/article-title";
 import FilterSelectBox from "@/components/filter/filter-select-box";
 import FilterList from "@/components/filter/filter-list";
 import MarkdownRenderer from "@/components/markdown/markdown-renderer";
@@ -127,7 +127,7 @@ export default function Post({
 }) {
   return (
     <article>
-      <ArticleTitile title="Hugo's Blog" />
+      <ArticleTitle title="Hugo's Blog" />
       <Suspense fallback={<Loading />}>
         <BlogPosts searchParams={searchParams} />
       </Suspense>

@@ -2,7 +2,7 @@ import Container from "@/app/(exp)/remark/_components/container";
 import { HeroPost } from "@/app/(exp)/remark/_components/hero-post";
 import { MoreStories } from "@/app/(exp)/remark/_components/more-stories";
 import { getBlogPosts } from "@/lib/api/blog";
-import ArticleTitile from "@/components/article-title";
+import ArticleTitle from "@/components/article-title";
 
 export default function Index() {
   const allPosts = getBlogPosts();
@@ -13,7 +13,7 @@ export default function Index() {
 
   return (
     <article>
-      <ArticleTitile title="Hugo's Blog" />
+      <ArticleTitle title="Hugo's Blog" />
       <Container>
         <HeroPost
           title={heroPost.title}

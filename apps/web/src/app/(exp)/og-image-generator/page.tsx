@@ -1,5 +1,5 @@
 import OGImageGenerator from "./og-image-generator";
-import ArticleTitile from "@/components/article-title";
+import ArticleTitle from "@/components/article-title";
 
 export const metadata = {
   title: "Chun-Ho (Hugo) Lin",
@@ -33,7 +33,7 @@ export const metadata = {
 export default function Page() {
   return (
     <article>
-      <ArticleTitile title={"OG Image Generator"} />
+      <ArticleTitle title={"OG Image Generator"} />
       <OGImageGenerator />
     </article>
   );

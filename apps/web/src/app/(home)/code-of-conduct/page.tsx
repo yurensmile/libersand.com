@@ -1,4 +1,4 @@
-import ArticleTitile from "@/components/article-title";
+import ArticleTitle from "@/components/article-title";
 import AnimatedSection from "@/components/animated-section";
 import markdownToHtml from "@/lib/markdownToHtml";
 
@@ -147,7 +147,7 @@ export default async function CodeOfConduct() {
   return (
     <article>
       <AnimatedSection id="code-of-conduct">
-        <ArticleTitile title="Code of Conduct" />
+        <ArticleTitle title="Code of Conduct" />
       </AnimatedSection>
       <div
         className={cn("markdown")}

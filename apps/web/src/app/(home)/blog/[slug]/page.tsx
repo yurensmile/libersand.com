@@ -7,7 +7,7 @@ import { LuFacebook, LuTwitter } from "react-icons/lu";
 import Balancer from "react-wrap-balancer";
 import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 
-import ArticleTitile from "@/components/article-title";
+import ArticleTitle from "@/components/article-title";
 import Comments from "@/components/comments";
 
 import { CMS_NAME } from "@/lib/constants";
@@ -38,7 +38,7 @@ export default async function Post(props: Params) {
     <div>
       <article>
         <ViewTransitionsProgressBarLink href="/blog" rel="noopener noreferrer">
-          <ArticleTitile
+          <ArticleTitle
             className="text-light-gray hover:text-light-gray-70"
             title="← Back to Blog"
           />
@@ -94,7 +94,7 @@ export default async function Post(props: Params) {
       </article>
 
       <article style={{ marginTop: "1rem" }}>
-        <ArticleTitile title="Comments" />
+        <ArticleTitle title="Comments" />
         <Comments giscusConfig={giscusConfig} />
       </article>
     </div>
