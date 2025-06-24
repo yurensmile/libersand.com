@@ -411,26 +411,3 @@ I'm an incoming student at [University of Southern California](https://usc.edu) 
 };
 
 export default config;
-
-export const about = config.about;
-export const avatar = config.avatar;
-export const title = config.title;
-export const description = config.description;
-export const author = config.author;
-export const keywords = config.keywords;
-export const status = config.status;
-export const siteURL = config.siteURL;
-export const navigationLinks = config.navigationLinks;
-export const contacts = config.contacts;
-export const socialLinks = config.socialLinks;
-export const homeMetaData = config.homeMetaData;
-export const jsonLdPerson = config.jsonLdPerson;
-export const resumes = config.resumes;
-export const shikiTheme = config.shikiTheme;
-export const giscusConfig = config.giscusConfig;
-export const googleAnalyticId = config.googleAnalyticId;
-export const googleTagManagerId = config.googleTagManagerId;
-export const web3formsAccessKey = config.web3formsAccessKey;
-export const umamiWebsiteId = config.umamiWebsiteId;
-export const umamiUrl = config.umamiUrl;
-export const analytics = config.analytics;

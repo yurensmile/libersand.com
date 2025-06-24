@@ -7,23 +7,11 @@ import { VercelNavBar } from "@/components/layout/vercel-navbar";
 import SideBar from "@/components/layout/side-bar";
 import Hello from "@/components/hello";
 import { ProgressBar } from "@/components/progress-bar";
-import {
-  GoogleAnalytic,
-  UmamiAnalytic,
-  VercelAnalytic
-} from "@/components/analytics";
+import { GoogleAnalytic } from "@/components/analytics/google";
+import { UmamiAnalytic } from "@/components/analytics/umami";
+import { Analytics as VercelAnalytic } from "@vercel/analytics/next";
 
-import {
-  about,
-  avatar,
-  status,
-  navigationLinks,
-  jsonLdPerson,
-  homeMetaData,
-  socialLinks,
-  contacts,
-  analytics,
-} from "@/config";
+import config from "@/config";
 
 import type { JsonLdHtml } from "@/types/json-ld";
 
@@ -44,6 +32,18 @@ const robotoMono = Roboto_Mono({
   display: "swap",
   preload: false,
 });
+
+const {
+  about,
+  avatar,
+  status,
+  navigationLinks,
+  jsonLdPerson,
+  homeMetaData,
+  socialLinks,
+  contacts,
+  analytics,
+} = config;
 
 const { firstName, lastName, middleName, preferredName, } = about;
 const { googleAnalyticId, googleTagManagerId, umamiWebsiteId, umamiUrl, } = analytics;

@@ -7,12 +7,15 @@ import TalkToHugo from "@/components/about/talk-to-hugo";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { getBlogPosts } from "@/lib/api/blog";
 
-import { about, web3formsAccessKey } from "@/config";
+import config from "@/config";
 
 import { cn } from "@1chooo/ui/lib/utils";
 
 import "@/styles/markdown-styles.css";
 
+const {
+  about, web3formsAccessKey
+} = config;
 const {
   firstName,
   lastName,
