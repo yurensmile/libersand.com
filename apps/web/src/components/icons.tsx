@@ -8,16 +8,14 @@ import {
   Swords,
 } from "lucide-react";
 
-import { IoSchoolOutline } from "@react-icons/all-files/io5/IoSchoolOutline";
-import { FaAws } from "@react-icons/all-files/fa/FaAws";
-import { FaReact } from "@react-icons/all-files/fa/FaReact";
-import { MdAttachment } from "@react-icons/all-files/md/MdAttachment";
-import { DiRedis } from "@react-icons/all-files/di/DiRedis";
-import { SiLatex } from "@react-icons/all-files/si/SiLatex";
-import { SiKubernetes } from "@react-icons/all-files/si/SiKubernetes";
-import { SiPostman } from "@react-icons/all-files/si/SiPostman";
+import { IoSchoolOutline } from "react-icons/io5";
+import { DiRedis } from "react-icons/di";
+import { FaAws, FaReact } from "react-icons/fa"
 
-import { MdOutlineDevices } from "react-icons/md";
+import {
+  MdOutlineDevices,
+  MdAttachment,
+} from "react-icons/md";
 import {
   LuGithub,
   LuPencil,
@@ -30,11 +28,10 @@ import {
 } from "react-icons/lu";
 import { PiMediumLogoBold } from "react-icons/pi";
 import { FaXTwitter } from "react-icons/fa6";
-
 import { GoalIcon, ArrowRightIcon } from "@primer/octicons-react";
 import { AiOutlinePython } from "react-icons/ai";
 import { RiJavaLine, RiJavascriptLine } from "react-icons/ri";
-import { SiFastapi } from "react-icons/si";
+import { SiLatex, SiFastapi, SiKubernetes, SiPostman } from "react-icons/si";
 import { BiLogoFlask } from "react-icons/bi";
 import { VscTerminalLinux, VscAzure } from "react-icons/vsc";
 import {
