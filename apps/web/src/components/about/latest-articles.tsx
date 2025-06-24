@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 import AboutSection from "@/components/section/about";
-import { ProgressBarLink } from "@/components/progress-bar";
+import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
 import StaggeredAnimationSection from "@/components/staggered-animation-section";
 import { BlurFade } from "@/components/magicui/blur-fade";
@@ -56,7 +56,7 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
         <div className="latest-post-list">
           {visiblePosts.map((post) => (
             <div key={post.slug} className="latest-post-item group active">
-              <ProgressBarLink
+              <ViewTransitionsProgressBarLink
                 href={`/blog/${post.slug}`}
                 rel="noopener noreferrer"
               >
@@ -78,7 +78,7 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
                 <h3 className="ml-[10px] text-white-2 text-base font-normal capitalize leading-[1.3] group-hover:text-orange-yellow-crayola group-hover:font-bold">
                   {post.title}
                 </h3>
-              </ProgressBarLink>
+              </ViewTransitionsProgressBarLink>
             </div>
           ))}
         </div>
@@ -91,12 +91,12 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
               "group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800",
             )}
           >
-            <ProgressBarLink href="/blog">
+            <ViewTransitionsProgressBarLink href="/blog">
               <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
                 <span>✨ See More Posts</span>
                 <ArrowRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
               </AnimatedShinyText>
-            </ProgressBarLink>
+            </ViewTransitionsProgressBarLink>
           </div>
         </div>
       </BlurFade>
