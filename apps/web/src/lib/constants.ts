@@ -1,8 +1,8 @@
 import type { Breakpoint } from "@/hooks/use-responsive-image-size";
-import moment from "moment";
+import { format } from "date-fns";
 
 export const POSTS_PER_PAGE = 8;
-export const BUILD_TIME = moment().format("MMMM Do YYYY");
+export const BUILD_TIME = format(Date.now(), "LLLL dd, yyyy");
 
 export const breakpoints: Breakpoint[] = [
   { maxWidth: 250, size: { width: 80, height: 80 } },
