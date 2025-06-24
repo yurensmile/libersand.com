@@ -2,18 +2,16 @@
 
 import { useEffect, useState } from "react";
 
-import AboutSection from "@/components/section/about";
-
 import Image from "next/image";
-import { BlogPost } from "@/types/blog";
 
+import AboutSection from "@/components/section/about";
 import { ProgressBarLink } from "@/components/progress-bar";
 import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
 import StaggeredAnimationSection from "@/components/staggered-animation-section";
 import { BlurFade } from "@/components/magicui/blur-fade";
+import { getIcon, ICON_NAMES } from "@/components/icons";
 
-import { LuEye } from "react-icons/lu";
-import { ArrowRightIcon } from "@primer/octicons-react";
+import { BlogPost } from "@/types/blog";
 
 import { cn } from "@/lib/utils";
 
@@ -49,6 +47,9 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
     return null; // or a loading placeholder
   }
 
+  const Eye = getIcon(ICON_NAMES.EYE_LU);
+  const ArrowRight = getIcon(ICON_NAMES.ARROW_RIGHT);
+
   return (
     <AboutSection id="latest-articles" title="Latest Articles">
       <StaggeredAnimationSection>
@@ -61,7 +62,7 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
               >
                 <figure className="latest-post-img">
                   <div className="absolute latest-post-item-icon-box text-orange-yellow-crayola text-xl bg-jet p-[18px] rounded-xl top-1/2 left-1/2 transition-all duration-250 ease-linear">
-                    <LuEye />
+                    <Eye />
                   </div>
                   <Image
                     src={post.coverImage}
@@ -93,7 +94,7 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
             <ProgressBarLink href="/blog">
               <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
                 <span>✨ See More Posts</span>
-                <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+                <ArrowRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
               </AnimatedShinyText>
             </ProgressBarLink>
           </div>

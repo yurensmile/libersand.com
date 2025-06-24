@@ -1,14 +1,23 @@
-import { Swords } from "lucide-react";
-import { MdOutlineDevices } from "react-icons/md";
-import { IoSchoolOutline } from "react-icons/io5";
-import { Paperclip } from "lucide-react";
 import {
   BriefcaseIcon,
   GraduationCapIcon,
   AwardIcon,
   CalendarIcon,
   MapPin,
+  Paperclip,
+  Swords,
 } from "lucide-react";
+
+import { IoSchoolOutline } from "@react-icons/all-files/io5/IoSchoolOutline";
+import { FaAws } from "@react-icons/all-files/fa/FaAws";
+import { FaReact } from "@react-icons/all-files/fa/FaReact";
+import { MdAttachment } from "@react-icons/all-files/md/MdAttachment";
+import { DiRedis } from "@react-icons/all-files/di/DiRedis";
+import { SiLatex } from "@react-icons/all-files/si/SiLatex";
+import { SiKubernetes } from "@react-icons/all-files/si/SiKubernetes";
+import { SiPostman } from "@react-icons/all-files/si/SiPostman";
+
+import { MdOutlineDevices } from "react-icons/md";
 import {
   LuGithub,
   LuPencil,
@@ -17,18 +26,17 @@ import {
   LuMail,
   LuMapPin,
   LuZap,
+  LuEye,
 } from "react-icons/lu";
 import { PiMediumLogoBold } from "react-icons/pi";
 import { FaXTwitter } from "react-icons/fa6";
-import { MdAttachment } from "react-icons/md";
-import { GoalIcon } from "@primer/octicons-react";
-import { FaReact, FaAws } from "react-icons/fa";
+
+import { GoalIcon, ArrowRightIcon } from "@primer/octicons-react";
 import { AiOutlinePython } from "react-icons/ai";
 import { RiJavaLine, RiJavascriptLine } from "react-icons/ri";
-import { SiLatex, SiFastapi, SiKubernetes, SiPostman } from "react-icons/si";
+import { SiFastapi } from "react-icons/si";
 import { BiLogoFlask } from "react-icons/bi";
 import { VscTerminalLinux, VscAzure } from "react-icons/vsc";
-import { DiRedis } from "react-icons/di";
 import {
   TbBrandCpp,
   TbBrandTypescript,
@@ -89,6 +97,8 @@ export enum ICON_NAMES {
   ASTRO = "astro",
   TERRAFORM = "terraform",
   ZAP = "zap",
+  EYE_LU = "eye-lu",
+  ARROW_RIGHT = "arrow-right",
 }
 
 export const icons: Record<ICON_NAMES, VCardIconType> = {
@@ -135,6 +145,8 @@ export const icons: Record<ICON_NAMES, VCardIconType> = {
   [ICON_NAMES.ASTRO]: TbBrandAstro,
   [ICON_NAMES.TERRAFORM]: TbBrandTerraform,
   [ICON_NAMES.ZAP]: LuZap,
+  [ICON_NAMES.EYE_LU]: LuEye,
+  [ICON_NAMES.ARROW_RIGHT]: ArrowRightIcon,
 };
 
 // Updated return type to include undefined

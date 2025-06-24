@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import createGlobe from "cobe";
 import { useSpring } from "react-spring";
-import { LuMapPin } from "react-icons/lu";
+import { getIcon, ICON_NAMES } from "@/components/icons";
 
 function AutoRotatingGlobe() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -73,10 +73,12 @@ function AutoRotatingGlobe() {
     };
   }, [r]);
 
+  const Map = getIcon(ICON_NAMES.MAP_PIN_LU);
+
   return (
     <div className="absolute inset-x-0 bottom-[-190px] mx-auto aspect-square h-[388px] [@media(max-width:420px)]:bottom-[-140px] [@media(max-width:420px)]:h-[320px] [@media(min-width:768px)_and_(max-width:858px)]:h-[380px]">
       <div className="flex items-center gap-2 text-white-2 mt-4 ml-4">
-        <LuMapPin size={24} />
+        <Map size={24} />
         <h2 className="text-sm font-light">Taipei, Taiwan (UTC +08:00)</h2>
       </div>
       <div
