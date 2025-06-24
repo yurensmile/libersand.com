@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "motion/react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@1chooo/ui/lib/utils";
 
 /**
  *

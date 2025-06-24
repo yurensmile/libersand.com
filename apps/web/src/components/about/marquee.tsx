@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@1chooo/ui/lib/utils";
 import { range } from "@/lib/range";
 
 type MarqueeProps = {

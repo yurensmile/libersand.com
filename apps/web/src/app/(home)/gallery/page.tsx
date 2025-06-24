@@ -5,7 +5,7 @@ import AnimatedGradientText from "@/components/magicui/animated-gradient-text";
 import ArticleTitle from "@/components/article-title";
 import config from "@/config";
 import { ChevronRight } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "@1chooo/ui/lib/utils";
 
 const { title } = config;
 

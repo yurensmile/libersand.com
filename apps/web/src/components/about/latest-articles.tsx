@@ -13,7 +13,7 @@ import { getIcon, ICON_NAMES } from "@/components/icons";
 
 import { BlogPost } from "@/types/blog";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@1chooo/ui/lib/utils";
 
 import "@/styles/about/latest-posts.css";
 
