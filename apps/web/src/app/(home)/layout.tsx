@@ -13,7 +13,17 @@ import {
   VercelAnalytic
 } from "@/components/analytics";
 
-import config from "@/config";
+import {
+  about,
+  avatar,
+  status,
+  navigationLinks,
+  jsonLdPerson,
+  homeMetaData,
+  socialLinks,
+  contacts,
+  analytics,
+} from "@/config";
 
 import type { JsonLdHtml } from "@/types/json-ld";
 
@@ -35,22 +45,8 @@ const robotoMono = Roboto_Mono({
   preload: false,
 });
 
-const {
-  googleAnalyticId,
-  googleTagManagerId,
-  about,
-  avatar,
-  status,
-  navigationLinks,
-  jsonLdPerson,
-  homeMetaData,
-  socialLinks,
-  contacts,
-  analytics,
-} = config;
-
-const { firstName, lastName, middleName, preferredName } = about;
-const { umamiWebsiteId, umamiUrl } = analytics;
+const { firstName, lastName, middleName, preferredName, } = about;
+const { googleAnalyticId, googleTagManagerId, umamiWebsiteId, umamiUrl, } = analytics;
 
 export const metadata: Metadata = homeMetaData;
 
