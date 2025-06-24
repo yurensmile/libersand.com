@@ -400,6 +400,14 @@ I'm an incoming student at [University of Southern California](https://usc.edu) 
   googleAnalyticId: process.env.NEXT_PUBLIC_GA_ID || "",
   googleTagManagerId: process.env.NEXT_PUBLIC_GTM_ID || "",
   web3formsAccessKey: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "",
+  umamiWebsiteId: process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID || "",
+  umamiUrl: process.env.NEXT_PUBLIC_UMAMI_URL || "",
+  analytics: {
+    googleAnalyticId: process.env.NEXT_PUBLIC_GA_ID || "",
+    googleTagManagerId: process.env.NEXT_PUBLIC_GTM_ID || "",
+    umamiWebsiteId: process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID || "",
+    umamiUrl: process.env.NEXT_PUBLIC_UMAMI_URL || "",
+  }
 };
 
 export default config;

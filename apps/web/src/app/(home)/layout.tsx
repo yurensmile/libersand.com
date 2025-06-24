@@ -46,9 +46,11 @@ const {
   homeMetaData,
   socialLinks,
   contacts,
+  analytics,
 } = config;
 
 const { firstName, lastName, middleName, preferredName } = about;
+const { umamiWebsiteId, umamiUrl } = analytics;
 
 export const metadata: Metadata = homeMetaData;
 
@@ -89,7 +91,7 @@ function HomeLayout({ children }: { readonly children: React.ReactNode }) {
             key="1chooo-website-jsonld"
           />
           <VercelAnalytic />
-          <UmamiAnalytic />
+          <UmamiAnalytic umamiWebsiteId={umamiWebsiteId} umamiUrl={umamiUrl} />
           <GoogleAnalytic googleAnalyticId={googleAnalyticId} googleTagManagerId={googleTagManagerId} />
         </body>
       </html>
