@@ -82,7 +82,7 @@ importers:
         specifier: ^19.15.1
         version: 19.15.2(react@19.1.0)
       '@react-icons/all-files':
-        specifier: ^4.1.0
+        specifier: 4.1.0
         version: 4.1.0(react@19.1.0)
       '@rehype-pretty/transformers':
         specifier: ^0.13.2
@@ -136,7 +136,7 @@ importers:
         specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
       react-icons:
-        specifier: ^5.4.0
+        specifier: 5.5.0
         version: 5.5.0(react@19.1.0)
       react-loading-skeleton:
         specifier: ^3.5.0
