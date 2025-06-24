@@ -3,7 +3,6 @@
 import React, { useRef } from "react";
 import { sendGTMEvent } from "@next/third-parties/google";
 
-import AboutSection from "@/components/section/about";
 import { BlurFade } from "@/components/magicui/blur-fade";
 
 import { Send } from "lucide-react";
@@ -42,51 +41,50 @@ function TalkToHugo({ web3formsAccessKey }: TalkToHugoProps) {
     }
   };
   return (
-    <AboutSection id="talk-to-hugo" title="Talk To Hugo">
-      <BlurFade inView delay={0.4} direction="up">
-        <form onSubmit={onSubmit} className="form">
-          <div className="input-wrapper">
-            <input
-              type="text"
-              name="Full Name"
-              className="form-input"
-              placeholder="Full name"
-              required
-            />
-            <input
-              type="email"
-              name="Email"
-              className="form-input"
-              placeholder="Email address"
-              required
-            />
-          </div>
-          <textarea
-            name="Message"
+
+    <BlurFade inView delay={0.4} direction="up">
+      <form onSubmit={onSubmit} className="form">
+        <div className="input-wrapper">
+          <input
+            type="text"
+            name="Full Name"
             className="form-input"
-            placeholder="Your Message"
+            placeholder="Full name"
             required
-            ref={inputRef}
-          ></textarea>
-          <button
-            className="form-btn"
-            type="submit"
-            disabled={result === "Sending...."}
-          >
-            <Send />
-            <span>
-              {result === ""
-                ? "Send Message"
-                : result === "Sending...."
-                  ? "Sending..."
-                  : result === "Form Submitted Successfully"
-                    ? "Message Sent!"
-                    : result}
-            </span>
-          </button>
-        </form>
-      </BlurFade>
-    </AboutSection>
+          />
+          <input
+            type="email"
+            name="Email"
+            className="form-input"
+            placeholder="Email address"
+            required
+          />
+        </div>
+        <textarea
+          name="Message"
+          className="form-input"
+          placeholder="Your Message"
+          required
+          ref={inputRef}
+        ></textarea>
+        <button
+          className="form-btn"
+          type="submit"
+          disabled={result === "Sending...."}
+        >
+          <Send />
+          <span>
+            {result === ""
+              ? "Send Message"
+              : result === "Sending...."
+                ? "Sending..."
+                : result === "Form Submitted Successfully"
+                  ? "Message Sent!"
+                  : result}
+          </span>
+        </button>
+      </form>
+    </BlurFade>
   );
 }
 

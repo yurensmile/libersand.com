@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 import Image from "next/image";
 
-import AboutSection from "@/components/section/about";
 import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
 import StaggeredAnimationSection from "@/components/staggered-animation-section";
@@ -51,7 +50,7 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
   const ArrowRight = getIcon(ICON_NAMES.ARROW_RIGHT);
 
   return (
-    <AboutSection id="latest-articles" title="Latest Articles">
+    <>
       <StaggeredAnimationSection>
         <div className="latest-post-list">
           {visiblePosts.map((post) => (
@@ -100,6 +99,6 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
           </div>
         </div>
       </BlurFade>
-    </AboutSection>
+    </>
   );
 }
