@@ -35,7 +35,6 @@
     "@1chooo/activity-calendar": "workspace:*",
     "@1chooo/github-calendar": "workspace:*",
     "@1chooo/ui": "workspace:*",
-    "@heroicons/react": "^2.2.0",
     "@next/bundle-analyzer": "15.3.4",
     "@next/third-parties": "15.3.4",
     "@primer/octicons-react": "^19.15.1",
