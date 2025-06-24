@@ -16,18 +16,18 @@ function mapPostsToSitemap(
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  let blogs = await getBlogPosts();
-  let blogMaps = mapPostsToSitemap(blogs, "post");
+  const posts = await getBlogPosts();
+  const postMaps = mapPostsToSitemap(posts, "post");
 
-  let portfolios = await getPortfolioPosts();
-  let portfolioMaps = mapPostsToSitemap(portfolios, "portfolio");
+  const portfolios = await getPortfolioPosts();
+  const portfolioMaps = mapPostsToSitemap(portfolios, "portfolio");
 
-  let routes = ["", "/resume", "/portfolio", "/post", "/gallery"].map(
+  const routes = ["", "/resume", "/portfolio", "/post", "/gallery", "/blog"].map(
     (route) => ({
       url: `${siteURL}${route}`,
       lastModified: new Date().toISOString().split("T")[0],
     }),
   );
 
-  return [...routes, ...blogMaps, ...portfolioMaps];
+  return [...routes, ...postMaps, ...portfolioMaps];
 }
