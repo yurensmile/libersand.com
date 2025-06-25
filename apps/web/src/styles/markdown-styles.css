@@ -88,13 +88,13 @@
   height: calc(.25em);
 }
 
-.image-with-caption {
+.markdown .image-with-caption {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
   text-align: center;
 }
 
-.image-with-caption img {
+.markdown .image-with-caption img {
   max-width: 100%;
   height: auto;
   display: block;
@@ -108,7 +108,7 @@
   max-height: 200px;
 }
 
-.image-caption {
+.markdown .image-caption {
   margin-top: 0.75rem;
   font-size: 0.875rem;
   color: var(--light-gray-70);
@@ -118,50 +118,50 @@
 }
 
 /* Alternative styling options */
-.image-caption.small {
+.markdown .image-caption.small {
   font-size: 0.75rem;
 }
 
-.image-caption.bold {
+.markdown .image-caption.bold {
   font-weight: 600;
   font-style: normal;
 }
 
-[data-highlighted-line] {
+.markdown [data-highlighted-line] {
   background: rgba(200, 200, 255, 0.1);
   @apply border-l-blue-400;
 }
 
-[data-highlighted-chars] {
+.markdown [data-highlighted-chars] {
   @apply bg-zinc-600/50 rounded;
   box-shadow: 0 0 0 4px rgb(82 82 91 / 0.5);
 }
 
-[data-chars-id] {
+.markdown [data-chars-id] {
   @apply shadow-none p-1 border-b-2;
 }
 
-[data-chars-id] span {
+.markdown [data-chars-id] span {
   @apply !text-inherit;
 }
 
-[data-chars-id='v'] {
+.markdown [data-chars-id='v'] {
   @apply !text-pink-300 bg-rose-800/50 border-b-pink-600 font-bold;
 }
 
-[data-chars-id='s'] {
+.markdown [data-chars-id='s'] {
   @apply !text-yellow-300 bg-yellow-800/50 border-b-yellow-600 font-bold;
 }
 
-[data-chars-id='i'] {
+.markdown [data-chars-id='i'] {
   @apply !text-purple-200 bg-purple-800/50 border-b-purple-600 font-bold;
 }
 
-code[data-line-numbers] {
+.markdown code[data-line-numbers] {
   counter-reset: line;
 }
 
-code[data-line-numbers]>[data-line]::before {
+.markdown code[data-line-numbers]>[data-line]::before {
   counter-increment: line;
   content: counter(line);
 
@@ -172,38 +172,38 @@ code[data-line-numbers]>[data-line]::before {
   color: gray;
 }
 
-code[data-line-numbers-max-digits="2"]>[data-line]::before {
+.markdown code[data-line-numbers-max-digits="2"]>[data-line]::before {
   width: 1.25rem;
 }
 
-code[data-line-numbers-max-digits="3"]>[data-line]::before {
+.markdown code[data-line-numbers-max-digits="3"]>[data-line]::before {
   width: 1.75rem;
 }
 
-code[data-line-numbers-max-digits="4"]>[data-line]::before {
+.markdown code[data-line-numbers-max-digits="4"]>[data-line]::before {
   width: 2.25rem;
 }
 
 @media (min-width: 640px) {
-  .image-with-caption img {
+  .markdown .image-with-caption img {
     max-height: 400px;
   }
 }
 
 @media (min-width: 768px) {
-  .image-with-caption img {
+  .markdown .image-with-caption img {
     max-height: 400px;
   }
 }
 
 @media (min-width: 1024px) {
-  .image-with-caption img {
+  .markdown .image-with-caption img {
     max-height: 400px;
   }
 }
 
 @media (min-width: 1200px) {
-  .image-with-caption img {
+  .markdown .image-with-caption img {
     max-height: 400px;
   }
 }
