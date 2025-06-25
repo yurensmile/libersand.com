@@ -3,24 +3,28 @@ import ResumeCard from "@/components/resume/resume-card";
 
 import type { ResumeCardType } from "@/types/resume";
 
+import { cn } from "@1chooo/ui/lib/utils";
+
 interface ResumeTimeLineProps {
   icon: string;
   title: string;
   resumeCards: ResumeCardType[];
 }
 
+import resumeTimelineStyles from "@/styles/resume/timeline.module.css";
+
 function ResumeTimeLine({ icon, title, resumeCards }: ResumeTimeLineProps) {
   return (
-    <div className="timeline">
+    <div className={cn(resumeTimelineStyles["timelines"])}>
       <div className="flex items-center gap-4 mb-6">
         <IconBox iconName={icon} />
         <h3 className="text-white-2 text-2xl font-bold">{title}</h3>
       </div>
 
-      <ol className="timeline-list">
+      <ol className={cn(resumeTimelineStyles["timeline"])}>
         {resumeCards.map((resumeCard: ResumeCardType, index: number) => (
           <li
-            className="timeline-item"
+            className={cn(resumeTimelineStyles["timeline-cards"])}
             key={`${resumeCard.institution}-${index}`}
           >
             <ResumeCard resumeCard={resumeCard} />

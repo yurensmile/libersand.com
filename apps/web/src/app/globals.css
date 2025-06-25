@@ -422,70 +422,15 @@ main {
   #RESUME
 \*-----------------------------------*/
 
-.timeline {
-  margin-bottom: 30px;
-}
-
-.timeline .title-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 25px;
-}
-
-.timeline-list {
-  font-size: var(--fs-6);
-  margin-left: 45px;
-}
-
 .relevant-courses-list {
   font-size: var(--fs-6);
   margin-left: 25px;
 }
 
-.timeline-item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.timeline-item:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-
 .relevant-courses-list span {
   color: var(--vegas-gold);
   font-weight: var(--fw-400);
   line-height: 1.6;
-}
-
-/* .timeline-list span {
-  color: var(--vegas-gold);
-  font-weight: var(--fw-400);
-  line-height: 1.6;
-} */
-
-.timeline-item:not(:last-child)::before {
-  content: "";
-  position: absolute;
-  top: -25px;
-  left: -30px;
-  width: 1px;
-  height: calc(100% + 50px);
-  background: var(--jet);
-}
-
-.timeline-item::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: -33px;
-  height: 6px;
-  width: 6px;
-  background: var(--text-gradient-yellow);
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px var(--jet);
 }
 
 .content-highlight-yellow {
@@ -496,16 +441,6 @@ main {
 .code-highlight-yellow {
   color: var(--orange-yellow-crayola);
   display: inline;
-}
-
-.timeline-list p span {
-  float: right;
-  color: var(--white-1);
-}
-
-.timeline-list h4 span {
-  float: right;
-  color: var(--white-1);
 }
 
 /*-----------------------------------*\
@@ -925,20 +860,6 @@ textarea.form-input::-webkit-resizer {
 
   .relevant-courses-list {
     margin-left: 25px;
-  }
-
-  .timeline-list {
-    margin-left: 65px;
-  }
-
-  .timeline-item:not(:last-child)::before {
-    left: -40px;
-  }
-
-  .timeline-item::after {
-    height: 8px;
-    width: 8px;
-    left: -43px;
   }
 
   /**

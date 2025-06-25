@@ -106,7 +106,7 @@ export default function ResumeCard({ resumeCard }: ResumeCardProps) {
 
   return (
     <>
-      <section
+      <button
         className="hover:scale-105 duration-300"
         onClick={() => openModal(resumeCard)}
       >
@@ -150,7 +150,7 @@ export default function ResumeCard({ resumeCard }: ResumeCardProps) {
             </div>
           </div>
         </div>
-      </section>
+      </button>
 
       {/* Modal */}
       {activeResumeCard && (
