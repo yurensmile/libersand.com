@@ -17,7 +17,7 @@
     z-index: -1;
 }
 
-.resume-card-modal-container {
+.modalContainer {
     position: fixed;
     top: 0;
     left: 0;
@@ -33,16 +33,16 @@
     visibility: hidden;
 }
 
-.resume-card-modal-container::-webkit-scrollbar {
+.modalContainer::-webkit-scrollbar {
     display: none;
 }
 
-.resume-card-modal-container.active {
+.modalContainerActive {
     pointer-events: all;
     visibility: visible;
 }
 
-.resume-card-overlay {
+.modalOverlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -56,13 +56,13 @@
     transition: var(--transition-1);
 }
 
-.resume-card-overlay.active {
+.modalOverlayActive {
     opacity: 0.8;
     visibility: visible;
     pointer-events: all;
 }
 
-.resume-card-modal {
+.modal {
     background: var(--eerie-black-2);
     position: relative;
     padding: 15px;
@@ -76,12 +76,12 @@
     z-index: 2;
 }
 
-.resume-card-modal-container.active .resume-card-modal {
+.modalContainerActive .modal {
     transform: scale(1);
     opacity: 1;
 }
 
-.resume-card-modal-close-btn {
+.modal-close-btn {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -97,28 +97,28 @@
     opacity: 0.7;
 }
 
-.resume-card-modal-close-btn:hover,
-.resume-card-modal-close-btn:focus {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
     opacity: 1;
 }
 
-.resume-card-modal-avatar-box {
+.modal-avatar-box {
     width: max-content;
     border-radius: 14px;
     margin-bottom: 15px;
     box-shadow: var(--shadow-2);
 }
 
-.resume-card-modal-img-wrapper>img {
+.modal-img-wrapper>img {
     display: none;
 }
 
 @media (min-width: 580px) {
-    .resume-card-modal-container {
+    .modalContainer {
         padding: 20px;
     }
 
-    .resume-card-modal {
+    .modal {
         display: flex;
         justify-content: flex-start;
         align-items: stretch;
@@ -127,22 +127,22 @@
         border-radius: 20px;
     }
 
-    .resume-card-modal-img-wrapper {
+    .modal-img-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .resume-card-modal-avatar-box {
+    .modal-avatar-box {
         border-radius: 18px;
         margin-bottom: 0;
     }
 
-    .resume-card-modal-avatar {
+    .modal-avatar {
         width: 65px;
     }
 
-    .resume-card-modal-img-wrapper>img {
+    .modal-img-wrapper>img {
         display: block;
         flex-grow: 1;
         width: 35px;
@@ -150,12 +150,12 @@
 }
 
 @media (min-width: 768px) {
-    .resume-card-modal {
+    .modal {
         gap: 35px;
         max-width: 680px;
     }
 
-    .resume-card-modal-avatar {
+    .modal-avatar {
         width: 80px;
     }
 }
