@@ -11,7 +11,9 @@ import Balancer from "react-wrap-balancer";
 import config from "@/config";
 import type { BlogPost } from "@/types/blog";
 
-import "@/styles/blog.css";
+import blogStyles from "@/styles/blog.module.css";
+
+import { cn } from "@1chooo/ui/lib/utils";
 
 const { title } = config;
 
@@ -26,34 +28,39 @@ export default function Blog() {
   return (
     <article>
       <ArticleTitle title="Hugo's Blog" />
-      <section className="blog-posts">
-        <ul className="blog-posts-list">
+      <section className={cn(blogStyles["blog"])}>
+        <ul className={cn(blogStyles["posts"])}>
           {allPosts.map((post: BlogPost) => (
-            <li key={post.slug} className="blog-post-item">
+            <li className={cn(blogStyles["post"])} key={post.slug}>
               <ViewTransitionsProgressBarLink
                 href={`/blog/${post.slug}`}
                 rel="noopener noreferrer"
               >
-                <figure className="blog-banner-box">
+                <figure className={cn(blogStyles["banner-box"])}>
                   <Image
                     src={post.coverImage || "/placeholder.svg"}
                     alt={post.title || "Blog post image"}
-                    width={1600}
-                    height={900}
+                    width={1200}
+                    height={675}
                     priority={false}
                     placeholder="blur"
                     loading="eager"
                     blurDataURL="https://docs.1chooo.com/images/cover-with-1chooo-com.png"
                   />
                 </figure>
-                <div className="blog-content">
-                  <div className="blog-meta">
-                    <p className="blog-category">{post.category.toUpperCase()}</p>
-                    <h3 className="blog-item-title">
+                <div className={cn(blogStyles["content"])}>
+                  <div className={cn(blogStyles["meta"])}>
+                    <p className={cn(blogStyles["category"])}>
+                      {post.category.toUpperCase()}
+                    </p>
+                    <h3 className={cn(blogStyles["title"])}>
                       <Balancer>{post.title}</Balancer>
                     </h3>
                   </div>
-                  <time className="blog-time" dateTime={post.publishedAt}>
+                  <time
+                    className={cn(blogStyles["date"])}
+                    dateTime={post.publishedAt}
+                  >
                     {new Date(post.publishedAt).toLocaleDateString("en-us", {
                       month: "long",
                       day: "numeric",
