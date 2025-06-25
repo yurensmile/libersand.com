@@ -14,7 +14,7 @@ import { BlogPost } from "@/types/blog";
 
 import { cn } from "@1chooo/ui/lib/utils";
 
-import "@/styles/about/latest-posts.css";
+import latestArticlesStyles from "@/styles/about/latest-articles.module.css";
 
 interface LatestArticlesProps {
   posts: BlogPost[];
@@ -52,22 +52,22 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
   return (
     <>
       <StaggeredAnimationSection>
-        <div className="latest-post-list">
+        <ul className={cn(latestArticlesStyles["latest-posts"])}>
           {visiblePosts.map((post) => (
-            <div key={post.slug} className="latest-post-item group active">
+            <li key={post.slug} className={cn(latestArticlesStyles["latest-post"], "group active")}>
               <ViewTransitionsProgressBarLink
                 href={`/blog/${post.slug}`}
                 rel="noopener noreferrer"
               >
-                <figure className="latest-post-img">
-                  <div className="absolute latest-post-item-icon-box text-orange-yellow-crayola text-xl bg-jet p-[18px] rounded-xl top-1/2 left-1/2 transition-all duration-250 ease-linear">
+                <figure className={cn(latestArticlesStyles["latest-post-img"])}>
+                  <div className={cn(latestArticlesStyles["latest-post-icon-box"], "absolute text-orange-yellow-crayola text-xl bg-jet p-[18px] rounded-xl top-1/2 left-1/2 transition-all duration-250 ease-linear")}>
                     <Eye />
                   </div>
                   <Image
                     src={post.coverImage}
                     alt={post.excerpt || "Blog post image"}
-                    width={1600}
-                    height={900}
+                    width={1200}
+                    height={675}
                     priority
                     quality={50}
                     placeholder="empty"
@@ -78,9 +78,9 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
                   {post.title}
                 </h3>
               </ViewTransitionsProgressBarLink>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </StaggeredAnimationSection>
 
       <BlurFade inView delay={0.4} direction="up">
