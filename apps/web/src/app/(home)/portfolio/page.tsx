@@ -4,7 +4,7 @@ import FilterSelectBox from "@/components/filter/filter-select-box";
 import FilterList from "@/components/filter/filter-list";
 import MarkdownRenderer from "@/components/markdown/markdown-renderer";
 import Pagination from "@/components/pagination";
-import { ProgressBarLink } from "@/components/progress-bar";
+import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 import { getPortfolioPosts } from "@/lib/db/v1/portfolio";
 import config from "@/config";
 import { LuEye } from "react-icons/lu";
@@ -74,7 +74,7 @@ export default async function Portfolio({
               className="project-item active"
               data-category={post.metadata.category}
             >
-              <ProgressBarLink
+              <ViewTransitionsProgressBarLink
                 href={`/portfolio/${post.slug}`}
                 rel="noopener noreferrer"
               >
@@ -98,7 +98,7 @@ export default async function Portfolio({
                   <MarkdownRenderer content={post.metadata.title} />
                 </h3>
                 <p className="project-category">{post.metadata.category}</p>
-              </ProgressBarLink>
+              </ViewTransitionsProgressBarLink>
             </li>
           ))}
         </ul>

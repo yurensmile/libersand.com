@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { MdExpandMore } from "react-icons/md";
-import { ProgressBarLink } from "@/components/progress-bar";
+
+import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 
 interface FilterSelectBoxProps {
   path: string;
@@ -37,11 +38,11 @@ function FilterSelectBox({
                   setIsSelectActive(false);
                 }}
               >
-                <ProgressBarLink
+                <ViewTransitionsProgressBarLink
                   href={`${path}?tag=${encodeURIComponent(tag)}`}
                 >
                   {tag}
-                </ProgressBarLink>
+                </ViewTransitionsProgressBarLink>
               </button>
             </li>
           ))}

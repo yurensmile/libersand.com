@@ -1,5 +1,6 @@
 import React from "react";
-import { ProgressBarLink } from "@/components/progress-bar";
+
+import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 
 interface FilterListProps {
   path: string;
@@ -12,12 +13,12 @@ function FilterList({ path, selectedTag, blogTags }: FilterListProps) {
     <ul className="filter-list">
       {blogTags.map((tag, index) => (
         <li className="filter-item" key={index}>
-          <ProgressBarLink
+          <ViewTransitionsProgressBarLink
             href={`/${path}?tag=${encodeURIComponent(tag)}`}
             className={`filter-btn ${selectedTag === tag ? "active" : ""}`}
           >
             {tag}
-          </ProgressBarLink>
+          </ViewTransitionsProgressBarLink>
         </li>
       ))}
     </ul>

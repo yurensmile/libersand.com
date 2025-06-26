@@ -1,4 +1,4 @@
-import { ProgressBarLink } from "@/components/progress-bar";
+import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 
 interface PaginationProps {
   currentPage: number;
@@ -16,7 +16,7 @@ function Pagination({
   return (
     <div className="flex justify-center mt-5">
       {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
-        <ProgressBarLink
+        <ViewTransitionsProgressBarLink
           key={pageNum}
           href={{
             pathname: basePath,
@@ -32,7 +32,7 @@ function Pagination({
           }}
         >
           {pageNum}
-        </ProgressBarLink>
+        </ViewTransitionsProgressBarLink>
       ))}
     </div>
   );

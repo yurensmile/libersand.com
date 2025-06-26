@@ -7,7 +7,7 @@ import FilterSelectBox from "@/components/filter/filter-select-box";
 import FilterList from "@/components/filter/filter-list";
 import MarkdownRenderer from "@/components/markdown/markdown-renderer";
 import Pagination from "@/components/pagination";
-import { ProgressBarLink } from "@/components/progress-bar";
+import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 import { POSTS_PER_PAGE } from "@/lib/constants";
 import { getBlogPosts } from "@/lib/db/v1/post";
 import config from "@/config";
@@ -65,7 +65,7 @@ async function BlogPosts({ searchParams }: { searchParams: BlogQueryParams }) {
             className="blog-post-item active"
             data-category={post.metadata.category}
           >
-            <ProgressBarLink
+            <ViewTransitionsProgressBarLink
               href={`/post/${post.slug}`}
               rel="noopener noreferrer"
             >
@@ -106,7 +106,7 @@ async function BlogPosts({ searchParams }: { searchParams: BlogQueryParams }) {
                   content={post.metadata.summary}
                 />
               </div>
-            </ProgressBarLink>
+            </ViewTransitionsProgressBarLink>
           </li>
         ))}
       </ul>

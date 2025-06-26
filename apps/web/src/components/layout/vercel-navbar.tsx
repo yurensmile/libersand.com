@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { usePathname } from "next/navigation";
 
-import { ProgressBarLink } from "@/components/progress-bar";
+import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 import { BlurFade } from "@/components/magicui/blur-fade";
 
 import type { NavigationLink } from "@/types/nav-bar";
@@ -49,7 +49,7 @@ export const VercelNavBar = ({ navigationLinks }: VercelNavBarProps) => {
                 color: isActive(item.path) ? "#FFF" : "#888888",
               }}
             >
-              <ProgressBarLink
+              <ViewTransitionsProgressBarLink
                 href={item.path}
                 className="text-sm md:text-base lg:text-base"
               >
@@ -77,7 +77,7 @@ export const VercelNavBar = ({ navigationLinks }: VercelNavBarProps) => {
                     className="absolute bottom-0 left-0 right-0 w-full h-0.5 bg-white"
                   />
                 )}
-              </ProgressBarLink>
+              </ViewTransitionsProgressBarLink>
             </button>
           ))}
         </ul>

@@ -2,8 +2,9 @@
 
 import React from "react";
 import { usePathname } from "next/navigation";
-import { ProgressBarLink } from "@/components/progress-bar";
+import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 import { BlurFade } from "@/components/magicui/blur-fade";
+
 import type { NavigationLink } from "@/types/nav-bar";
 
 import "@/styles/nav-bar.css";
@@ -28,12 +29,12 @@ function HomeHeader({ navigationLinks }: HomeHeaderProps) {
         <ul className="navbar-list">
           {navigationLinks.map((item) => (
             <li className="navbar-item" key={item.path}>
-              <ProgressBarLink
+              <ViewTransitionsProgressBarLink
                 href={item.path}
                 className={`navbar-link text-light-gray ${isActive(item.path) ? "active" : ""}`}
               >
                 {item.label}
-              </ProgressBarLink>
+              </ViewTransitionsProgressBarLink>
             </li>
           ))}
         </ul>

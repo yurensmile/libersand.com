@@ -1,6 +1,7 @@
 import React from "react";
 import { sendGTMEvent } from "@next/third-parties/google";
-import { ProgressBarLink } from "@/components/progress-bar";
+import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
+
 import type { VCardIconType } from "@/types/config";
 
 interface SeeMoreButtonProps {
@@ -13,7 +14,7 @@ interface SeeMoreButtonProps {
 function SeeMoreButton({ badge, path, icon: Icon }: SeeMoreButtonProps) {
   return (
     <div className="flex justify-center">
-      <ProgressBarLink href={path}>
+      <ViewTransitionsProgressBarLink href={path}>
         <button
           className="hover:scale-105 active:scale-95 rounded-xl shadow-lg bg-border-gradient-onyx hover:bg-orange-yellow-crayola-dark z-0 cursor-pointer text-orange-yellow-crayola px-5 py-3 font-bold"
           onClick={() =>
@@ -26,7 +27,7 @@ function SeeMoreButton({ badge, path, icon: Icon }: SeeMoreButtonProps) {
           <span>{badge}</span>
           <Icon className="ml-2 group-hover:ml-2 group-hover:scale-110" />
         </button>
-      </ProgressBarLink>
+      </ViewTransitionsProgressBarLink>
     </div>
   );
 }
