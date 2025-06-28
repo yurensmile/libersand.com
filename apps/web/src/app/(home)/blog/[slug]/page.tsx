@@ -11,7 +11,7 @@ import ArticleTitle from "@/components/article-title";
 import Comments from "@/components/comments";
 
 import { getBlogPosts, getBlogPostBySlug } from "@/lib/api/blog";
-import markdownToHtml from "@/lib/markdownToHtml";
+import markdownToHtml from "@/lib/markdown-to-html";
 
 import config from "@/config";
 

@@ -1,6 +1,6 @@
 import ArticleTitle from "@/components/article-title";
 import AnimatedSection from "@/components/animated-section";
-import markdownToHtml from "@/lib/markdownToHtml";
+import markdownToHtml from "@/lib/markdown-to-html";
 
 import { cn } from "@1chooo/ui/lib/utils";
 

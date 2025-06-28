@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import ArticleTitle from "@/components/article-title";
 import { LatestArticles } from "@/components/about/latest-articles";
 
-import markdownToHtml from "@/lib/markdownToHtml";
+import markdownToHtml from "@/lib/markdown-to-html";
 import { getBlogPosts } from "@/lib/api/blog";
 
 import config from "@/config";
