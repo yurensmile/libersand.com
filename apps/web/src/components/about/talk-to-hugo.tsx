@@ -41,7 +41,6 @@ function TalkToHugo({ web3formsAccessKey }: TalkToHugoProps) {
     }
   };
   return (
-
     <BlurFade inView delay={0.4} direction="up">
       <form onSubmit={onSubmit} className="form">
         <div className="input-wrapper">

@@ -45,8 +45,9 @@ const {
   analytics,
 } = config;
 
-const { firstName, lastName, middleName, preferredName, } = about;
-const { googleAnalyticId, googleTagManagerId, umamiWebsiteId, umamiUrl, } = analytics;
+const { firstName, lastName, middleName, preferredName } = about;
+const { googleAnalyticId, googleTagManagerId, umamiWebsiteId, umamiUrl } =
+  analytics;
 
 export const metadata: Metadata = homeMetaData;
 
@@ -88,7 +89,10 @@ function ArchiveLayout({ children }: { readonly children: React.ReactNode }) {
           />
           <VercelAnalytic />
           <UmamiAnalytic umamiWebsiteId={umamiWebsiteId} umamiUrl={umamiUrl} />
-          <GoogleAnalytic googleAnalyticId={googleAnalyticId} googleTagManagerId={googleTagManagerId} />
+          <GoogleAnalytic
+            googleAnalyticId={googleAnalyticId}
+            googleTagManagerId={googleTagManagerId}
+          />
         </body>
       </html>
     </ViewTransitions>

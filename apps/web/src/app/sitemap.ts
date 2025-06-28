@@ -22,12 +22,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const portfolios = await getPortfolioPosts();
   const portfolioMaps = mapPostsToSitemap(portfolios, "portfolio");
 
-  const routes = ["", "/resume", "/portfolio", "/post", "/gallery", "/blog"].map(
-    (route) => ({
-      url: `${siteURL}${route}`,
-      lastModified: new Date().toISOString().split("T")[0],
-    }),
-  );
+  const routes = [
+    "",
+    "/resume",
+    "/portfolio",
+    "/post",
+    "/gallery",
+    "/blog",
+  ].map((route) => ({
+    url: `${siteURL}${route}`,
+    lastModified: new Date().toISOString().split("T")[0],
+  }));
 
   return [...routes, ...postMaps, ...portfolioMaps];
 }

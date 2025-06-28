@@ -157,7 +157,7 @@ export default function ResumeCard({ resumeCard }: ResumeCardProps) {
         <div
           className={cn(
             resumeCardStyles.modalContainer,
-            activeResumeCard && resumeCardStyles.modalContainerActive
+            activeResumeCard && resumeCardStyles.modalContainerActive,
           )}
           aria-modal="true"
           role="dialog"
@@ -165,7 +165,7 @@ export default function ResumeCard({ resumeCard }: ResumeCardProps) {
           <div
             className={cn(
               resumeCardStyles.modalOverlay,
-              activeResumeCard && resumeCardStyles.modalOverlayActive
+              activeResumeCard && resumeCardStyles.modalOverlayActive,
             )}
             onClick={closeModal}
           ></div>

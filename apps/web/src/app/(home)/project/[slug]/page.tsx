@@ -31,7 +31,10 @@ export default async function Post(props: Params) {
   return (
     <div>
       <article>
-        <ViewTransitionsProgressBarLink href="/project" rel="noopener noreferrer">
+        <ViewTransitionsProgressBarLink
+          href="/project"
+          rel="noopener noreferrer"
+        >
           <ArticleTitle
             className="text-light-gray hover:text-light-gray-70"
             title="← Back to Project"
@@ -69,7 +72,6 @@ export default async function Post(props: Params) {
     </div>
   );
 }
-
 
 export async function generateMetadata(props: Params): Promise<Metadata> {
   const params = await props.params;

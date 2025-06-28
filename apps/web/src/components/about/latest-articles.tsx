@@ -54,13 +54,24 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
       <StaggeredAnimationSection>
         <ul className={cn(latestArticlesStyles["latest-posts"])}>
           {visiblePosts.map((post) => (
-            <li key={post.slug} className={cn(latestArticlesStyles["latest-post"], "group active")}>
+            <li
+              key={post.slug}
+              className={cn(
+                latestArticlesStyles["latest-post"],
+                "group active",
+              )}
+            >
               <ViewTransitionsProgressBarLink
                 href={`/blog/${post.slug}`}
                 rel="noopener noreferrer"
               >
                 <figure className={cn(latestArticlesStyles["latest-post-img"])}>
-                  <div className={cn(latestArticlesStyles["latest-post-icon-box"], "absolute text-orange-yellow-crayola text-xl bg-jet p-[18px] rounded-xl top-1/2 left-1/2 transition-all duration-250 ease-linear")}>
+                  <div
+                    className={cn(
+                      latestArticlesStyles["latest-post-icon-box"],
+                      "absolute text-orange-yellow-crayola text-xl bg-jet p-[18px] rounded-xl top-1/2 left-1/2 transition-all duration-250 ease-linear",
+                    )}
+                  >
                     <Eye />
                   </div>
                   <Image

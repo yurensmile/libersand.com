@@ -10,12 +10,9 @@ import {
 
 import { IoSchoolOutline } from "react-icons/io5";
 import { DiRedis } from "react-icons/di";
-import { FaAws, FaReact } from "react-icons/fa"
+import { FaAws, FaReact } from "react-icons/fa";
 
-import {
-  MdOutlineDevices,
-  MdAttachment,
-} from "react-icons/md";
+import { MdOutlineDevices, MdAttachment } from "react-icons/md";
 import {
   LuGithub,
   LuPencil,

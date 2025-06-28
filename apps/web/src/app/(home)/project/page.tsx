@@ -52,12 +52,8 @@ export default function Project() {
                     blurDataURL="https://docs.1chooo.com/images/cover-with-1chooo-com.png"
                   />
                 </figure>
-                <h3 className={cn(projectStyles["title"])}>
-                  {post.title}
-                </h3>
-                <p className={cn(projectStyles["category"])}>
-                  {post.category}
-                </p>
+                <h3 className={cn(projectStyles["title"])}>{post.title}</h3>
+                <p className={cn(projectStyles["category"])}>{post.category}</p>
               </ViewTransitionsProgressBarLink>
             </li>
           ))}

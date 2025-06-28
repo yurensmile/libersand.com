@@ -52,7 +52,11 @@ async function About() {
         )}
       </AnimatedSection>
 
-      {allPosts.length > 0 && <AboutSection id="latest-articles" title="Latest Articles"><LatestArticles posts={allPosts} /></AboutSection>}
+      {allPosts.length > 0 && (
+        <AboutSection id="latest-articles" title="Latest Articles">
+          <LatestArticles posts={allPosts} />
+        </AboutSection>
+      )}
       <AboutSection id="coding-stats" title="Coding Stats">
         <CodingStats techStacks={techStacks} githubUsername={githubUsername} />
       </AboutSection>

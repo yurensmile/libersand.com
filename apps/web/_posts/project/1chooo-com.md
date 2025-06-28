@@ -14,7 +14,7 @@ ogImage:
   url: "/images/banner/projects/1chooo-com.webp"
 lastModifiedAt: "2025-01-02"
 summary: "👨🏻‍💻 $ ls -al Hugo -- A Turborepo of my personal website and blog built using React and Next.js, and Nextra (V3), fully responsive across all devices"
-tags: 
+tags:
   - Next.js
   - React
   - Turbo
@@ -80,12 +80,12 @@ $ npm run dev   # Open http://localhost:3000 with your browser to see the result
 ## 📲 Contact Info
 
 > **Hugo ChunHo Lin**
-> 
->   📩 E-mail: <a href="mailto:hugo@1chooo.com">hugo@1chooo.com</a>
+>
+> 📩 E-mail: <a href="mailto:hugo@1chooo.com">hugo@1chooo.com</a>
 > <br />
->   🧳 Linkedin: <a href="https://www.linkedin.com/in/1chooo/">Hugo ChunHo Lin</a>
+> 🧳 Linkedin: <a href="https://www.linkedin.com/in/1chooo/">Hugo ChunHo Lin</a>
 > <br />
->   👨🏻‍💻 GitHub: <a href="https://github.com/1chooo">1chooo</a>
+> 👨🏻‍💻 GitHub: <a href="https://github.com/1chooo">1chooo</a>
 
 ## 🪪 License
 
@@ -107,4 +107,3 @@ Please remove all of my personal information by running `npm run delete`.
 Made with 🖤 by [@1chooo][1chooo-com]
 
 [1chooo-com]: https://1chooo.com
-

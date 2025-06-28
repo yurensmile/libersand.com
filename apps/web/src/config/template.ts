@@ -407,7 +407,7 @@ I'm an incoming student at [University of Southern California](https://usc.edu) 
     googleTagManagerId: process.env.NEXT_PUBLIC_GTM_ID || "",
     umamiWebsiteId: process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID || "",
     umamiUrl: process.env.NEXT_PUBLIC_UMAMI_URL || "",
-  }
+  },
 };
 
 export default config;

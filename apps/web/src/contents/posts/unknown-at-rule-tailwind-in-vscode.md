@@ -35,7 +35,6 @@ To address this, simply install the [`PostCSS Language Support`](https://marketp
 ### How to Install PostCSS Language Support
 
 1. Open the extension marketplace in VSCode.
-
    - **Shortcut**: Press `Ctrl/Command + Shift + X`.
    - **Manual Navigation**: Click the Extensions icon on the left toolbar.
 
