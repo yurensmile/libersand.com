@@ -9,6 +9,8 @@ import { getPortfolioPosts } from "@/lib/db/v1/portfolio";
 import config from "@/config";
 import { LuEye } from "react-icons/lu";
 
+import "@/styles/deprecated/portfolio.css"; // Import portfolio styles
+
 const { title } = config;
 const POSTS_PER_PAGE = 9;
 
@@ -56,7 +58,7 @@ export default async function Portfolio({
   return (
     <article>
       <ArticleTitle title="Hugo's Portfolio" />
-      <section className="projects">
+      <section>
         <FilterList
           path="portfolio"
           selectedTag={selectedTag}
