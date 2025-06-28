@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from 'next'
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { LuFacebook, LuTwitter } from "react-icons/lu";
@@ -10,7 +10,6 @@ import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 import ArticleTitle from "@/components/article-title";
 import Comments from "@/components/comments";
 
-import { CMS_NAME } from "@/lib/constants";
 import { getBlogPosts, getBlogPostBySlug } from "@/lib/api/blog";
 import markdownToHtml from "@/lib/markdownToHtml";
 
@@ -21,6 +20,12 @@ import { cn } from "@1chooo/ui/lib/utils";
 import "@/styles/markdown-styles.css";
 
 const { giscusConfig } = config;
+
+type Params = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
 
 export default async function Post(props: Params) {
   const params = await props.params;
@@ -101,13 +106,10 @@ export default async function Post(props: Params) {
   );
 }
 
-type Params = {
-  params: Promise<{
-    slug: string;
-  }>;
-};
-
-export async function generateMetadata(props: Params): Promise<Metadata> {
+export async function generateMetadata(
+  props: Params,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
   const params = await props.params;
   const post = getBlogPostBySlug(params.slug);
 
@@ -115,13 +117,18 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     return notFound();
   }
 
-  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
+  const title = `${post.title}`;
+
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || []
 
   return {
     title,
+    description: post.excerpt || config.description,
+    keywords: post.tags || config.keywords,
     openGraph: {
       title,
-      images: [post.ogImage.url],
+      images: [post.ogImage.url, ...previousImages],
     },
   };
 }
