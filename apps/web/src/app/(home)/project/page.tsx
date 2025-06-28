@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 
 import ArticleTitle from "@/components/article-title";
 import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
@@ -11,11 +12,9 @@ import { LuEye } from "react-icons/lu";
 
 import projectStyles from "@/styles/project.module.css";
 
-const { title } = config;
-
-export const metadata = {
-  title: `Project | ${title}`,
-  description: "Read my thoughts on software development, design, and more.",
+export const metadata: Metadata = {
+  title: `Project | ${config.title}`,
+  description: config.description,
 };
 
 export default function Project() {

@@ -15,11 +15,9 @@ import blogStyles from "@/styles/blog.module.css";
 
 import { cn } from "@1chooo/ui/lib/utils";
 
-const { title } = config;
-
 export const metadata: Metadata = {
-  title: `Blog | ${title}`,
-  description: "Read my thoughts on software development, design, and more.",
+  title: `Blog | ${config.title}`,
+  description: config.description,
 };
 
 export default function Blog() {
