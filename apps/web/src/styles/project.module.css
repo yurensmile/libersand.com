@@ -13,7 +13,7 @@
   display: none;
 }
 
-.project .card.active {
+.project .cardActive {
   display: block;
   animation: scaleUp 0.25s ease forwards;
 }
@@ -27,11 +27,11 @@
   width: 100%;
 }
 
-.project .card>a:hover .banner-box::before {
+.project .card:has(> a:hover) .bannerBox::before {
   background: hsla(0, 0%, 0%, 0.5);
 }
 
-.project .icon-box {
+.project .iconBox {
   --scale: 0.8;
 
   background: var(--jet);
@@ -48,7 +48,7 @@
   transition: var(--transition-1);
 }
 
-.project .card>a:hover .icon-box {
+.project .card>a:hover .iconBox {
   --scale: 1;
   opacity: 1;
 }
@@ -57,16 +57,16 @@
   transform: scale(1.1);
 }
 
-.project .banner-box {
+.project .bannerBox {
   position: relative;
   width: 100%;
-  height: 200px;
+  aspect-ratio: 16 / 9;
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 15px;
 }
 
-.project .banner-box::before {
+.project .bannerBox::before {
   content: "";
   position: absolute;
   top: 0;
@@ -78,7 +78,7 @@
   transition: var(--transition-1);
 }
 
-.project .banner-box img {
+.project .bannerBox img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -87,7 +87,7 @@
 
 .project .title,
 .project .category {
-  margin-left: 10px;
+  margin-inline-start: 10px;
 }
 
 .project .title {
@@ -104,19 +104,19 @@
 }
 
 @media (min-width: 375px) {
- .project .banner-box {
+  .project .bannerBox {
     height: auto;
   }
 }
 
 @media (min-width: 450px) {
-  .project .banner-box {
+  .project .bannerBox {
     height: auto;
   }
 }
 
 @media (min-width: 580px) {
-  .project .banner-box {
+  .project .bannerBox {
     border-radius: 16px;
   }
 }

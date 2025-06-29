@@ -24,24 +24,24 @@ export default function Project() {
     <article>
       <ArticleTitle title="Hugo's Project" />
 
-      <section className={cn(projectStyles["project"])}>
-        <ul className={cn(projectStyles["cards"])}>
+      <section className={cn(projectStyles.project)}>
+        <ul className={cn(projectStyles.cards)}>
           {projects.map((post) => (
             <li
               key={post.slug}
-              className={cn(projectStyles["card"], projectStyles["active"])}
+              className={cn(projectStyles.card, projectStyles.cardActive)}
               data-category={post.category}
             >
               <ViewTransitionsProgressBarLink
                 href={`/project/${post.slug}`}
                 rel="noopener noreferrer"
               >
-                <figure className={cn(projectStyles["banner-box"])}>
-                  <div className={cn(projectStyles["icon-box"])}>
+                <figure className={cn(projectStyles.bannerBox)}>
+                  <div className={cn(projectStyles.iconBox)}>
                     <LuEye />
                   </div>
                   <Image
-                    src={post.coverImage}
+                    src={post.coverImage || "https://docs.1chooo.com/images/cover-with-1chooo-com.png"}
                     alt={post.title || "Portfolio post image"}
                     width={480}
                     height={270}
@@ -52,8 +52,8 @@ export default function Project() {
                     blurDataURL="https://docs.1chooo.com/images/cover-with-1chooo-com.png"
                   />
                 </figure>
-                <h3 className={cn(projectStyles["title"])}>{post.title}</h3>
-                <p className={cn(projectStyles["category"])}>{post.category}</p>
+                <h3 className={cn(projectStyles.title)}>{post.title}</h3>
+                <p className={cn(projectStyles.category)}>{post.category}</p>
               </ViewTransitionsProgressBarLink>
             </li>
           ))}
