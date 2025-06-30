@@ -30,7 +30,7 @@ interface ProgressContextType {
 const ProgressBarContext = createContext<ProgressContextType | null>(null);
 
 export function useProgressBar() {
-  let progress = useContext(ProgressBarContext);
+  const progress = useContext(ProgressBarContext);
 
   if (progress === null) {
     throw new Error("Need to be inside provider");
@@ -45,8 +45,8 @@ interface ProgressBarProps {
 }
 
 export function ProgressBar({ className, children }: ProgressBarProps) {
-  let progress = useProgress();
-  let width = useMotionTemplate`${progress.value}%`;
+  const progress = useProgress();
+  const width = useMotionTemplate`${progress.value}%`;
 
   return (
     <ProgressBarContext.Provider value={progress}>
@@ -66,11 +66,11 @@ export function ProgressBar({ className, children }: ProgressBarProps) {
 
 interface ProgressBarLinkProps {
   href:
-    | string
-    | {
-        pathname: string;
-        query?: Record<string, string>;
-      };
+  | string
+  | {
+    pathname: string;
+    query?: Record<string, string>;
+  };
   children: React.ReactNode;
   className?: string;
   [key: string]: any;
@@ -81,10 +81,10 @@ export function ProgressBarLink({
   children,
   ...props
 }: ProgressBarLinkProps) {
-  let progress = useProgressBar();
-  let router = useRouter();
+  const progress = useProgressBar();
+  const router = useRouter();
 
-  let handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     progress.start();
 
@@ -92,8 +92,8 @@ export function ProgressBarLink({
     if (typeof href === "string") {
       url = href;
     } else if (typeof href === "object" && href !== null) {
-      let { pathname, query } = href;
-      let searchParams = new URLSearchParams(query || {}).toString();
+      const { pathname, query } = href;
+      const searchParams = new URLSearchParams(query || {}).toString();
       url = `${pathname}${searchParams ? `?${searchParams}` : ""}`;
     } else {
       console.error("Invalid href prop");
@@ -118,10 +118,10 @@ export function ViewTransitionsProgressBarLink({
   children,
   ...props
 }: ProgressBarLinkProps) {
-  let progress = useProgressBar();
-  let router = useRouter();
+  const progress = useProgressBar();
+  const router = useRouter();
 
-  let handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     progress.start();
 
@@ -129,8 +129,8 @@ export function ViewTransitionsProgressBarLink({
     if (typeof href === "string") {
       url = href;
     } else if (typeof href === "object" && href !== null) {
-      let { pathname, query } = href;
-      let searchParams = new URLSearchParams(query || {}).toString();
+      const { pathname, query } = href;
+      const searchParams = new URLSearchParams(query || {}).toString();
       url = `${pathname}${searchParams ? `?${searchParams}` : ""}`;
     } else {
       console.error("Invalid href prop");
@@ -196,7 +196,7 @@ function useProgress() {
     "initial" | "in-progress" | "completing" | "complete"
   >("initial");
 
-  let value = useSpring(0, {
+  const value = useSpring(0, {
     damping: 25,
     mass: 0.5,
     stiffness: 300,
@@ -210,7 +210,7 @@ function useProgress() {
         value.jump(0);
       }
 
-      let current = value.get();
+      const current = value.get();
 
       let diff;
       if (current === 0) {
@@ -276,7 +276,7 @@ function useInterval(callback: () => void, delay: number | null) {
     if (delay !== null) {
       tick();
 
-      let id = setInterval(tick, delay);
+      const id = setInterval(tick, delay);
       return () => clearInterval(id);
     }
   }, [delay]);
