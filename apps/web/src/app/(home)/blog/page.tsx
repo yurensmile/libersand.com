@@ -15,22 +15,31 @@ import { cn } from "@1chooo/ui/lib/utils";
 
 import classes from "@/styles/blog.module.css";
 
-export const metadata: Metadata = {
-  title: `Blog | ${config.title}`,
-  description: config.description,
-};
+interface CategoryPageProps {
+  params: Promise<{ category: string }>;
+}
 
-function getAllCategories(posts: BlogPost[]): Record<string, number> {
-  const allCategories: Record<string, number> = Object.create(null);
+export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
+  const { category } = await params;
+  const categoryName = decodeURIComponent(category);
+
+  return {
+    title: `${categoryName} | Blog | ${config.title}`,
+    description: `Blog posts about ${categoryName}`,
+  };
+}
+
+function getCategories(posts: BlogPost[]): Record<string, number> {
+  const categories: Record<string, number> = Object.create(null);
 
   for (const post of posts) {
     const category = post.category;
 
-    allCategories[category] ??= 0;
-    allCategories[category] += 1;
+    categories[category] ??= 0;
+    categories[category] += 1;
   }
 
-  return allCategories;
+  return categories;
 }
 
 export default async function Blog() {
@@ -43,7 +52,7 @@ export default async function Blog() {
     allPosts = [];
   }
 
-  const categories = getAllCategories(allPosts);
+  const categories = getCategories(allPosts);
   const blogCategories = Object.keys(categories);
 
   return (

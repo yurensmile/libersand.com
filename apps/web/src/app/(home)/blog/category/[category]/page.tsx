@@ -20,17 +20,17 @@ interface CategoryPageProps {
   params: Promise<{ category: string }>;
 }
 
-function getAllCategories(posts: BlogPost[]): Record<string, number> {
-  const allCategories: Record<string, number> = Object.create(null);
+function getCategories(posts: BlogPost[]): Record<string, number> {
+  const categories: Record<string, number> = Object.create(null);
 
   for (const post of posts) {
     const category = post.category;
 
-    allCategories[category] ??= 0;
-    allCategories[category] += 1;
+    categories[category] ??= 0;
+    categories[category] += 1;
   }
 
-  return allCategories;
+  return categories;
 }
 
 function filterPostsByCategory(posts: BlogPost[], selectedCategory: string): BlogPost[] {
@@ -52,13 +52,13 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 export async function generateStaticParams() {
   try {
     const allPosts = await getBlogPosts();
-    const categories = getAllCategories(allPosts);
+    const categories = getCategories(allPosts);
 
     return Object.keys(categories).map((category) => ({
       category: category.toLowerCase(),
     }));
   } catch (error) {
-    console.error('Failed to generate static params:', error);
+    console.error("Failed to generate static params:", error);
     return [];
   }
 }
@@ -70,24 +70,23 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   try {
     allPosts = await getBlogPosts();
   } catch (error) {
-    console.error('Failed to load blog posts:', error);
+    console.error("Failed to load blog posts:", error);
     allPosts = [];
   }
 
   const categoryParam = decodeURIComponent(category);
   const filteredPosts = filterPostsByCategory(allPosts, categoryParam);
 
-  // 如果找不到該分類的文章，顯示 404
   if (filteredPosts.length === 0) {
     notFound();
   }
 
-  const categories = getAllCategories(allPosts);
+  const categories = getCategories(allPosts);
   const blogCategories = Object.keys(categories);
 
   return (
     <article>
-      <PageTitle title={`Hugo's Blog`} />
+      <PageTitle title="Hugo's Blog" />
 
       <section className={cn(classes.blog)}>
         <ul className={classes.filters}>
