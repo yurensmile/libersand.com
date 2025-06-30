@@ -336,24 +336,6 @@ main {
   min-width: 259px;
 }
 
-.article-title {
-  font-weight: var(--fw-600);
-  position: relative;
-  padding-bottom: 7px;
-  margin-bottom: 30px;
-}
-
-.article-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 30px;
-  height: 3px;
-  background: var(--text-gradient-yellow);
-  border-radius: 3px;
-}
-
 /*-----------------------------------*\
   #SIDEBAR
 \*-----------------------------------*/
@@ -765,16 +747,6 @@ textarea.form-input::-webkit-resizer {
     --fs-6: 16px;
     padding: 16px 20px;
   }
-
-  .article-title {
-    font-weight: var(--fw-600);
-    padding-bottom: 15px;
-  }
-
-  .article-title::after {
-    width: 40px;
-    height: 5px;
-  }
 }
 
 /**
@@ -861,10 +833,6 @@ textarea.form-input::-webkit-resizer {
   .form-btn {
     width: max-content;
     margin-left: auto;
-  }
-
-  .article-title {
-    padding-bottom: 20px;
   }
 }
 

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 
-import ArticleTitle from "@/components/article-title";
+import PageTitle from "@/components/page-title";
 import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 
 import { getProjects } from "@/lib/api/project";
@@ -22,7 +22,7 @@ export default function Project() {
 
   return (
     <article>
-      <ArticleTitle title="Hugo's Project" />
+      <PageTitle title="Hugo's Project" />
 
       <section className={cn(projectStyles.project)}>
         <ul className={cn(projectStyles.cards)}>

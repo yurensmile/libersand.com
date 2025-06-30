@@ -2,7 +2,7 @@
 
 import { useReportWebVitals } from "next/web-vitals";
 import { useState } from "react";
-import ArticleTitle from "@/components/article-title";
+import PageTitle from "@/components/page-title";
 import {
   Activity,
   Zap,
@@ -116,7 +116,7 @@ export default function WebVitalsDashboard() {
 
   return (
     <article>
-      <ArticleTitle title="Web Vitals Dashboard" />
+      <PageTitle title="Web Vitals Dashboard" />
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8 text-center">

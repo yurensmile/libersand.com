@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-import ArticleTitle from "@/components/article-title";
+import PageTitle from "@/components/page-title";
 import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 
 import { getBlogPosts } from "@/lib/api/blog";
@@ -25,7 +25,7 @@ export default function Blog() {
 
   return (
     <article>
-      <ArticleTitle title="Hugo's Blog" />
+      <PageTitle title="Hugo's Blog" />
       <section className={cn(blogStyles.blog)}>
         <ul className={cn(blogStyles.cards)}>
           {allPosts.map((post: BlogPost) => (

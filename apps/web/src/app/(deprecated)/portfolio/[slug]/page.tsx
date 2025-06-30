@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { unstable_noStore as noStore } from "next/cache";
 import MarkdownRenderer from "@/components/markdown/markdown-renderer";
-import ArticleTitle from "@/components/article-title";
+import PageTitle from "@/components/page-title";
 import { getPortfolioPosts } from "@/lib/db/v1/portfolio";
 
 import "@/styles/blog/blog-text.css";
@@ -116,7 +116,7 @@ export default async function Portfolio(props: { params: tParams }) {
     <div>
       <article>
         <section className="blog-text">
-          <ArticleTitle title="Hugo's Portfolio" />
+          <PageTitle title="Hugo's Portfolio" />
           <h1 className="title font-semibold text-2xl font-text-2xl tracking-tighter max-w-[650px]">
             <MarkdownRenderer content={post.metadata.title} />
           </h1>

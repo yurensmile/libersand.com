@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import { X } from "lucide-react";
-import ArticleTitle from "@/components/article-title";
+import PageTitle from "@/components/page-title";
 
 type Tag = {
   id: string;
@@ -50,7 +50,7 @@ export default function App() {
 
   return (
     <article>
-      <ArticleTitle title="Tag Selection Interaction" />
+      <PageTitle title="Tag Selection Interaction" />
 
       <main className="relative w-full min-h-screen flex items-start md:items-center justify-center px-4 py-10">
         <div className="p-6 max-w-lg w-full flex flex-col">

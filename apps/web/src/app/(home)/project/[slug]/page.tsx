@@ -4,7 +4,7 @@ import type { Metadata, ResolvingMetadata } from 'next'
 import { notFound } from "next/navigation";
 
 import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
-import ArticleTitle from "@/components/article-title";
+import PageTitle from "@/components/page-title";
 
 import Balancer from "react-wrap-balancer";
 
@@ -40,7 +40,7 @@ export default async function Post(props: Params) {
           href="/project"
           rel="noopener noreferrer"
         >
-          <ArticleTitle
+          <PageTitle
             className="text-light-gray hover:text-light-gray-70"
             title="← Back to Project"
           />

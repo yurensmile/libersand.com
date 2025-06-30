@@ -1,10 +1,10 @@
 import { MarkdownAlert, Highlight } from "@/components/markdown-alert";
-import ArticleTitle from "@/components/article-title";
+import PageTitle from "@/components/page-title";
 
 export default function MarkdownCookbook() {
   return (
     <article>
-      <ArticleTitle title={"Markdown Cookbook"} />
+      <PageTitle title={"Markdown Cookbook"} />
       <div className="min-h-screen p-8">
         <div className="max-w-4xl mx-auto space-y-6">
           <MarkdownAlert type="tip">

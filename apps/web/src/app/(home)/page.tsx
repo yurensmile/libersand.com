@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
-import ArticleTitle from "@/components/article-title";
+import PageTitle from "@/components/page-title";
 import { LatestArticles } from "@/components/about/latest-articles";
 
 import markdownToHtml from "@/lib/markdown-to-html";
@@ -41,7 +41,7 @@ async function About() {
   return (
     <article>
       <AnimatedSection id="about">
-        <ArticleTitle title={title} />
+        <PageTitle title={title} />
       </AnimatedSection>
       <AnimatedSection>
         {processedIntroduction && (

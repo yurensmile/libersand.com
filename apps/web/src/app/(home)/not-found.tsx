@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 
-import ArticleTitle from "@/components/article-title";
+import PageTitle from "@/components/page-title";
 import config from "@/config";
 import { Home, ArrowLeft } from "lucide-react";
 
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 function NotFound() {
   return (
     <article>
-      <ArticleTitle title="Page Not Found!" />
+      <PageTitle title="Page Not Found!" />
 
       <div className="flex flex-col items-center justify-center px-4 py-12">
         <div className="w-full max-w-3xl mx-auto text-center">

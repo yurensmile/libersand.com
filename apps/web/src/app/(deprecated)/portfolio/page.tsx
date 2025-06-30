@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ArticleTitle from "@/components/article-title";
+import PageTitle from "@/components/page-title";
 import FilterSelectBox from "@/components/filter/filter-select-box";
 import FilterList from "@/components/filter/filter-list";
 import MarkdownRenderer from "@/components/markdown/markdown-renderer";
@@ -57,7 +57,7 @@ export default async function Portfolio({
 
   return (
     <article>
-      <ArticleTitle title="Hugo's Portfolio" />
+      <PageTitle title="Hugo's Portfolio" />
       <section>
         <FilterList
           path="portfolio"
