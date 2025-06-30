@@ -20,7 +20,7 @@ const config: Config = {
   navigationLinks: [
     { path: "/", label: "About" },
     { path: "/resume", label: "Resume" },
-    { path: "/portfolio", label: "Portfolio" },
+    { path: "/project", label: "Project" },
     { path: "/blog", label: "Blog" },
   ],
   contacts: [
@@ -408,6 +408,15 @@ I'm an incoming student at [University of Southern California](https://usc.edu) 
     umamiWebsiteId: process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID || "",
     umamiUrl: process.env.NEXT_PUBLIC_UMAMI_URL || "",
   },
+  robots: {
+    rules: [
+      {
+        userAgent: "*",
+      },
+    ],
+    sitemap: "https://1chooo.com/sitemap.xml",
+    host: "https://1chooo.com",
+  }
 };
 
 export default config;

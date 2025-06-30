@@ -5,7 +5,7 @@ import type { GiscusProps } from "@giscus/react";
 import type { IconType as ReactIconType } from "react-icons";
 import type { Icon as OcticonsType } from "@primer/octicons-react";
 import type { Person } from "@/types/json-ld";
-import type { Metadata } from "next";
+import type { Metadata, MetadataRoute } from "next";
 import type { Resumes } from "@/types/resume";
 
 export type VCardIconType = ReactIconType | OcticonsType | string;
@@ -73,6 +73,10 @@ export type Config = {
   umamiWebsiteId: string;
   umamiUrl: string;
   analytics: Analytics;
+  /**
+ * @see https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots#generate-a-robots-file
+ */
+  robots: MetadataRoute.Robots;
 };
 
 type AnalyticPlatforms = "google-analytics" | "vercel" | "umami";
