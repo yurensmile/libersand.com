@@ -10,7 +10,7 @@ import { cn } from "@1chooo/ui/lib/utils";
 import config from "@/config";
 import { LuEye } from "react-icons/lu";
 
-import projectStyles from "@/styles/project.module.css";
+import classes from "@/styles/project.module.css";
 
 export const metadata: Metadata = {
   title: `Project | ${config.title}`,
@@ -24,20 +24,20 @@ export default function Project() {
     <article>
       <PageTitle title="Hugo's Project" />
 
-      <section className={cn(projectStyles.project)}>
-        <ul className={cn(projectStyles.cards)}>
+      <section className={cn(classes.project)}>
+        <ul className={cn(classes.cards)}>
           {projects.map((post) => (
             <li
               key={post.slug}
-              className={cn(projectStyles.card, projectStyles.cardActive)}
+              className={cn(classes.card, classes.cardActive)}
               data-category={post.category}
             >
               <ViewTransitionsProgressBarLink
                 href={`/project/${post.slug}`}
                 rel="noopener noreferrer"
               >
-                <figure className={cn(projectStyles.bannerBox)}>
-                  <div className={cn(projectStyles.iconBox)}>
+                <figure className={cn(classes.bannerBox)}>
+                  <div className={cn(classes.iconBox)}>
                     <LuEye />
                   </div>
                   <Image
@@ -52,8 +52,8 @@ export default function Project() {
                     blurDataURL="https://docs.1chooo.com/images/cover-with-1chooo-com.png"
                   />
                 </figure>
-                <h3 className={cn(projectStyles.title)}>{post.title}</h3>
-                <p className={cn(projectStyles.category)}>{post.category}</p>
+                <h3 className={cn(classes.title)}>{post.title}</h3>
+                <p className={cn(classes.category)}>{post.category}</p>
               </ViewTransitionsProgressBarLink>
             </li>
           ))}

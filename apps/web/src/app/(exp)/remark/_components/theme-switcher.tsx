@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./switch.module.css";
+import classes from "./switch.module.css";
 import { memo, useEffect, useState } from "react";
 
 declare global {
@@ -86,7 +86,7 @@ const Switch = () => {
   return (
     <button
       suppressHydrationWarning
-      className={styles.switch}
+      className={classes.switch}
       onClick={handleModeSwitch}
     />
   );

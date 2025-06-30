@@ -2,7 +2,7 @@ import React from "react";
 
 import { BlurFade } from "@/components/magicui/blur-fade";
 
-import styles from "@/styles/about-section.module.css";
+import classes from "@/styles/about-section.module.css";
 
 interface AboutSectionProps {
   id?: string;
@@ -12,9 +12,9 @@ interface AboutSectionProps {
 
 function AboutSection({ id, title, children }: AboutSectionProps) {
   return (
-    <section id={id} className={styles.section}>
+    <section id={id} className={classes.section}>
       <BlurFade inView delay={0.4} direction="down">
-        <h2 className={styles.title}>{title}</h2>
+        <h2 className={classes.title}>{title}</h2>
       </BlurFade>
       {children}
     </section>
