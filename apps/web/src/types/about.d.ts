@@ -1,7 +1,3 @@
-// https://github.com/afiiif/pokemon-world/blob/main/src/types/pokemon.ts
-
-import type { VCardIconType } from "@/types/config";
-
 export type LifeStyle = {
   icon: string;
   title: string;
