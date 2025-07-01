@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { BlogPost } from "@/types/blog";
+import Link from "next/link";
 
 import "@/styles/about/coding-stats.css";
 
@@ -44,18 +45,18 @@ export default function PostsLoop({ count, posts }: BlogPostsProps) {
           className="coding-item relative rounded-2xl shadow-shadow-2 bg-gradient-onyx before:absolute before:content-[''] before:rounded-2xl group cursor-pointer"
           onClick={() => handlePostClick(post.link)}
         >
-          <div className="shadow-feature-card dark:shadow-feature-card-dark flex flex-col gap-2 overflow-hidden rounded-xl p-2 relative z-30 duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1">
+          <div className="shadow-feature-card dark:shadow-feature-card-dark flex flex-col gap-1 overflow-hidden relative z-30 duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1">
             <h2 className="flex items-center mb-3">
-              <a
+              <Link
                 href={post.link}
-                className="text-base font-bold leading-tight tracking-tight sm:text-lg dark:text-neutral-100"
+                className="text-base font-bold leading-tight tracking-tight sm:text-lg text-white-1"
                 onClick={(e) => {
                   e.preventDefault();
                   handlePostClick(post.link);
                 }}
               >
                 {post.title}
-              </a>
+              </Link>
               <svg
                 className="group-hover:translate-x-0 flex-shrink-0 translate-y-0.5 -translate-x-1 w-2.5 h-2.5 stroke-current ml-1 transition-all ease-in-out duration-200 transform text-light-gray"
                 viewBox="0 0 13 15"
@@ -94,10 +95,10 @@ export default function PostsLoop({ count, posts }: BlogPostsProps) {
                 </g>
               </svg>
             </h2>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
+            <p className="text-sm text-light-gray-70">
               <span>{post.excerpt}</span>
             </p>
-            <div className="mt-2.5 text-xs font-medium text-neutral-800 dark:text-neutral-300">
+            <div className="mt-2.5 text-xs font-medium text-light-gray">
               Posted on {post.publishedAt}
             </div>
           </div>
