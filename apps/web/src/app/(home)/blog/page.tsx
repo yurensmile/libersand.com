@@ -15,17 +15,10 @@ import { cn } from "@1chooo/ui/lib/utils";
 
 import classes from "@/styles/blog.module.css";
 
-interface CategoryPageProps {
-  params: Promise<{ category: string }>;
-}
-
-export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
-  const { category } = await params;
-  const categoryName = decodeURIComponent(category);
-
+export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: `${categoryName} | Blog | ${config.title}`,
-    description: `Blog posts about ${categoryName}`,
+    title: `Blog | ${config.title}`,
+    description: config.description,
   };
 }
 
