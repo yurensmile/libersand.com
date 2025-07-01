@@ -16,7 +16,7 @@ import { cn } from "@1chooo/ui/lib/utils";
 
 import classes from "@/styles/blog.module.css";
 
-interface CategoryPageProps {
+interface BlogCategoryProps {
   params: Promise<{ category: string }>;
 }
 
@@ -39,7 +39,7 @@ function filterPostsByCategory(posts: BlogPost[], selectedCategory: string): Blo
   });
 }
 
-export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: BlogCategoryProps): Promise<Metadata> {
   const { category } = await params;
   const categoryName = decodeURIComponent(category);
 
@@ -63,7 +63,7 @@ export async function generateStaticParams() {
   }
 }
 
-export default async function CategoryPage({ params }: CategoryPageProps) {
+export default async function BlogCategory({ params }: BlogCategoryProps) {
   const { category } = await params;
   let allPosts: BlogPost[];
 

@@ -14,11 +14,11 @@ import { LuEye } from "react-icons/lu";
 import classes from "@/styles/project.module.css";
 import { ProjectPost } from "@/types/project";
 
-interface CategoryPageProps {
+interface ProjectCategoryProps {
   params: Promise<{ category: string }>;
 }
 
-export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: ProjectCategoryProps): Promise<Metadata> {
   const { category } = await params;
   const categoryName = decodeURIComponent(category);
 
@@ -62,7 +62,7 @@ function filterProjectsByCategory(posts: ProjectPost[], selectedCategory: string
   });
 }
 
-export default async function CategoryPage({ params }: CategoryPageProps) {
+export default async function ProjectCategory({ params }: ProjectCategoryProps) {
   const { category } = await params;
   let projects: ProjectPost[];
 
