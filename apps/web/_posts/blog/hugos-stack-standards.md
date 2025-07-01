@@ -1,16 +1,18 @@
 ---
-title: "Hugo's Go-To Stack for Building Maintainable Software"
-excerpt: "Here's a quick summary of my go-to tech stack for software development. My experience comes from being highly active on GitHub, with over 5,000 contributions in 2024. Additionally, I'll share insights on writing maintainable, clean, and scalable code."
+title: "Hugo's Stack & Standards"
+excerpt: "5,000+ contributions in 2024 — here's my stack and standards for clean, scalable code."
 coverImage: "/images/banner/posts/hugo-s-go-to-stack-for-building-maintainable-software.webp"
 date: "2025-01-09"
 author:
   name: 1chooo
   avatar: "https://github.com/1chooo.png"
+  website: "https://1chooo.com"
+  github: "https://github.com/1chooo"
 ogImage:
   url: "/images/banner/posts/hugo-s-go-to-stack-for-building-maintainable-software.webp"
 publishedAt: "2025-01-09"
 lastModifiedAt: "2025-01-09"
-category: "Software Development"
+category: "Software"
 tags:
   - React
   - Web Development
