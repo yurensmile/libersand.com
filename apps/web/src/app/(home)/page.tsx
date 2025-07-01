@@ -5,6 +5,9 @@ import PageTitle from "@/components/page-title";
 import markdownToHtml from "@/lib/markdown-to-html";
 import { getBlogPosts } from "@/lib/api/blog";
 import { MyWritings } from "@/components/about/my-writings";
+import GitHubCalendar from "@1chooo/github-calendar";
+import { ThemeInput } from "@1chooo/activity-calendar/types";
+import { BlurFade } from "@/components/magicui/blur-fade";
 
 import config from "@/config";
 
@@ -27,6 +30,10 @@ const {
 
 async function About() {
   const allPosts = getBlogPosts();
+  const yellowTheme: ThemeInput = {
+    light: ["#EBEBEB", "#FFDA6B"],
+    dark: ["#383838", "#FFDA6B"],
+  };
 
   let title = preferredName
     ? `About ${preferredName} 👨🏻‍💻`
@@ -50,8 +57,27 @@ async function About() {
         )}
       </AnimatedSection>
 
-      <AboutSection id="my-writings">
-        <MyWritings count={3} posts={allPosts} githubUsername={githubUsername} />
+      <AboutSection id="github-calendar">
+        <BlurFade inView delay={0.4} direction="up">
+          <section id="github-calendar" className="text-light-gray">
+            {githubUsername && (
+              <GitHubCalendar
+                username={githubUsername}
+                blockSize={12}
+                blockMargin={4}
+                colorScheme="dark"
+                blockRadius={2}
+                fontSize={14}
+                style={{ fontWeight: "bold" }}
+                theme={yellowTheme}
+              />
+            )}
+          </section>
+        </BlurFade>
+      </AboutSection>
+
+      <AboutSection id="my-writings" title="My Writings">
+        <MyWritings count={3} posts={allPosts} />
       </AboutSection>
 
       <AboutSection id="talk-to-hugo" title="Talk To Hugo">

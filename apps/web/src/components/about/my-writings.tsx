@@ -1,8 +1,5 @@
-import Link from "next/link";
 import React from "react";
-
-import GitHubCalendar from "@1chooo/github-calendar";
-import { ThemeInput } from "@1chooo/activity-calendar/types";
+import Link from "next/link";
 
 import PostsLoop from "@/components/about/posts-loop";
 import { BlogPost } from "@/types/blog";
@@ -15,34 +12,12 @@ import "@/styles/about/coding-stats.css";
 interface MyWritingsProps {
   count?: number;
   posts?: BlogPost[];
-  githubUsername?: string;
 }
 
-export function MyWritings({ count, posts, githubUsername }: MyWritingsProps) {
-  const yellowTheme: ThemeInput = {
-    light: ["#EBEBEB", "#FFDA6B"],
-    dark: ["#383838", "#FFDA6B"],
-  };
+export function MyWritings({ count, posts }: MyWritingsProps) {
 
   return (
     <div className="w-full max-w-4xl mx-auto my-7 xl:px-0">
-      <BlurFade inView delay={0.4} direction="up">
-        <section id="github-calendar" className="text-light-gray my-5">
-          {githubUsername && (
-            <GitHubCalendar
-              username={githubUsername}
-              blockSize={12}
-              blockMargin={4}
-              colorScheme="dark"
-              blockRadius={2}
-              fontSize={14}
-              style={{ fontWeight: "bold" }}
-              theme={yellowTheme}
-            />
-          )}
-        </section>
-      </BlurFade>
-
       <div className="flex flex-col items-start justify-start md:flex-row md:space-x-7">
         <PostsLoop count={count} posts={posts} />
 
