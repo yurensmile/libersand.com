@@ -99,7 +99,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           </li>
 
           {projectCategories.map((category, index) => (
-            <li key={index}>
+            <li key={`${index}-${category}`}>
               <ViewTransitionsProgressBarLink
                 href={`/project/category/${encodeURIComponent(category.toLowerCase())}`}
                 className={cn(classes.filterButton, {
