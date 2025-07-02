@@ -1,10 +1,10 @@
+import React from "react";
 import { PropsWithChildren } from "react";
 import Link from "next/link";
-import React from "react";
 
 /**
  * @example
- * <Badge href="https://nextjs.org">
+ * <TechBadge href="https://nextjs.org">
  *   <svg
  *     width="12"
  *     height="12"
@@ -19,9 +19,9 @@ import React from "react";
  *     />
  *   </svg>
  *   Next.js
- * </Badge>
+ * </TechBadge>
  */
-export function Badge(props: PropsWithChildren & { href: string }) {
+export function TechBadge(props: PropsWithChildren & { href: string }) {
   return (
     <Link
       {...props}

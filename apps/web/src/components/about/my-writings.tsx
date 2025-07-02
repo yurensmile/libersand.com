@@ -4,7 +4,7 @@ import Link from "next/link";
 import PostsLoop from "@/components/about/posts-loop";
 import { BlogPost } from "@/types/blog";
 import { Newspaper, Zap } from "lucide-react";
-import { Badge } from "@/components/badge";
+import { TechBadge } from "@/components/tech-badge";
 import { BlurFade } from "@/components/magicui/blur-fade";
 
 import "@/styles/about/coding-stats.css";
@@ -86,7 +86,7 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                   </h2>
                 </div>
                 <div className="flex flex-wrap gap-2 shadow-feature-card dark:shadow-feature-card-dark rounded-xl mt-4">
-                  <Badge href="https://www.typescriptlang.org/">
+                  <TechBadge href="https://www.typescriptlang.org/">
                     <svg
                       width="14"
                       height="14"
@@ -110,8 +110,8 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                       />
                     </svg>
                     TypeScript
-                  </Badge>
-                  <Badge href="https://nextjs.org">
+                  </TechBadge>
+                  <TechBadge href="https://nextjs.org">
                     <svg
                       width="14"
                       height="14"
@@ -126,8 +126,8 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                       />
                     </svg>
                     Next.js
-                  </Badge>
-                  <Badge href="https://react.dev">
+                  </TechBadge>
+                  <TechBadge href="https://react.dev">
                     <svg
                       width="14"
                       height="14"
@@ -146,8 +146,8 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                       />
                     </svg>
                     React
-                  </Badge>
-                  <Badge href="https://isocpp.org/">
+                  </TechBadge>
+                  <TechBadge href="https://isocpp.org/">
                     <svg
                       width="14"
                       height="14"
@@ -182,8 +182,8 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                       />
                     </svg>
                     C++
-                  </Badge>
-                  <Badge href="https://www.python.org/">
+                  </TechBadge>
+                  <TechBadge href="https://www.python.org/">
                     <svg
                       width="14"
                       height="14"
@@ -230,8 +230,8 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                       </defs>
                     </svg>
                     Python
-                  </Badge>
-                  <Badge href="https://aws.amazon.com/lambda/">
+                  </TechBadge>
+                  <TechBadge href="https://aws.amazon.com/lambda/">
                     <svg
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -282,8 +282,8 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                       </g>
                     </svg>
                     Linux
-                  </Badge>
-                  <Badge href="https://aws.amazon.com/lambda/">
+                  </TechBadge>
+                  <TechBadge href="https://aws.amazon.com/lambda/">
                     <svg
                       width="14"
                       height="14"
@@ -326,8 +326,8 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                       />
                     </svg>
                     Java
-                  </Badge>
-                  <Badge href="https://www.djangoproject.com/">
+                  </TechBadge>
+                  <TechBadge href="https://www.djangoproject.com/">
                     <svg
                       width="14"
                       height="14"
@@ -353,8 +353,8 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                       />
                     </svg>
                     Django
-                  </Badge>
-                  <Badge href="https://code.visualstudio.com/">
+                  </TechBadge>
+                  <TechBadge href="https://code.visualstudio.com/">
                     <svg
                       width="14"
                       height="14"
@@ -377,8 +377,8 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                       />
                     </svg>
                     VSCode
-                  </Badge>
-                  <Badge href="https://github.com">
+                  </TechBadge>
+                  <TechBadge href="https://github.com">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
@@ -402,8 +402,8 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                       </g>
                     </svg>
                     GitHub
-                  </Badge>
-                  <Badge href="https://www.docker.com/">
+                  </TechBadge>
+                  <TechBadge href="https://www.docker.com/">
                     <svg
                       width="14"
                       height="14"
@@ -418,8 +418,8 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                       />
                     </svg>
                     Docker
-                  </Badge>
-                  <Badge href="https://kubernetes.io/">
+                  </TechBadge>
+                  <TechBadge href="https://kubernetes.io/">
                     <svg
                       width="14"
                       height="14"
@@ -439,8 +439,8 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                       />
                     </svg>
                     JavaScript
-                  </Badge>
-                  <Badge href="https://kubernetes.io/">
+                  </TechBadge>
+                  <TechBadge href="https://kubernetes.io/">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -464,8 +464,8 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                       </defs>
                     </svg>
                     Tailwind CSS
-                  </Badge>
-                  <Badge href="https://go.dev/">
+                  </TechBadge>
+                  <TechBadge href="https://go.dev/">
                     <svg
                       height="14"
                       width="14"
@@ -529,8 +529,8 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                       <path d="m140.178 78.719c-3.088-11.356-28.987-9.662-28.39 3.885 1.295 10.06 31.378 7.37 28.39-3.885z" />
                     </svg>
                     Go
-                  </Badge>
-                  <Badge href="https://kubernetes.io/">
+                  </TechBadge>
+                  <TechBadge href="https://kubernetes.io/">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 32 32"
@@ -550,8 +550,8 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                       />
                     </svg>
                     Kubernetes
-                  </Badge>
-                  <Badge href="https://aws.amazon.com">
+                  </TechBadge>
+                  <TechBadge href="https://aws.amazon.com">
                     <svg
                       width="14"
                       height="14"
@@ -585,7 +585,7 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                       </g>
                     </svg>
                     AWS
-                  </Badge>
+                  </TechBadge>
                 </div>
               </div>
             </div>
