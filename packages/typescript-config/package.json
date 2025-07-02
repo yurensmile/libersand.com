@@ -6,6 +6,7 @@
     "email": "hugo@1chooo.com",
     "url": "https://1chooo.com"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/1chooo/portfolio"

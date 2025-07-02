@@ -2,6 +2,7 @@
   "name": "1chooo-com-web",
   "version": "0.13.0",
   "private": true,
+  "type": "module",
   "license": "CC-BY-4.0",
   "author": {
     "name": "Chun-Ho (Hugo) Lin",

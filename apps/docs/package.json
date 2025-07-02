@@ -2,6 +2,7 @@
   "name": "1chooo-com-docs",
   "version": "0.13.0",
   "private": true,
+  "type": "module",
   "author": {
     "name": "Chun-Ho (Hugo) Lin",
     "email": "hugo@1chooo.com",
