@@ -1,13 +1,13 @@
 ---
-title: "Three methods to Access environment variable values in Python"
-excerpt: "In Python, you can access environment variables using the `os` module, which provides a property called `environ` that contains the environment variables. In this post, I will share with you three methods to access environment variable values in Python."
-coverImage: "/images/banner/posts/three-methods-to-access-environment-variable-values-in-python.png"
+title: "3 Methods to Load .env in Python"
+excerpt: "Access environment variables in Python with `os.environ`. Here are three ways to do it."
+coverImage: "/images/banner/blog/3-methods-to-load-env-in-python.webp"
 date: "2024-12-26"
 author:
   name: 1chooo
   avatar: "https://github.com/1chooo.png"
 ogImage:
-  url: "/images/banner/posts/three-methods-to-access-environment-variable-values-in-python.png"
+  url: "/images/banner/blog/3-methods-to-load-env-in-python.webp"
 publishedAt: "2024-12-26"
 lastModifiedAt: "2024-12-26"
 category: "Python"
@@ -22,7 +22,7 @@ tags:
 
 Hi everyone! I'm Hugo. I am currently focusing on developing https://1chooo.com and backend applications with Python. And there is a scenario where I need to access environment variable values in Python. However, sometimes it works, sometimes it doesn't. So, I decided to write this post to share with you three methods to access environment variable values in Python. That way, you can easily access environment variables in your Python applications.
 
-![Three methods to Access environment variable values in Python by Hugo](/images/banner/posts/three-methods-to-access-environment-variable-values-in-python.png)
+![3 Methods to Load .env in Python by Hugo](/images/banner/blog/3-methods-to-load-env-in-python.webp)
 
 Environment variables are `key-value` pairs created by the operating system. In Python, you can access these variables using the `os` module, which provides a property called `environ` that contains the environment variables.
 
