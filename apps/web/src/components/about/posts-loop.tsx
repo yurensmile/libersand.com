@@ -2,7 +2,8 @@
 
 import { useRouter } from "next/navigation";
 import { BlogPost } from "@/types/blog";
-import Link from "next/link";
+import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
+
 import { BlurFade } from "@/components/magicui/blur-fade";
 
 import "@/styles/about/coding-stats.css";
@@ -49,16 +50,12 @@ export default function PostsLoop({ count, posts }: BlogPostsProps) {
             >
               <div className="shadow-feature-card dark:shadow-feature-card-dark flex flex-col gap-1 overflow-hidden relative z-30 duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1">
                 <h2 className="flex items-center mb-3">
-                  <Link
+                  <ViewTransitionsProgressBarLink
                     href={post.link}
                     className="text-base font-bold leading-tight tracking-tight sm:text-lg text-white-1"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handlePostClick(post.link);
-                    }}
                   >
                     {post.title}
-                  </Link>
+                  </ViewTransitionsProgressBarLink>
                   <svg
                     className="group-hover:translate-x-0 flex-shrink-0 translate-y-0.5 -translate-x-1 w-2.5 h-2.5 stroke-current ml-1 transition-all ease-in-out duration-200 transform text-light-gray"
                     viewBox="0 0 13 15"
@@ -109,14 +106,16 @@ export default function PostsLoop({ count, posts }: BlogPostsProps) {
         ))}
       </ul>
 
-      <div className="flex items-center justify-center w-full py-4">
-        <Link
-          href="/blog"
-          className="inline-flex w-auto px-4 py-2 text-xs font-semibold duration-300 ease-out border rounded-full bg-white text-neutral-900 hover:border-neutral-300 hover:bg-black hover:text-white"
-        >
-          {"View All My Writings"}
-        </Link>
-      </div>
+      <BlurFade inView delay={0.4} direction="up">
+        <div className="flex items-center justify-center w-full py-4">
+          <ViewTransitionsProgressBarLink
+            href="/blog"
+            className="inline-flex w-auto px-4 py-2 text-xs font-semibold duration-300 ease-out border rounded-full bg-white text-neutral-900 hover:border-neutral-300 hover:bg-black hover:text-white"
+          >
+            {"View All My Writings"}
+          </ViewTransitionsProgressBarLink>
+        </div>
+      </BlurFade>
     </div>
   );
 }
