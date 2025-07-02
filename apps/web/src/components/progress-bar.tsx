@@ -66,11 +66,11 @@ export function ProgressBar({ className, children }: ProgressBarProps) {
 
 interface ProgressBarLinkProps {
   href:
-  | string
-  | {
-    pathname: string;
-    query?: Record<string, string>;
-  };
+    | string
+    | {
+        pathname: string;
+        query?: Record<string, string>;
+      };
   children: React.ReactNode;
   className?: string;
   [key: string]: any;

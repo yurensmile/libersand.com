@@ -41,7 +41,7 @@ export default async function Blog() {
   try {
     allPosts = await getBlogPosts();
   } catch (error) {
-    console.error('Failed to load blog posts:', error);
+    console.error("Failed to load blog posts:", error);
     allPosts = [];
   }
 
@@ -86,7 +86,10 @@ export default async function Blog() {
               >
                 <figure className={cn(classes.bannerBox)}>
                   <Image
-                    src={post.coverImage || "https://docs.1chooo.com/images/cover-with-1chooo-com.png"}
+                    src={
+                      post.coverImage ||
+                      "https://docs.1chooo.com/images/cover-with-1chooo-com.png"
+                    }
                     alt={post.title || "Blog post image"}
                     width={960}
                     height={540}

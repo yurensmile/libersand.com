@@ -418,7 +418,7 @@ I'm an incoming student at [University of Southern California](https://usc.edu) 
     ],
     sitemap: "https://1chooo.com/sitemap.xml",
     host: "https://1chooo.com",
-  }
+  },
 };
 
 export default config;

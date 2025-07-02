@@ -43,7 +43,12 @@ export default function PostsLoop({ count, posts }: BlogPostsProps) {
     <div className="w-full md:w-2/3 space-y-7">
       <ul className="space-y-6">
         {postsLoop.map((post, index) => (
-          <BlurFade key={`${index}-${post.slug}`} inView delay={0.4} direction="up">
+          <BlurFade
+            key={`${index}-${post.slug}`}
+            inView
+            delay={0.4}
+            direction="up"
+          >
             <li
               className="coding-item relative rounded-2xl shadow-shadow-2 bg-gradient-onyx before:absolute before:content-[''] before:rounded-2xl group cursor-pointer"
               onClick={() => handlePostClick(post.link)}

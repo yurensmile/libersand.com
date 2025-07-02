@@ -39,7 +39,7 @@ export default async function Project() {
   try {
     projects = await getProjects();
   } catch (error) {
-    console.error('Failed to load project posts:', error);
+    console.error("Failed to load project posts:", error);
     projects = [];
   }
 
@@ -91,7 +91,10 @@ export default async function Project() {
                     <LuEye />
                   </div>
                   <Image
-                    src={post.coverImage || "https://docs.1chooo.com/images/cover-with-1chooo-com.png"}
+                    src={
+                      post.coverImage ||
+                      "https://docs.1chooo.com/images/cover-with-1chooo-com.png"
+                    }
                     alt={post.title || "Portfolio post image"}
                     width={480}
                     height={270}

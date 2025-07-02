@@ -33,13 +33,18 @@ function getCategories(posts: BlogPost[]): Record<string, number> {
   return categories;
 }
 
-function filterPostsByCategory(posts: BlogPost[], selectedCategory: string): BlogPost[] {
-  return posts.filter(post => {
+function filterPostsByCategory(
+  posts: BlogPost[],
+  selectedCategory: string,
+): BlogPost[] {
+  return posts.filter((post) => {
     return post.category.toLowerCase() === selectedCategory.toLowerCase();
   });
 }
 
-export async function generateMetadata({ params }: BlogCategoryProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: BlogCategoryProps): Promise<Metadata> {
   const { category } = await params;
   const categoryName = decodeURIComponent(category);
 
@@ -104,7 +109,8 @@ export default async function BlogCategory({ params }: BlogCategoryProps) {
               <ViewTransitionsProgressBarLink
                 href={`/blog/category/${encodeURIComponent(category.toLowerCase())}`}
                 className={cn(classes.filterButton, {
-                  [classes.filterButtonActive]: category.toLowerCase() === categoryParam.toLowerCase(),
+                  [classes.filterButtonActive]:
+                    category.toLowerCase() === categoryParam.toLowerCase(),
                 })}
               >
                 {category} ({categories[category]})
@@ -124,7 +130,10 @@ export default async function BlogCategory({ params }: BlogCategoryProps) {
               >
                 <figure className={cn(classes.bannerBox)}>
                   <Image
-                    src={post.coverImage || "https://docs.1chooo.com/images/cover-with-1chooo-com.png"}
+                    src={
+                      post.coverImage ||
+                      "https://docs.1chooo.com/images/cover-with-1chooo-com.png"
+                    }
                     alt={post.title || "Blog post image"}
                     width={960}
                     height={540}

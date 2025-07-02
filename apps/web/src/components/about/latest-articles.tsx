@@ -56,10 +56,7 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
           {visiblePosts.map((post) => (
             <li
               key={post.slug}
-              className={cn(
-                classes["latest-post"],
-                "group active",
-              )}
+              className={cn(classes["latest-post"], "group active")}
             >
               <ViewTransitionsProgressBarLink
                 href={`/blog/${post.slug}`}

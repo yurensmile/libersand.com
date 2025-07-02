@@ -1,7 +1,11 @@
-'use client'
+"use client";
 
-import { motion } from "motion/react"
-export function PopIn(props: { children: React.ReactNode; delay?: number; divKey?: any }) {
+import { motion } from "motion/react";
+export function PopIn(props: {
+  children: React.ReactNode;
+  delay?: number;
+  divKey?: any;
+}) {
   return (
     <motion.div
       initial={{
@@ -14,13 +18,13 @@ export function PopIn(props: { children: React.ReactNode; delay?: number; divKey
       }}
       transition={{
         delay: props.delay || 0.5,
-        type: 'spring',
+        type: "spring",
       }}
       key={props.divKey || undefined}
     >
       {props.children}
     </motion.div>
-  )
+  );
 }
 
 export function HoverPop(props: { children: React.ReactNode; scale?: number }) {
@@ -33,10 +37,14 @@ export function HoverPop(props: { children: React.ReactNode; scale?: number }) {
     >
       {props.children}
     </motion.div>
-  )
+  );
 }
 
-export function FadeIn(props: { children: React.ReactNode; delay?: number; divKey?: any }) {
+export function FadeIn(props: {
+  children: React.ReactNode;
+  delay?: number;
+  divKey?: any;
+}) {
   return (
     <motion.div
       initial={{
@@ -52,10 +60,14 @@ export function FadeIn(props: { children: React.ReactNode; delay?: number; divKe
     >
       {props.children}
     </motion.div>
-  )
+  );
 }
 
-export function FadeUp(props: { children: React.ReactNode; delay?: number; divKey?: any }) {
+export function FadeUp(props: {
+  children: React.ReactNode;
+  delay?: number;
+  divKey?: any;
+}) {
   return (
     <motion.div
       initial={{
@@ -73,10 +85,14 @@ export function FadeUp(props: { children: React.ReactNode; delay?: number; divKe
     >
       {props.children}
     </motion.div>
-  )
+  );
 }
 
-export function FadeLeft(props: { children: React.ReactNode; delay?: number; divKey?: any }) {
+export function FadeLeft(props: {
+  children: React.ReactNode;
+  delay?: number;
+  divKey?: any;
+}) {
   return (
     <motion.div
       initial={{
@@ -94,5 +110,5 @@ export function FadeLeft(props: { children: React.ReactNode; delay?: number; div
     >
       {props.children}
     </motion.div>
-  )
+  );
 }

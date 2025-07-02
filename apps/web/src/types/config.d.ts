@@ -73,8 +73,8 @@ export type Config = {
   umamiUrl: string;
   analytics: Analytics;
   /**
- * @see https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots#generate-a-robots-file
- */
+   * @see https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots#generate-a-robots-file
+   */
   robots: MetadataRoute.Robots;
 };
 

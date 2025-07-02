@@ -15,7 +15,6 @@ interface MyWritingsProps {
 }
 
 export function MyWritings({ count, posts }: MyWritingsProps) {
-
   return (
     <div className="w-full max-w-4xl mx-auto my-7 xl:px-0">
       <div className="flex flex-col items-start justify-start md:flex-row md:space-x-7">
@@ -51,7 +50,10 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                     Inoreader
                   </Link>{" "}
                   or{" "}
-                  <Link className="font-bold" href={"https://1chooo.com/rss.xml"}>
+                  <Link
+                    className="font-bold"
+                    href={"https://1chooo.com/rss.xml"}
+                  >
                     RSS
                   </Link>
                   .
@@ -494,7 +496,12 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                           fill="#fff"
                         />
                         <path d="m67.337 29.385c-.598-10.36-5.18-18.428-12.75-23.508-6.774-4.582-15.739-6.375-24.604-5.28-8.865 1.197-17.034 5.181-22.413 11.457-5.976 6.972-8.267 16.136-6.175 26.695l.896-.2-.896.2c9.363 36.656 68.133 27.791 65.942-9.364zm-64.15 9.165c-1.992-10.06.2-18.627 5.778-25.102 5.08-5.877 12.75-9.761 21.217-10.857s16.934.598 23.31 4.98c7.071 4.782 11.355 12.253 11.952 22.114 2.092 34.764-53.391 43.132-62.256 8.865z" />
-                        <ellipse cx="18.03" cy="32.872" rx="9.662" ry="10.459" />
+                        <ellipse
+                          cx="18.03"
+                          cy="32.872"
+                          rx="9.662"
+                          ry="10.459"
+                        />
                         <ellipse
                           cx="22.412"
                           cy="35.262"
@@ -509,7 +516,12 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                           fill="#fff"
                         />
                         <path d="m66.44 24.604c-8.865-38.151-68.63-27.692-66.24 11.455v.1c3.286 19.324 20.52 29.186 39.545 25.998 8.665-1.494 16.435-5.677 21.515-11.853 5.578-6.874 7.57-15.739 5.18-25.7zm-6.673 24.504c-4.782 5.778-12.053 9.762-20.321 11.157-18.03 2.988-34.167-6.276-37.354-24.405-2.192-36.856 54.188-46.718 62.555-10.858 2.192 9.463.399 17.731-4.88 24.106z" />
-                        <ellipse cx="17.631" cy="34.167" rx="9.463" ry="10.459" />
+                        <ellipse
+                          cx="17.631"
+                          cy="34.167"
+                          rx="9.463"
+                          ry="10.459"
+                        />
                         <ellipse
                           cx="22.014"
                           cy="36.557"

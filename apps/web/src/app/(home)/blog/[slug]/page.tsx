@@ -44,7 +44,10 @@ export default async function Post(props: Params) {
     <div>
       <article>
         <FadeUp delay={0.3 * 2}>
-          <ViewTransitionsProgressBarLink href="/blog" rel="noopener noreferrer">
+          <ViewTransitionsProgressBarLink
+            href="/blog"
+            rel="noopener noreferrer"
+          >
             <PageTitle
               className="text-light-gray hover:text-light-gray-70"
               title="← Back to Blog"
@@ -109,13 +112,13 @@ export default async function Post(props: Params) {
             />
           </div>
         </FadeIn>
-      </article >
+      </article>
 
       <article style={{ marginTop: "1rem" }}>
         <PageTitle title="Comments" />
         <Comments giscusConfig={giscusConfig} />
       </article>
-    </div >
+    </div>
   );
 }
 

@@ -18,7 +18,9 @@ interface ProjectCategoryProps {
   params: Promise<{ category: string }>;
 }
 
-export async function generateMetadata({ params }: ProjectCategoryProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: ProjectCategoryProps): Promise<Metadata> {
   const { category } = await params;
   const categoryName = decodeURIComponent(category);
 
@@ -56,20 +58,25 @@ function getCategories(posts: ProjectPost[]): Record<string, number> {
   return categories;
 }
 
-function filterProjectsByCategory(posts: ProjectPost[], selectedCategory: string): ProjectPost[] {
-  return posts.filter(post => {
+function filterProjectsByCategory(
+  posts: ProjectPost[],
+  selectedCategory: string,
+): ProjectPost[] {
+  return posts.filter((post) => {
     return post.category.toLowerCase() === selectedCategory.toLowerCase();
   });
 }
 
-export default async function ProjectCategory({ params }: ProjectCategoryProps) {
+export default async function ProjectCategory({
+  params,
+}: ProjectCategoryProps) {
   const { category } = await params;
   let projects: ProjectPost[];
 
   try {
     projects = await getProjects();
   } catch (error) {
-    console.error('Failed to load blog posts:', error);
+    console.error("Failed to load blog posts:", error);
     projects = [];
   }
 
@@ -103,7 +110,8 @@ export default async function ProjectCategory({ params }: ProjectCategoryProps) 
               <ViewTransitionsProgressBarLink
                 href={`/project/category/${encodeURIComponent(category.toLowerCase())}`}
                 className={cn(classes.filterButton, {
-                  [classes.filterButtonActive]: category.toLowerCase() === categoryParam.toLowerCase(),
+                  [classes.filterButtonActive]:
+                    category.toLowerCase() === categoryParam.toLowerCase(),
                 })}
               >
                 {category} ({categories[category]})
@@ -130,7 +138,10 @@ export default async function ProjectCategory({ params }: ProjectCategoryProps) 
                     <LuEye />
                   </div>
                   <Image
-                    src={post.coverImage || "https://docs.1chooo.com/images/cover-with-1chooo-com.png"}
+                    src={
+                      post.coverImage ||
+                      "https://docs.1chooo.com/images/cover-with-1chooo-com.png"
+                    }
                     alt={post.title || "Portfolio post image"}
                     width={480}
                     height={270}

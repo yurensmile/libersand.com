@@ -20,13 +20,8 @@ const TalkToHugo = dynamic(() => import("@/components/about/talk-to-hugo"));
 const AnimatedSection = dynamic(() => import("@/components/animated-section"));
 
 const { about, web3formsAccessKey } = config;
-const {
-  firstName,
-  lastName,
-  preferredName,
-  introduction,
-  githubUsername,
-} = about;
+const { firstName, lastName, preferredName, introduction, githubUsername } =
+  about;
 
 async function About() {
   const allPosts = getBlogPosts();
