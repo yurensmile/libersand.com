@@ -30,12 +30,12 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                 className="shadow-feature-card dark:shadow-feature-card-dark flex flex-col gap-2 overflow-hidden rounded-xl p-2"
               >
                 <div className="relative flex items-center space-x-2">
-                  <Newspaper className="flex-none text-neutral-700 dark:text-neutral-200" size={18} />
-                  <h2 className="flex text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+                  <Newspaper className="flex-none text-white-1" size={18} />
+                  <h2 className="flex text-sm font-semibold text-white-1">
                     Subscribe my blog
                   </h2>
                 </div>
-                <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
+                <p className="mt-2 text-sm text-light-gray-70">
                   Get my blog updates via{" "}
                   <Link
                     className="font-bold"
@@ -68,7 +68,7 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                   />
                   <button
                     type="submit"
-                    className="block w-full px-4 py-2 mt-5 text-xs font-semibold text-center duration-300 ease-out border rounded bg-neutral-900 dark:bg-neutral-100 dark:hover:border-neutral-300 dark:text-neutral-800 dark:hover:bg-neutral-950 dark:hover:text-neutral-100 text-neutral-100 border-neutral-900 hover:bg-white hover:text-neutral-900"
+                    className="block w-full px-4 py-2 mt-5 text-xs font-semibold text-center duration-300 ease-out border rounded bg-neutral-100 hover:border-neutral-300 text-neutral-800 hover:bg-neutral-950 hover:text-neutral-100"
                   >
                     Subscribe
                   </button>
