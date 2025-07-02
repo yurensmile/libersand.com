@@ -93,6 +93,7 @@ const config: Config = {
       type: "website",
       siteName: "Chun-Ho (Hugo) Lin - 1chooo",
       title: "Chun-Ho (Hugo) Lin - 1chooo",
+      locale: "en_US",
       description:
         "I'm Chun-Ho (Hugo) Lin, an incoming student at University of Southern California (USC) ✌️. Previously, I obtained my Bachelor's degree from National Central University (NCU) 🐿️.",
       images: [
@@ -106,6 +107,7 @@ const config: Config = {
     },
     manifest: "/manifest.json",
     twitter: {
+      site: "@1chooo___",
       card: "summary_large_image",
       title: "Chun-Ho (Hugo) Lin - 1chooo",
       description:
