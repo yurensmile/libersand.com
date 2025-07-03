@@ -144,7 +144,7 @@ export async function generateMetadata(
       {
         name: post.author.name,
         url: post.author.url || "https://1chooo.com",
-      }
+      },
     ],
     description: post.excerpt || config.description,
     keywords: post.tags || config.keywords,
