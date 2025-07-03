@@ -17,8 +17,8 @@ export default function Index() {
       <Container>
         <HeroPost
           title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
+          coverImage={heroPost.thumbnail}
+          date={heroPost.publishedAt}
           author={heroPost.author}
           slug={heroPost.slug}
           excerpt={heroPost.excerpt}

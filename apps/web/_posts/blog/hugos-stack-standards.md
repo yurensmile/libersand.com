@@ -1,17 +1,12 @@
 ---
 title: "Hugo's Stack & Standards"
 excerpt: "5,000+ contributions in 2024 — here's my stack and standards for clean, scalable code."
-coverImage: "/images/banner/blog/hugos-stack-standards.webp"
-date: "2025-01-09"
+thumbnail: "/images/thumbnail/blog/hugos-stack-standards.webp"
 author:
-  name: 1chooo
+  name: Chun-Ho (Hugo) Lin | @1chooo
   avatar: "https://github.com/1chooo.png"
-  website: "https://1chooo.com"
-  github: "https://github.com/1chooo"
-ogImage:
-  url: "/images/banner/blog/hugos-stack-standards.webp"
+  url: "https://1chooo.com"
 publishedAt: "2025-01-09"
-lastModifiedAt: "2025-01-09"
 category: "Software"
 tags:
   - React
@@ -23,7 +18,7 @@ tags:
 
 Hey there 👋 This is Hugo. Here's a quick summary of my go-to tech stack for Software Development. My experience comes from being highly active on GitHub, with over 5,000 contributions in 2024 (check it out [here](https://github.com/1chooo?tab=overview&from=2024-12-01&to=2024-12-31)). Additionally, I'll share insights on writing maintainable, clean, and scalable code.
 
-![Hugo's Stack & Standards](/images/banner/blog/hugos-stack-standards.webp)
+![Hugo's Stack & Standards](/images/thumbnail/blog/hugos-stack-standards.webp)
 
 ## React
 

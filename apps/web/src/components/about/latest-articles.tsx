@@ -72,7 +72,7 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
                     <Eye />
                   </div>
                   <Image
-                    src={post.coverImage}
+                    src={post.thumbnail}
                     alt={post.excerpt || "Blog post image"}
                     width={1200}
                     height={675}

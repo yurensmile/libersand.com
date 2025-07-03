@@ -87,7 +87,7 @@ export default async function Blog() {
                 <figure className={cn(classes.bannerBox)}>
                   <Image
                     src={
-                      post.coverImage ||
+                      post.thumbnail ||
                       "https://docs.1chooo.com/images/cover-with-1chooo-com.png"
                     }
                     alt={post.title || "Blog post image"}

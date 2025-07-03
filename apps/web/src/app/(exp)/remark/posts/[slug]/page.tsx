@@ -26,8 +26,8 @@ export default async function Post(props: Params) {
         <Header />
         <PostHeader
           title={post.title}
-          coverImage={post.coverImage}
-          date={post.date}
+          coverImage={post.thumbnail}
+          date={post.publishedAt}
           author={post.author}
         />
         <PostBody content={content} />
@@ -56,7 +56,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     title,
     openGraph: {
       title,
-      images: [post.ogImage.url],
+      images: [post.thumbnail],
     },
   };
 }

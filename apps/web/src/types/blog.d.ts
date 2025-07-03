@@ -1,15 +1,14 @@
 export type Author = {
   name: string;
   avatar: string;
+  url: string;
 };
 
 export type BlogPost = {
   slug: string;
   title: string;
-  date: string;
   publishedAt: string;
-  lastModifiedAt: string;
-  coverImage: string;
+  thumbnail: string;
   author: Author;
   /**
    * @todo let user to customize the color of tags and categories
@@ -17,8 +16,5 @@ export type BlogPost = {
   tags: string[];
   category: string;
   excerpt: string;
-  ogImage: {
-    url: string;
-  };
   content: string;
 };

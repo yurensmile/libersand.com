@@ -140,11 +140,17 @@ export async function generateMetadata(
 
   return {
     title,
+    authors: [
+      {
+        name: post.author.name,
+        url: post.author.url || "https://1chooo.com",
+      }
+    ],
     description: post.excerpt || config.description,
     keywords: post.tags || config.keywords,
     openGraph: {
       title,
-      images: [post.ogImage.url, ...previousImages],
+      images: [post.thumbnail, ...previousImages],
     },
   };
 }
