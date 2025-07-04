@@ -1,13 +1,15 @@
-"use client";
-
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
 import PageTitle from "@/components/page-title";
-import config from "@/config";
-import { Home, ArrowLeft } from "lucide-react";
+import { LatestArticles } from "@/components/about/latest-articles";
 
-import type { Metadata } from "next";
+import { getBlogPosts } from "@/lib/api/blog";
+import config from "@/config";
+
+const AboutSection = dynamic(() => import("@/components/section/about"));
 
 const { title } = config;
 
@@ -16,6 +18,8 @@ export const metadata: Metadata = {
 };
 
 function NotFound() {
+  const allPosts = getBlogPosts();
+
   return (
     <article>
       <PageTitle title="Page Not Found!" />
@@ -32,29 +36,9 @@ function NotFound() {
           </h2>
         </div>
 
-        <div className="flex flex-col gap-6 mt-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-lg mx-auto w-full">
-            <div className="flex items-center justify-center">
-              <Link
-                href="/"
-                className="flex items-center border-none px-4 py-2 mx-1 cursor-pointer text-base bg-border-gradient-onyx hover:scale-105 active:scale-95 rounded-xl shadow-lg hover:bg-orange-yellow-crayola-dark duration-300 text-white-2 font-bold"
-              >
-                <Home className="mr-2 h-4 w-4" />
-                <span>Return Home</span>
-              </Link>
-            </div>
-            <div className="flex items-center justify-center">
-              <button
-                type="button"
-                onClick={() => window.history.back()}
-                className="flex items-center border-none px-4 py-2 mx-1 cursor-pointer text-base bg-border-gradient-onyx hover:scale-105 active:scale-95 rounded-xl shadow-lg hover:bg-orange-yellow-crayola-dark duration-300 text-orange-yellow-crayola font-bold"
-              >
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                <span>Go Back</span>
-              </button>
-            </div>
-          </div>
-        </div>
+        <AboutSection id="read-my-writings" title="Read My Writings">
+          <LatestArticles posts={allPosts} />
+        </AboutSection>
 
         <div className="mt-12 pt-6 border-t border-gray-800 text-sm text-gray-500">
           <p>
