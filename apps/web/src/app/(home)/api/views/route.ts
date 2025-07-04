@@ -4,9 +4,25 @@ import { createClient } from "@/lib/supabase"
 export async function POST(request: NextRequest) {
   try {
     const { slug } = await request.json()
+    const isProduction = process.env.NODE_ENV === "production"
 
     if (!slug) {
       return NextResponse.json({ error: "Slug is required" }, { status: 400 })
+    }
+
+    if (!isProduction) {
+      const supabase = createClient()
+      const { data, error } = await supabase
+        .from("page_views")
+        .select("views")
+        .eq("page", `blog/${slug}`)
+        .single()
+
+      if (error && error.code !== "PGRST116") {
+        throw error
+      }
+
+      return NextResponse.json({ views: data?.views || 0 })
     }
 
     const supabase = createClient()
