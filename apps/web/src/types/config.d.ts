@@ -76,6 +76,8 @@ export type Config = {
    * @see https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots#generate-a-robots-file
    */
   robots: MetadataRoute.Robots;
+  llmsTxtContent?: string;
+  llmsFullTxtContent?: string;
 };
 
 type AnalyticPlatforms = "google-analytics" | "vercel" | "umami";
