@@ -8,6 +8,7 @@ import { LatestArticles } from "@/components/about/latest-articles";
 
 import { getBlogPosts } from "@/lib/api/blog";
 import config from "@/config";
+import { BlogPost } from "@/types/blog";
 
 const AboutSection = dynamic(() => import("@/components/section/about"));
 
@@ -17,9 +18,11 @@ export const metadata: Metadata = {
   title: `Not Found | ${title}`,
 };
 
-function NotFound() {
-  const allPosts = getBlogPosts();
+interface NotFoundProps {
+  posts: BlogPost[];
+}
 
+function NotFound({ posts }: NotFoundProps) {
   return (
     <article>
       <PageTitle title="Page Not Found!" />
@@ -37,7 +40,7 @@ function NotFound() {
         </div>
 
         <AboutSection id="read-my-writings" title="Read My Writings">
-          <LatestArticles posts={allPosts} />
+          <LatestArticles posts={posts} />
         </AboutSection>
 
         <div className="mt-12 pt-6 border-t border-gray-800 text-sm text-gray-500">
@@ -57,4 +60,8 @@ function NotFound() {
   );
 }
 
-export default NotFound;
+export default async function NotFoundPage() {
+  const allPosts = await getBlogPosts();
+
+  return <NotFound posts={allPosts} />;
+}
