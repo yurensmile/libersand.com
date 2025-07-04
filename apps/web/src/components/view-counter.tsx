@@ -2,7 +2,13 @@
 
 import { useEffect, useState } from "react"
 
-export function ViewCounter() {
+interface ViewCounterProps {
+  slug: string
+  showLabel?: boolean
+  className?: string
+}
+
+export function ViewCounter({ slug, showLabel = true, className = "" }: ViewCounterProps) {
   const [views, setViews] = useState<number>(0)
   const [loading, setLoading] = useState(true)
 
@@ -11,6 +17,10 @@ export function ViewCounter() {
       try {
         const response = await fetch("/api/views", {
           method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ slug }),
         })
         const data = await response.json()
         setViews(data.views)
@@ -22,21 +32,15 @@ export function ViewCounter() {
     }
 
     incrementView()
-  }, [])
+  }, [slug])
 
   if (loading) {
     return (
-      <div />
+      <p className="text-neutral-600 dark:text-neutral-400">{"... views"}</p>
     )
   }
 
   return (
-    // <div className="fixed bottom-4 right-4 bg-[#21262d] border border-[#30363d] rounded-lg px-4 py-2 text-white shadow-lg">
-    //   <div className="flex items-center space-x-2">
-    //     <Eye className="w-4 h-4" />
-    //     <span>{views.toLocaleString()} views</span>
-    //   </div>
-    // </div>
     <p className="text-neutral-600 dark:text-neutral-400">{`${Number(views).toLocaleString('en-US')} views`}</p>
   )
 }
