@@ -1,12 +1,14 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { BlogPost } from "@/types/blog";
-import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 
+import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 import { BlurFade } from "@/components/magicui/blur-fade";
 
-import "@/styles/about/coding-stats.css";
+import { BlogPost } from "@/types/blog";
+import { cn } from "@1chooo/ui/lib/utils"
+
+import classes from "@/styles/gradient-card.module.css"
 
 interface BlogPostsProps {
   count: number;
@@ -50,7 +52,7 @@ export default function PostsLoop({ count, posts }: BlogPostsProps) {
             direction="up"
           >
             <li
-              className="coding-item relative rounded-2xl shadow-shadow-2 bg-gradient-onyx before:absolute before:content-[''] before:rounded-2xl group cursor-pointer"
+              className={cn(classes.gradientCard, "group cursor-pointer")}
               onClick={() => handlePostClick(post.link)}
             >
               <div className="shadow-feature-card dark:shadow-feature-card-dark flex flex-col gap-1 overflow-hidden relative z-30 duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1">

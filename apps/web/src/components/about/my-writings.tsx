@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import { Newspaper, Zap } from "lucide-react";
 
 import PostsLoop from "@/components/about/posts-loop";
-import { BlogPost } from "@/types/blog";
-import { Newspaper, Zap } from "lucide-react";
 import { TechBadge } from "@/components/tech-badge";
 import { BlurFade } from "@/components/magicui/blur-fade";
+import GradientCard from "@/components/ui/gradient-card";
 
-import "@/styles/about/coding-stats.css";
+import { BlogPost } from "@/types/blog";
 
 interface MyWritingsProps {
   count?: number;
@@ -22,7 +22,7 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
 
         <div className="w-full mt-10 md:w-1/3 md:mt-0">
           <BlurFade inView delay={0.4} direction="up">
-            <div className="coding-item relative rounded-2xl shadow-shadow-2 bg-gradient-onyx before:absolute before:content-[''] before:rounded-2xl">
+            <GradientCard>
               <form
                 method="get"
                 action="https://1chooo.com/rss.xml"
@@ -76,10 +76,10 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                   </button>
                 </div>
               </form>
-            </div>
+            </GradientCard>
           </BlurFade>
           <BlurFade inView delay={0.8} direction="up">
-            <div className="coding-item relative rounded-2xl shadow-shadow-2 bg-gradient-onyx before:absolute before:content-[''] before:rounded-2xl mt-4">
+            <GradientCard className="mt-4">
               <div className="flex flex-wrap gap-2 shadow-feature-card dark:shadow-feature-card-dark rounded-xl">
                 <div className="relative flex items-center space-x-2">
                   <Zap className="flex-none text-white-1" size={18} />
@@ -600,7 +600,7 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
                   </TechBadge>
                 </div>
               </div>
-            </div>
+            </GradientCard>
           </BlurFade>
         </div>
       </div>
