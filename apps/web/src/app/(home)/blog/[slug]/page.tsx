@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 
 import type { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
@@ -6,7 +6,7 @@ import Link from "next/link";
 import { LuFacebook, LuTwitter } from "react-icons/lu";
 import Balancer from "react-wrap-balancer";
 import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
-
+import { ViewCounter } from "@/components/view-counter";
 import { FadeLeft, FadeUp, FadeIn } from "@/components/animations";
 import PageTitle from "@/components/page-title";
 import Comments from "@/components/comments";
@@ -76,6 +76,9 @@ export default async function Post(props: Params) {
                 aria-hidden="true"
               ></span>
               <span>{post.category.toUpperCase()}</span>
+              <Suspense fallback={<div />}>
+                <ViewCounter />
+              </Suspense>
             </div>
             <div className="flex items-center space-x-2 ml-4">
               <Link
