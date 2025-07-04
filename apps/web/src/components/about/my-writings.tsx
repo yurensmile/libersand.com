@@ -5,7 +5,7 @@ import { Newspaper, Zap } from "lucide-react";
 import PostsLoop from "@/components/about/posts-loop";
 import { TechBadge } from "@/components/tech-badge";
 import { BlurFade } from "@/components/magicui/blur-fade";
-import GradientCard from "@/components/ui/gradient-card";
+import GradientCard from "@/components/gradient-card";
 
 import { BlogPost } from "@/types/blog";
 

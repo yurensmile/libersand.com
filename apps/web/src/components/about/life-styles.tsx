@@ -1,4 +1,4 @@
-import GradientCard from "@/components/ui/gradient-card";
+import GradientCard from "@/components/gradient-card";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { getIcon } from "@/components/icons";
 
