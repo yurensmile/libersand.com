@@ -16,7 +16,7 @@ function LifeStyles({ lifestyles }: LifeStylesProps) {
           const Icon = getIcon(lifestyle.icon);
 
           return (
-            <GradientCard key={lifestyle.title || index}>
+            <GradientCard key={lifestyle.title || index} className="group hover:scale-105 duration-300">
               <div className="mb-2.5 sm:mb-0 sm:mt-2 flex justify-center items-center">
                 <Icon className="text-orange-yellow-crayola" size={24} />
               </div>
