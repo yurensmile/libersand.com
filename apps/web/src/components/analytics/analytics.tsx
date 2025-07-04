@@ -9,7 +9,7 @@ import {
 } from "@next/third-parties/google";
 import config from "@/config";
 
-let { googleAnalyticId, googleTagManagerId } = config;
+let { googleAnalyticId, googleTagManagerId } = config.analytics;
 
 const ANALYTICS = {
   driver: "ga4",

@@ -51,26 +51,10 @@ export type Config = {
   jsonLdPerson: Person;
   giscusConfig: GiscusProps;
   /**
-   * Google Analytics ID
-   * @deprecated integrate to Analytics
-   */
-  googleAnalyticId: string;
-  /**
-   * Google Tag Manager ID
-   * @deprecated integrate to Analytics
-   */
-  googleTagManagerId: string;
-  /**
    * web3formsAccessKey - Access key for Web3Forms to handle contact form submissions. Go to https://web3forms.com/ to get your access key.
    * @todo Support multiple access keys for different forms in the future.
    */
   web3formsAccessKey: string;
-  /**
-   * Analytics with Umami
-   * @see https://umami.is
-   */
-  umamiWebsiteId: string;
-  umamiUrl: string;
   analytics: Analytics;
   /**
    * @see https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots#generate-a-robots-file
