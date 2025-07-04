@@ -26,7 +26,7 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
               <form
                 method="get"
                 action="https://1chooo.com/rss.xml"
-                className="shadow-feature-card dark:shadow-feature-card-dark flex flex-col gap-2 overflow-hidden rounded-xl p-2"
+                className="flex flex-col gap-2 overflow-hidden rounded-xl p-2"
               >
                 <div className="relative flex items-center space-x-2">
                   <Newspaper className="flex-none text-white-1" size={18} />

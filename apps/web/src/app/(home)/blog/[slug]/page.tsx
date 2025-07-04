@@ -62,7 +62,7 @@ export default async function Post(props: Params) {
         </FadeLeft>
 
         <FadeUp delay={0.3 * 2}>
-          <div className="flex items-center justify-between mt-4 text-sm w-full text-neutral-600 dark:text-neutral-400">
+          <div className="flex items-center justify-between mt-4 text-sm w-full text-light-gray-70">
             <div className="flex items-center space-x-2">
               <span>
                 {new Date(post.publishedAt).toLocaleDateString("en-us", {

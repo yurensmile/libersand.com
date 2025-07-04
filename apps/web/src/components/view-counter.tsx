@@ -4,11 +4,10 @@ import { useEffect, useState } from "react"
 
 interface ViewCounterProps {
   slug: string
-  showLabel?: boolean
   className?: string
 }
 
-export function ViewCounter({ slug, showLabel = true, className = "" }: ViewCounterProps) {
+export function ViewCounter({ slug, className = "" }: ViewCounterProps) {
   const [views, setViews] = useState<number>(0)
   const [loading, setLoading] = useState(true)
 
@@ -36,11 +35,11 @@ export function ViewCounter({ slug, showLabel = true, className = "" }: ViewCoun
 
   if (loading) {
     return (
-      <p className="text-neutral-600 dark:text-neutral-400">{"... views"}</p>
+      <p className={className}>{"... views"}</p>
     )
   }
 
   return (
-    <p className="text-neutral-600 dark:text-neutral-400">{`${Number(views).toLocaleString('en-US')} views`}</p>
+    <p className={className}>{`${Number(views).toLocaleString('en-US')} views`}</p>
   )
 }

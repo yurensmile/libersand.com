@@ -1,9 +1,11 @@
 "use client";
 
+import React, { Suspense } from "react";
 import { useRouter } from "next/navigation";
 
 import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 import { BlurFade } from "@/components/magicui/blur-fade";
+import { ViewCounter } from "@/components/view-counter";
 
 import { BlogPost } from "@/types/blog";
 import { cn } from "@1chooo/ui/lib/utils"
@@ -55,7 +57,7 @@ export default function PostsLoop({ count, posts }: BlogPostsProps) {
               className={cn(classes.gradientCard, "group cursor-pointer")}
               onClick={() => handlePostClick(post.link)}
             >
-              <div className="shadow-feature-card dark:shadow-feature-card-dark flex flex-col gap-1 overflow-hidden relative z-30 duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1">
+              <div className="flex flex-col gap-1 overflow-hidden relative z-30 duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1">
                 <h2 className="flex items-center mb-3">
                   <ViewTransitionsProgressBarLink
                     href={post.link}
@@ -104,8 +106,12 @@ export default function PostsLoop({ count, posts }: BlogPostsProps) {
                 <p className="text-sm text-light-gray-70">
                   <span>{post.excerpt}</span>
                 </p>
-                <div className="mt-2.5 text-xs font-medium text-light-gray">
-                  Posted on {post.publishedAt}
+                <div className="mt-2.5 flex items-center gap-3 text-xs font-medium text-light-gray">
+                  <span>Posted on {post.publishedAt}</span>
+                  <span className="w-1 h-1 bg-current rounded-full" aria-hidden="true"></span>
+                  <Suspense fallback={<div>Loading views...</div>}>
+                    <ViewCounter slug={post.slug} />
+                  </Suspense>
                 </div>
               </div>
             </li>
