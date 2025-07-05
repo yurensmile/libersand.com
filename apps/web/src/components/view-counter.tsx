@@ -5,17 +5,17 @@ import { useEffect, useState } from "react"
 interface ViewCounterProps {
   slug: string
   className?: string
-  shouldIncrement?: boolean
+  trackView?: boolean
 }
 
-export function ViewCounter({ slug, className = "", shouldIncrement = false }: ViewCounterProps) {
+export function ViewCounter({ slug, className = "", trackView = false }: ViewCounterProps) {
   const [views, setViews] = useState<number>(0)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchViews = async () => {
       try {
-        if (shouldIncrement) {
+        if (trackView) {
           const response = await fetch("/api/views", {
             method: "POST",
             headers: {
@@ -40,7 +40,7 @@ export function ViewCounter({ slug, className = "", shouldIncrement = false }: V
     }
 
     fetchViews()
-  }, [slug, shouldIncrement])
+  }, [slug, trackView])
 
   if (loading) {
     return (

@@ -110,7 +110,7 @@ export default function PostsLoop({ count, posts }: BlogPostsProps) {
                   <span>Posted on {post.publishedAt}</span>
                   <span className="w-1 h-1 bg-current rounded-full" aria-hidden="true"></span>
                   <Suspense fallback={<div>Loading views...</div>}>
-                    <ViewCounter slug={post.slug} shouldIncrement={false} />
+                    <ViewCounter slug={post.slug} />
                   </Suspense>
                 </div>
               </div>
