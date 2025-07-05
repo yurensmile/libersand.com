@@ -139,7 +139,7 @@ export default async function ProjectCategory({
                   </div>
                   <Image
                     src={
-                      post.coverImage ||
+                      post.thumbnail ||
                       "https://docs.1chooo.com/images/cover-with-1chooo-com.png"
                     }
                     alt={post.title || "Portfolio post image"}

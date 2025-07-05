@@ -1,19 +1,12 @@
 ---
 title: "1chooo.com"
 excerpt: "I'm Chun-Ho (Hugo) Lin, a graduate with a Bachelor's degree from National Central University (NCU) 🐿️, driven by a sincere passion for Software Engineering 💻."
-coverImage: "/images/banner/projects/1chooo-com.webp"
+thumbnail: "/images/banner/projects/1chooo-com.webp"
 category: "Web Development"
-date: "2024-01-06"
-startDate: 2024-01-06
-endDate: 2024-12-31
 publishedAt: "2024-12-31"
 author:
   name: 1chooo
   avatar: "https://github.com/1chooo.png"
-ogImage:
-  url: "/images/banner/projects/1chooo-com.webp"
-lastModifiedAt: "2025-01-02"
-summary: "👨🏻‍💻 $ ls -al Hugo -- A Turborepo of my personal website and blog built using React and Next.js, and Nextra (V3), fully responsive across all devices"
 tags:
   - Next.js
   - React

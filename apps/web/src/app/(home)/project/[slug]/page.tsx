@@ -113,7 +113,7 @@ export async function generateMetadata(
     keywords: post.tags || config.keywords,
     openGraph: {
       title,
-      images: [post.ogImage.url, ...previousImages],
+      images: [post.thumbnail, ...previousImages],
     },
   };
 }
