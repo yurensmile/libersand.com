@@ -2,7 +2,7 @@
 title: "1chooo.com"
 excerpt: "I'm Chun-Ho (Hugo) Lin, a graduate with a Bachelor's degree from National Central University (NCU) 🐿️, driven by a sincere passion for Software Engineering 💻."
 thumbnail: "/images/banner/projects/1chooo-com.webp"
-category: "Web Development"
+category: "Website"
 publishedAt: "2024-12-31"
 author:
   name: 1chooo
@@ -15,87 +15,130 @@ tags:
   - Blog
 ---
 
-👨🏻‍💻 $ ls -al Hugo -- A Turborepo of my personal website and blog built using React and Next.js, and Nextra (V3), fully responsive across all devices
-
-<div align="center">
-  <strong>
-    <a href="https://github.com/1chooo/portfolio">💻 Source Code</a>&nbsp;&nbsp;&bull;&nbsp;
-    <a href="https://1chooo.com">🎥 Demo</a>&nbsp;&nbsp;&bull;&nbsp;
-    <a href="https://docs.1chooo.com">📚 Docs</a>
-  </strong>
-</div>
+👨🏻‍💻 $ ls -al Hugo -- A Turborepo of my personal portfolio and blog website built with React, Next.js, Tailwind CSS and TypeScript
 
 ![1chooo.com](/images/banner/projects/1chooo-com.webp)
 
-## 📍 Abstract
+A fast, responsive, and SEO-friendly portfolio + blog site to share your work, ideas, and projects -- all built with Next.js, TypeScript, and Tailwind CSS.
 
-Inspired by the [codewithsadee/vcard-personal-portfolio](https://github.com/codewithsadee/vcard-personal-portfolio), we aim to convert the `HTML/CSS` template into a [React-based](https://react.dev/) project using [Next.js Turborepo](https://turbo.build/).
+## Features
 
-Our goal is to provide a template where users can build their own portfolio and blog by simply modifying the **configuration and content** without changing the core code. Users will be able to set up their portfolio by updating the config and adding their own posts to the `contents` folder.
+### Tech Stack Highlights
 
-We'll also provide comprehensive documentation, including a user guide, code walkthrough, and thorough test coverage to ensure a smooth experience.
+- Next.js 15 with App Router
+- TypeScript with strict configuration
+- Tailwind CSS for styling
+- Turborepo for monorepo management
 
-## ✨ Features
+### Blogging Essentials
 
-- 💀 [Skeleton Loading]
-- ⚡️ [Next.js 15 with App Router]
-- ✍🏻 [Markdown Rendering]
-- 🧪 [Jest - Components Unit Testing]
-- 🟩 [GitHub Calendar Heatmap]
-- 💎 [giscus]
-- 🚨 [GitHub Alerts]
+- Markdown support
+- Comment system
+- RSS feed
+- Sitemap generation
+- 🚧 View counter
+- 🚧 Like button
 
-[Skeleton Loading]: https://github.com/dvtng/react-loading-skeleton
-[Next.js 15 with App Router]: https://nextjs.org/
-[Markdown Rendering]: https://github.com/hashicorp/next-mdx-remote
-[Jest - Components Unit Testing]: https://jestjs.io/
-[GitHub Calendar Heatmap]: https://github.com/grubersjoe/react-github-calendar
-[giscus]: https://giscus.app/
-[GitHub Alerts]: https://github.com/chrisweb/rehype-github-alerts
+### UI & UX Enhancements
 
-## 🌏 Contributing
+- Skeleton loading for better user experience
+- Responsive design for mobile and desktop
+- GitHub calendar heatmap to showcase contributions
+- Shiki for code syntax highlighting
+- Motion for animations
 
-[PRs](https://github.com/1chooo/portfolio/pulls) and [Issues](https://github.com/1chooo/portfolio/issues) are welcome! 🫵🏻
+### Performance & SEO
 
-Please read the [Contributing Guideline] for details on our code of conduct, and the process for submitting pull requests to us.
+- Lighthouse score of nearly **100**
+- SEO optimized with meta tags and `JSON-LD`
+- Open graph images using `next/og`
+
+![1chooo.com Lighthouse Score](https://raw.githubusercontent.com/1chooo/portfolio/main/.github/images/seo.webp)
+
+### Dev Experience
+
+- ESLint and Prettier for code quality
+- Conventional commit messages
+
+## Contributing
+
+Please refer to the [Contributing Guideline] for detailed information on how to start the app locally and contribute to this project.
 
 [Contributing Guideline]: https://docs.1chooo.com/contributing
 
-## 🔩 Getting Started
+[Pull Requests](https://github.com/1chooo/portfolio/pulls) and [reporting issues](https://github.com/1chooo/portfolio/issues) are welcome 🫵🏻 in our [GitHub repository](https://github.com/1chooo/portfolio)!
+
+## Getting Started
+
+> [!NOTE]
+> We choose [`pnpm`](https://pnpm.io/) as our package manager. Make sure you have it installed before running the following commands.
 
 ```shell
 $ git clone git@github.com:1chooo/1chooo.com.git
 $ cd 1chooo.com
-$ npm install
-$ npm run dev   # Open http://localhost:3000 with your browser to see the result.
+$ pnpm install
 ```
 
-## 📲 Contact Info
+### Run the Web App
 
-> **Hugo ChunHo Lin**
+```shell
+$ cd apps/web
+$ pnpm run dev   # Open http://localhost:3000 with your browser to see the result.
+```
+
+## Acknowledgments
+
+This project was made possible thanks to the amazing open-source community.
+
+A special thanks to [@codewithsadee](https://github.com/codewithsadee) for the excellent [vcard-personal-portfolio](https://github.com/codewithsadee/vcard-personal-portfolio), which served as the foundation for this project.
+
+The project also incorporates and adapts various open-source projects, including:
+
+- [rehype](https://github.com/rehypejs/rehype)
+- [remark](https://github.com/remarkjs/remark)
+- [Giscus](https://giscus.app/)
+- [react-scroll-motion](https://github.com/1000ship/react-scroll-motion)
+- [GitHub Calendar](https://github.com/grubersjoe/react-github-calendar)
+
+Additionally, I drew inspiration from several incredible projects, including:
+
+- [nelsonlai.me](https://nelsonlai.me)
+- [leerob.com](https://leerob.com)
+- [bntw.dev](https://bntw.dev)
+- [webtech-note.com](https://webtech-note.com)
+- [michaelangelo.io](https://michaelangelo.io)
+- [iamsahaj.xyz](https://iamsahaj.xyz)
+- [jinrup.dev](https://www.jinrup.dev)
+- [mt.ci](https://mt.ci)
+
+...and many others I can't recall but deeply appreciate.
+
+## Authors
+
+- **Chun-Ho (Hugo) Lin** [Website](https://1chooo.com) | [GitHub](https://github.com/1chooo) | [E-mail](mailto:hugo@1chooo.com)
+
+## Deploy on Vercel
+
+The easiest way to deploy 1chooo.com app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## License
+
+> [!IMPORTANT]
+> This [work](https://github.com/1chooo/portfolio) is licensed under [Creative Commons Attribution 4.0 International][cc-by] by [Chun-Ho (Hugo) Lin][1chooo-com].
 >
-> 📩 E-mail: <a href="mailto:hugo@1chooo.com">hugo@1chooo.com</a>
-> <br />
-> 🧳 Linkedin: <a href="https://www.linkedin.com/in/1chooo/">Hugo ChunHo Lin</a>
-> <br />
-> 👨🏻‍💻 GitHub: <a href="https://github.com/1chooo">1chooo</a>
-
-## 🪪 License
-
-This work is licensed under a
-[Creative Commons Attribution 4.0 International License][cc-by] by [Hugo ChunHo Lin][1chooo-com].
-
-[cc-by]: http://creativecommons.org/licenses/by/4.0/
-
-1. You are free to use this code as inspiration.
-2. Please do not copy it directly.
-3. Crediting the author is appreciated.
+> [cc-by]: http://creativecommons.org/licenses/by/4.0/
+>
+> 1. You are free to use this code as inspiration.
+> 2. Please do not copy it directly.
+> 3. Crediting the author is appreciated.
 
 This software can be modified and reused without restriction.
 The original license must be included with any copies of this software.
 If a significant portion of the source code is used, please provide a link back to this repository.
 
-Please remove all of my personal information by running `npm run delete`.
+Please remove all of my personal information by running `pnpm run delete`.
 
 Made with 🖤 by [@1chooo][1chooo-com]
 

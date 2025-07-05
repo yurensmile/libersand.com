@@ -68,7 +68,6 @@
 }
 
 .markdown :not(pre)>code {
-  font-family: var(--font-mono);
   font-size: 0.875rem;
   color: #f8f8f2;
   background-color: #282a36;
