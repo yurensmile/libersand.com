@@ -4,6 +4,18 @@
   color: var(--light-gray);
 }
 
+.markdown .heading-link {
+  display: inline-block;
+  color: var(--white-1);
+  text-decoration: none;
+}
+
+.markdown .heading-link:hover {
+  text-decoration: underline;
+  color: var(--light-gray);
+  text-decoration-color: var(--orange-yellow-crayola);
+}
+
 .markdown p,
 .markdown ul,
 .markdown ol,
