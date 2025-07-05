@@ -81,7 +81,7 @@ export default async function Post(props: Params) {
                 aria-hidden="true"
               ></span>
               <Suspense fallback={<div>Loading views...</div>}>
-                <ViewCounter slug={params.slug} />
+                <ViewCounter slug={post.slug} shouldIncrement={true} />
               </Suspense>
             </div>
             <div className="flex items-center space-x-2 ml-4">
