@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 
 import type { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { FadeLeft, FadeUp, FadeIn } from "@/components/animations";
 import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 import PageTitle from "@/components/page-title";
+import { ViewCounter } from "@/app/(home)/project/view-counter";
 
 import Balancer from "react-wrap-balancer";
 
@@ -70,6 +71,13 @@ export default async function Post(props: Params) {
                 aria-hidden="true"
               ></span>
               <span>{post.category.toUpperCase()}</span>
+              <span
+                className="w-1 h-1 bg-current rounded-full"
+                aria-hidden="true"
+              ></span>
+              <Suspense fallback={<div>Loading views...</div>}>
+                <ViewCounter slug={post.slug} trackView />
+              </Suspense>
             </div>
           </div>
         </FadeUp>
