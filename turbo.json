@@ -3,25 +3,81 @@
   "ui": "tui",
   "tasks": {
     "build": {
-      "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*"
+      ],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**",
+        "dist/**"
+      ],
+      "env": [
+        "POSTGRES_URL",
+        "POSTGRES_USER",
+        "POSTGRES_HOST",
+        "SUPABASE_JWT_SECRET",
+        "POSTGRES_PRISMA_URL",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_DATABASE",
+        "SUPABASE_URL",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_SERVICE_ROLE_KEY",
+        "POSTGRES_URL_NON_POOLING"
+      ]
     },
     "lint": {
-      "dependsOn": ["^lint"]
+      "dependsOn": [
+        "^lint"
+      ]
     },
     "dev": {
       "cache": false,
-      "persistent": true
+      "persistent": true,
+      "env": [
+        "POSTGRES_URL",
+        "POSTGRES_USER",
+        "POSTGRES_HOST",
+        "SUPABASE_JWT_SECRET",
+        "POSTGRES_PRISMA_URL",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_DATABASE",
+        "SUPABASE_URL",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_SERVICE_ROLE_KEY",
+        "POSTGRES_URL_NON_POOLING"
+      ]
     },
     "start": {
-      "dependsOn": ["^build"]
+      "dependsOn": [
+        "^build"
+      ]
     },
     "test": {
-      "dependsOn": ["^build"]
+      "dependsOn": [
+        "^build"
+      ],
+      "env": [
+        "POSTGRES_URL",
+        "POSTGRES_USER",
+        "POSTGRES_HOST",
+        "SUPABASE_JWT_SECRET",
+        "POSTGRES_PRISMA_URL",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_DATABASE",
+        "SUPABASE_URL",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_SERVICE_ROLE_KEY",
+        "POSTGRES_URL_NON_POOLING"
+      ]
     },
     "typecheck": {
-      "dependsOn": ["^build"]
+      "dependsOn": [
+        "^build"
+      ]
     }
   }
 }
