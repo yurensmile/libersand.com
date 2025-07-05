@@ -298,6 +298,9 @@ importers:
       unist-util-visit:
         specifier: ^5.0.0
         version: 5.0.0
+      zod:
+        specifier: 3.25.67
+        version: 3.25.67
     devDependencies:
       '@1chooo/eslint-config':
         specifier: workspace:^

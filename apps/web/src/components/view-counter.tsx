@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { ViewResponseSchema, type ViewResponse } from "@/lib/schemas/page-views"
 
 interface ViewCounterProps {
   slug: string
@@ -23,13 +24,25 @@ export function ViewCounter({ slug, className = "", trackView = false }: ViewCou
             },
             body: JSON.stringify({ slug }),
           })
-          const data = await response.json()
+
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`)
+          }
+          let rawData: ViewResponse | { error: string }
+          rawData = await response.json()
+          const data = ViewResponseSchema.parse(rawData)
           setViews(data.views)
         } else {
           const response = await fetch(`/api/views?slug=${encodeURIComponent(slug)}`, {
             method: "GET",
           })
-          const data = await response.json()
+
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`)
+          }
+          let rawData: ViewResponse | { error: string }
+          rawData = await response.json()
+          const data = ViewResponseSchema.parse(rawData)
           setViews(data.views)
         }
       } catch (error) {
