@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 import { BlurFade } from "@/components/magicui/blur-fade";
-import { ViewCounter } from "@/components/view-counter";
+import { ViewCounter } from "@/app/(home)/blog/view-counter";
 
 import { BlogPost } from "@/types/blog";
 import { cn } from "@1chooo/ui/lib/utils"

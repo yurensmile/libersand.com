@@ -17,7 +17,7 @@ export function ViewCounter({ slug, className = "", trackView = false }: ViewCou
     const fetchViews = async () => {
       try {
         if (trackView) {
-          const response = await fetch("/api/views", {
+          const response = await fetch("/api/blog-views", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -33,7 +33,7 @@ export function ViewCounter({ slug, className = "", trackView = false }: ViewCou
           const data = ViewResponseSchema.parse(rawData)
           setViews(data.views)
         } else {
-          const response = await fetch(`/api/views?slug=${encodeURIComponent(slug)}`, {
+          const response = await fetch(`/api/blog-views?slug=${encodeURIComponent(slug)}`, {
             method: "GET",
           })
 
