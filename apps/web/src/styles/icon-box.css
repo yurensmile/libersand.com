@@ -1,7 +1,0 @@
-.icon-box {
-    z-index: 1;
-}
-
-.icon-box::before {
-    z-index: -1;
-}
