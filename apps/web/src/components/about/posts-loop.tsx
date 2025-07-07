@@ -107,7 +107,7 @@ function PostsLoop({ count, posts }: BlogPostsProps) {
                   <span>{post.excerpt}</span>
                 </p>
                 <div className="mt-2.5 flex items-center gap-3 text-xs font-medium text-light-gray">
-                  <span>Posted on {post.publishedAt}</span>
+                  <span>{post.publishedAt}</span>
                   <span
                     className="w-1 h-1 bg-current rounded-full"
                     aria-hidden="true"
