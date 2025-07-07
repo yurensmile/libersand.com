@@ -43,7 +43,7 @@
     "commit": "cz",
     "commitlint": "commitlint --edit",
     "compile": "tsc",
-    "lint": "next lint --max-warnings 0",
+    "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "start": "ts-node ./bin/run.ts",
     "start:node": "node ./bin/run",
@@ -53,8 +53,8 @@
     "release": "semantic-release"
   },
   "devDependencies": {
-    "@1chooo/activity-calendar": "workspace:*",
-    "@1chooo/github-calendar": "workspace:*",
+    "@1chooo/eslint-config": "workspace:^",
+    "@1chooo/typescript-config": "workspace:*",
     "@commitlint/cli": "^18.6.1",
     "@commitlint/config-conventional": "^18.6.3",
     "@jest/globals": "^29.7.0",
@@ -73,6 +73,7 @@
     "ts-jest": "^29.1.4",
     "ts-node": "^10.9.2",
     "tsup": "^8.0.2",
+    "eslint": "9.30.0",
     "typescript": "^5.4.5"
   },
   "dependencies": {

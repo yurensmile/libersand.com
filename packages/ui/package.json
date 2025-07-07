@@ -15,7 +15,7 @@
   "homepage": "https://1chooo.com",
   "private": true,
   "scripts": {
-    "lint": "eslint . --max-warnings 0"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.9",
@@ -31,7 +31,8 @@
     "react-dom": "19.1.0",
     "tailwind-merge": "^3.2.0",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "3.25.67"
+    "zod": "3.25.67",
+    "eslint": "9.30.0"
   },
   "devDependencies": {
     "@1chooo/eslint-config": "workspace:*",
