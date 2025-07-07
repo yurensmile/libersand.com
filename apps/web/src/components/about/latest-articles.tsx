@@ -14,7 +14,7 @@ import { BlogPost } from "@/types/blog";
 
 import { cn } from "@1chooo/ui/lib/utils";
 
-import classes from "@/styles/about/latest-articles.module.css";
+import styles from "@/styles/about/latest-articles.module.css";
 
 interface LatestArticlesProps {
   posts: BlogPost[];
@@ -52,20 +52,20 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
   return (
     <>
       <StaggeredAnimationSection>
-        <ul className={cn(classes["latest-posts"])}>
+        <ul className={cn(styles["latest-posts"])}>
           {visiblePosts.map((post) => (
             <li
               key={post.slug}
-              className={cn(classes["latest-post"], "group active")}
+              className={cn(styles["latest-post"], "group active")}
             >
               <ViewTransitionsProgressBarLink
                 href={`/blog/${post.slug}`}
                 rel="noopener noreferrer"
               >
-                <figure className={cn(classes["latest-post-img"])}>
+                <figure className={cn(styles["latest-post-img"])}>
                   <div
                     className={cn(
-                      classes["latest-post-icon-box"],
+                      styles["latest-post-icon-box"],
                       "absolute text-orange-yellow-crayola text-xl bg-jet p-[18px] rounded-xl top-1/2 left-1/2 transition-all duration-250 ease-linear",
                     )}
                   >

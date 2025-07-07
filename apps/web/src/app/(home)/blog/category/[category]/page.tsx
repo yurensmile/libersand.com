@@ -14,7 +14,7 @@ import type { BlogPost } from "@/types/blog";
 
 import { cn } from "@1chooo/ui/lib/utils";
 
-import classes from "@/styles/blog.module.css";
+import styles from "@/styles/blog.module.css";
 
 interface BlogCategoryProps {
   params: Promise<{ category: string }>;
@@ -93,12 +93,12 @@ export default async function BlogCategory({ params }: BlogCategoryProps) {
     <article>
       <PageTitle title="Hugo's Blog" />
 
-      <section className={cn(classes.blog)}>
-        <ul className={classes.filters}>
+      <section className={cn(styles.blog)}>
+        <ul className={styles.filters}>
           <li>
             <ViewTransitionsProgressBarLink
               href="/blog"
-              className={cn(classes.filterButton)}
+              className={cn(styles.filterButton)}
             >
               All ({allPosts.length})
             </ViewTransitionsProgressBarLink>
@@ -108,8 +108,8 @@ export default async function BlogCategory({ params }: BlogCategoryProps) {
             <li key={index}>
               <ViewTransitionsProgressBarLink
                 href={`/blog/category/${encodeURIComponent(category.toLowerCase())}`}
-                className={cn(classes.filterButton, {
-                  [classes.filterButtonActive]:
+                className={cn(styles.filterButton, {
+                  [styles.filterButtonActive]:
                     category.toLowerCase() === categoryParam.toLowerCase(),
                 })}
               >
@@ -120,15 +120,15 @@ export default async function BlogCategory({ params }: BlogCategoryProps) {
         </ul>
       </section>
 
-      <section className={cn(classes.blog)}>
-        <ul className={cn(classes.cards)}>
+      <section className={cn(styles.blog)}>
+        <ul className={cn(styles.cards)}>
           {filteredPosts.map((post: BlogPost) => (
-            <li className={cn(classes.card)} key={post.slug}>
+            <li className={cn(styles.card)} key={post.slug}>
               <ViewTransitionsProgressBarLink
                 href={`/blog/${post.slug}`}
                 rel="noopener noreferrer"
               >
-                <figure className={cn(classes.bannerBox)}>
+                <figure className={cn(styles.bannerBox)}>
                   <Image
                     src={
                       post.thumbnail ||
@@ -143,17 +143,17 @@ export default async function BlogCategory({ params }: BlogCategoryProps) {
                     blurDataURL="https://docs.1chooo.com/images/cover-with-1chooo-com.png"
                   />
                 </figure>
-                <div className={cn(classes.content)}>
-                  <div className={cn(classes.meta)}>
-                    <p className={cn(classes.category)}>
+                <div className={cn(styles.content)}>
+                  <div className={cn(styles.meta)}>
+                    <p className={cn(styles.category)}>
                       {post.category.toUpperCase()}
                     </p>
-                    <h3 className={cn(classes.title)}>
+                    <h3 className={cn(styles.title)}>
                       <Balancer>{post.title}</Balancer>
                     </h3>
                   </div>
                   <time
-                    className={cn(classes.date)}
+                    className={cn(styles.date)}
                     dateTime={post.publishedAt}
                   >
                     {new Date(post.publishedAt).toLocaleDateString("en-us", {

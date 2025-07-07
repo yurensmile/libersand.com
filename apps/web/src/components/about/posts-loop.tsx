@@ -10,7 +10,7 @@ import { ViewCounter } from "@/app/(home)/blog/view-counter";
 import { BlogPost } from "@/types/blog";
 import { cn } from "@1chooo/ui/lib/utils"
 
-import classes from "@/styles/gradient-card.module.css"
+import styles from "@/styles/gradient-card.module.css"
 
 interface BlogPostsProps {
   count: number;
@@ -54,7 +54,7 @@ export default function PostsLoop({ count, posts }: BlogPostsProps) {
             direction="up"
           >
             <li
-              className={cn(classes.gradientCard, "group cursor-pointer")}
+              className={cn(styles.gradientCard, "group cursor-pointer")}
               onClick={() => handlePostClick(post.link)}
             >
               <div className="flex flex-col gap-1 overflow-hidden relative z-30 duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1">

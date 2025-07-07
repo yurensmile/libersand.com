@@ -11,20 +11,23 @@ interface ResumeTimeLineProps {
   resumeCards: ResumeCardType[];
 }
 
-import classes from "@/styles/resume/timeline.module.css";
+import styles from "@/styles/resume/timeline.module.css";
 
+/**
+ * @todo update styles name to match lowercase pascal case convention and styles.styleName
+ */
 function ResumeTimeLine({ icon, title, resumeCards }: ResumeTimeLineProps) {
   return (
-    <div className={cn(classes["timelines"])}>
+    <div className={cn(styles["timelines"])}>
       <div className="flex items-center gap-4 mb-6">
         <IconBox iconName={icon} />
         <h3 className="text-white-2 text-2xl font-bold">{title}</h3>
       </div>
 
-      <ol className={cn(classes["timeline"])}>
+      <ol className={cn(styles["timeline"])}>
         {resumeCards.map((resumeCard: ResumeCardType, index: number) => (
           <li
-            className={cn(classes["timeline-cards"])}
+            className={cn(styles["timeline-cards"])}
             key={`${resumeCard.institution}-${index}`}
           >
             <ResumeCard resumeCard={resumeCard} />

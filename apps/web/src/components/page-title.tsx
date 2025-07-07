@@ -2,7 +2,7 @@ import React from "react";
 
 import { cn } from "@1chooo/ui/lib/utils";
 
-import classes from "@/styles/page-title.module.css";
+import styles from "@/styles/page-title.module.css";
 
 interface PageTitleProps {
   className?: string;
@@ -10,7 +10,7 @@ interface PageTitleProps {
 }
 
 function PageTitle({ className, title }: PageTitleProps) {
-  return <h2 className={cn(classes.pageTitle, className)}>{title}</h2>;
+  return <h2 className={cn(styles.pageTitle, className)}>{title}</h2>;
 }
 
 export default PageTitle;

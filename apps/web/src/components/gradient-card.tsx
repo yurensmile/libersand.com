@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "@1chooo/ui/lib/utils";
 
-import classes from "@/styles/gradient-card.module.css";
+import styles from "@/styles/gradient-card.module.css";
 
 interface GradientCardProps {
   children: React.ReactNode;
@@ -11,7 +11,7 @@ interface GradientCardProps {
 function GradientCard({ children, className = "" }: GradientCardProps) {
   return (
     <div
-      className={cn(classes.gradientCard, `${className}`)}
+      className={cn(styles.gradientCard, `${className}`)}
     >
       {children}
     </div>

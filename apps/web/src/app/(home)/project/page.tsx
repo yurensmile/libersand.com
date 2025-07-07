@@ -10,7 +10,7 @@ import { cn } from "@1chooo/ui/lib/utils";
 import config from "@/config";
 import { LuEye } from "react-icons/lu";
 
-import classes from "@/styles/project.module.css";
+import styles from "@/styles/project.module.css";
 import { ProjectPost } from "@/types/project";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -50,12 +50,12 @@ export default async function Project() {
     <article>
       <PageTitle title="Hugo's Project" />
 
-      <section className={cn(classes.project)}>
-        <ul className={classes.filters}>
+      <section className={cn(styles.project)}>
+        <ul className={styles.filters}>
           <li>
             <ViewTransitionsProgressBarLink
               href="/project"
-              className={cn(classes.filterButton, classes.filterButtonActive)}
+              className={cn(styles.filterButton, styles.filterButtonActive)}
             >
               All ({projects.length})
             </ViewTransitionsProgressBarLink>
@@ -65,7 +65,7 @@ export default async function Project() {
             <li key={`${index}-${category}`}>
               <ViewTransitionsProgressBarLink
                 href={`/project/category/${encodeURIComponent(category.toLowerCase())}`}
-                className={cn(classes.filterButton)}
+                className={cn(styles.filterButton)}
               >
                 {category} ({categories[category]})
               </ViewTransitionsProgressBarLink>
@@ -74,20 +74,20 @@ export default async function Project() {
         </ul>
       </section>
 
-      <section className={cn(classes.project)}>
-        <ul className={cn(classes.cards)}>
+      <section className={cn(styles.project)}>
+        <ul className={cn(styles.cards)}>
           {projects.map((post) => (
             <li
               key={post.slug}
-              className={cn(classes.card, classes.cardActive)}
+              className={cn(styles.card, styles.cardActive)}
               data-category={post.category}
             >
               <ViewTransitionsProgressBarLink
                 href={`/project/${post.slug}`}
                 rel="noopener noreferrer"
               >
-                <figure className={cn(classes.bannerBox)}>
-                  <div className={cn(classes.iconBox)}>
+                <figure className={cn(styles.bannerBox)}>
+                  <div className={cn(styles.iconBox)}>
                     <LuEye />
                   </div>
                   <Image
@@ -105,8 +105,8 @@ export default async function Project() {
                     blurDataURL="https://docs.1chooo.com/images/cover-with-1chooo-com.png"
                   />
                 </figure>
-                <h3 className={cn(classes.title)}>{post.title}</h3>
-                <p className={cn(classes.category)}>{post.category}</p>
+                <h3 className={cn(styles.title)}>{post.title}</h3>
+                <p className={cn(styles.category)}>{post.category}</p>
               </ViewTransitionsProgressBarLink>
             </li>
           ))}

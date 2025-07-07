@@ -23,7 +23,7 @@ import { cn } from "@1chooo/ui/lib/utils";
 
 import type { ResumeCardType } from "@/types/resume";
 
-import classes from "@/styles/resume/resume-card.module.css";
+import styles from "@/styles/resume/resume-card.module.css";
 
 interface ResumeCardProps {
   resumeCard: ResumeCardType;
@@ -110,7 +110,7 @@ export default function ResumeCard({ resumeCard }: ResumeCardProps) {
         className="hover:scale-105 duration-300"
         onClick={() => openModal(resumeCard)}
       >
-        <div className={cn(classes["resume-card"])}>
+        <div className={cn(styles["resume-card"])}>
           <div className="flex flex-row items-center gap-4 p-6 pb-4 cursor-pointer transition-colors rounded-t-md">
             <div className="h-10 w-10 flex-shrink-0 overflow-hidden rounded-md">
               <Image
@@ -156,22 +156,22 @@ export default function ResumeCard({ resumeCard }: ResumeCardProps) {
       {activeResumeCard && (
         <div
           className={cn(
-            classes.modalContainer,
-            activeResumeCard && classes.modalContainerActive,
+            styles.modalContainer,
+            activeResumeCard && styles.modalContainerActive,
           )}
           aria-modal="true"
           role="dialog"
         >
           <div
             className={cn(
-              classes.modalOverlay,
-              activeResumeCard && classes.modalOverlayActive,
+              styles.modalOverlay,
+              activeResumeCard && styles.modalOverlayActive,
             )}
             onClick={closeModal}
           ></div>
-          <section className={cn(classes["modal"])}>
+          <section className={cn(styles["modal"])}>
             <button
-              className={cn(classes["modal-close-btn"])}
+              className={cn(styles["modal-close-btn"])}
               onClick={closeModal}
               aria-label="Close modal"
             >
@@ -191,14 +191,14 @@ export default function ResumeCard({ resumeCard }: ResumeCardProps) {
               </svg>
             </button>
 
-            <div className={cn(classes["modal-img-wrapper"])}>
-              <figure className={cn(classes["modal-avatar-box"])}>
+            <div className={cn(styles["modal-img-wrapper"])}>
+              <figure className={cn(styles["modal-avatar-box"])}>
                 <Image
                   src={resumeCard.institutionImage || "/favicon.ico"}
                   alt={resumeCard.institution}
                   width={80}
                   height={80}
-                  className={cn(classes["modal-avatar"])}
+                  className={cn(styles["modal-avatar"])}
                   onError={(e) => {
                     e.currentTarget.src = "/favicon.ico?height=80&width=80";
                     e.currentTarget.onerror = null;
