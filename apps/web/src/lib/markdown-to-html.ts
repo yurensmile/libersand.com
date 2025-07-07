@@ -9,14 +9,20 @@ import { transformerCopyButton } from "@rehype-pretty/transformers";
 import rehypeImageCaptions from "@/lib/rehype/image-captions";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
+import remarkReadingTime from "@/lib/remark/reading-time";
 
 import config from "@/config";
 
 const { shikiTheme } = config;
 
-const cache = new Map<string, string>();
+const cache = new Map<string, { html: string; readingTime: string }>();
 
-export default async function markdownToHtml(markdown: string) {
+export interface ProcessedMarkdown {
+  html: string;
+  readingTime: string;
+}
+
+export default async function markdownToHtml(markdown: string): Promise<ProcessedMarkdown> {
   if (cache.has(markdown)) {
     return cache.get(markdown)!;
   }
@@ -26,6 +32,7 @@ export default async function markdownToHtml(markdown: string) {
     .use(remarkGfm)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeSlug)
+    .use(remarkReadingTime)
     .use(rehypeAutolinkHeadings, {
       behavior: "wrap",
       properties: {
@@ -53,8 +60,14 @@ export default async function markdownToHtml(markdown: string) {
     .process(markdown);
 
   const htmlContent = result.toString();
+  const readingTime = result.data.readingTime as string || "0 min read";
 
-  cache.set(markdown, htmlContent);
+  const processedContent = {
+    html: htmlContent,
+    readingTime: readingTime
+  };
 
-  return htmlContent;
+  cache.set(markdown, processedContent);
+
+  return processedContent;
 }

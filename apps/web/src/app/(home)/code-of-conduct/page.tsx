@@ -142,7 +142,7 @@ For answers to common questions about this code of conduct, see the FAQ at
 `;
 
 export default async function CodeOfConduct() {
-  const content = await markdownToHtml(codeOfConduct || "");
+  const processedContent = await markdownToHtml(codeOfConduct || "");
 
   return (
     <article>
@@ -151,7 +151,7 @@ export default async function CodeOfConduct() {
       </AnimatedSection>
       <div
         className={cn("markdown")}
-        dangerouslySetInnerHTML={{ __html: content }}
+        dangerouslySetInnerHTML={{ __html: processedContent.html }}
       />
     </article>
   );

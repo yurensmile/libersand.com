@@ -112,6 +112,15 @@ function PostsLoop({ count, posts }: BlogPostsProps) {
                     className="w-1 h-1 bg-current rounded-full"
                     aria-hidden="true"
                   ></span>
+                  {post.readingTime && (
+                    <>
+                      <span>{post.readingTime}</span>
+                      <span
+                        className="w-1 h-1 bg-current rounded-full"
+                        aria-hidden="true"
+                      ></span>
+                    </>
+                  )}
                   <Suspense fallback={<div>Loading views...</div>}>
                     <ViewCounter slug={post.slug} />
                   </Suspense>

@@ -179,7 +179,7 @@ Creative Commons may be contacted at [creativecommons.org](https://creativecommo
 `;
 
 async function Terms() {
-  const content = await markdownToHtml(terms || "");
+  const processedContent = await markdownToHtml(terms || "");
 
   return (
     <article>
@@ -188,7 +188,7 @@ async function Terms() {
       </AnimatedSection>
       <div
         className={cn("markdown")}
-        dangerouslySetInnerHTML={{ __html: content }}
+        dangerouslySetInnerHTML={{ __html: processedContent.html }}
       />
     </article>
   );

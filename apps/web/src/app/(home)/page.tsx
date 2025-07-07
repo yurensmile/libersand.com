@@ -3,7 +3,8 @@ import dynamic from "next/dynamic";
 import PageTitle from "@/components/page-title";
 
 import markdownToHtml from "@/lib/markdown-to-html";
-import { getBlogPosts } from "@/lib/api/blog";
+import { getBlogPostsWithReadingTime } from '@/lib/api/blog';
+
 import { MyWritings } from "@/components/about/my-writings";
 import GitHubCalendar from "@1chooo/github-calendar";
 import { ThemeInput } from "@1chooo/activity-calendar/types";
@@ -24,7 +25,7 @@ const { firstName, lastName, preferredName, introduction, githubUsername } =
   about;
 
 async function About() {
-  const allPosts = getBlogPosts();
+  const allPosts = await getBlogPostsWithReadingTime();
   const yellowTheme: ThemeInput = {
     light: ["#EBEBEB", "#FFDA6B"],
     dark: ["#383838", "#FFDA6B"],
@@ -47,7 +48,7 @@ async function About() {
         {processedIntroduction && (
           <div
             className={cn("markdown")}
-            dangerouslySetInnerHTML={{ __html: processedIntroduction }}
+            dangerouslySetInnerHTML={{ __html: processedIntroduction.html }}
           />
         )}
       </AnimatedSection>

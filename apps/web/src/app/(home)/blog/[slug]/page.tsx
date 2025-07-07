@@ -2,17 +2,14 @@ import React, { Suspense } from "react";
 
 import type { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import { LuFacebook, LuTwitter } from "react-icons/lu";
 import Balancer from "react-wrap-balancer";
 import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
 import { ViewCounter } from "@/app/(home)/blog/view-counter";
 import { FadeLeft, FadeUp, FadeIn } from "@/components/animations";
 import PageTitle from "@/components/page-title";
 import Comments from "@/components/comments";
-
+import { getBlogPostBySlugWithProcessedContent } from '@/lib/api/blog';
 import { getBlogPosts, getBlogPostBySlug } from "@/lib/api/blog";
-import markdownToHtml from "@/lib/markdown-to-html";
 
 import config from "@/config";
 
@@ -30,15 +27,11 @@ type Params = {
 
 export default async function Post(props: Params) {
   const params = await props.params;
-  const post = getBlogPostBySlug(params.slug);
-  const shareUrl = `https://1chooo.com/blog/${post.slug}`;
-  const shareText = `Check out this post:`;
+  const post = await getBlogPostBySlugWithProcessedContent(params.slug);
 
   if (!post) {
     return notFound();
   }
-
-  const content = await markdownToHtml(post.content || "");
 
   return (
     <div>
@@ -62,47 +55,36 @@ export default async function Post(props: Params) {
         </FadeLeft>
 
         <FadeUp delay={0.3 * 2}>
+          <div className="flex items-center justify-between mt-4 text-lg w-full text-light-gray-70">
+            {post.excerpt}
+          </div>
+        </FadeUp>
+
+        <FadeUp delay={0.3 * 2}>
           <div className="flex items-center justify-between mt-4 text-sm w-full text-light-gray-70">
             <div className="flex items-center space-x-2">
               <span>
-                {new Date(post.publishedAt).toLocaleDateString("en-us", {
-                  month: "long",
-                  day: "numeric",
-                  year: "numeric",
-                })}
+                {post.publishedAt}
               </span>
               <span
                 className="w-1 h-1 bg-current rounded-full"
                 aria-hidden="true"
               ></span>
               <span>{post.category.toUpperCase()}</span>
-              <span
-                className="w-1 h-1 bg-current rounded-full"
-                aria-hidden="true"
-              ></span>
+            </div>
+            <div className="flex items-center space-x-2 ml-4">
+              {post.readingTime && (
+                <>
+                  <span>{post.readingTime}</span>
+                  <span
+                    className="w-1 h-1 bg-current rounded-full"
+                    aria-hidden="true"
+                  ></span>
+                </>
+              )}
               <Suspense fallback={<div>Loading views...</div>}>
                 <ViewCounter slug={post.slug} trackView />
               </Suspense>
-            </div>
-            <div className="flex items-center space-x-2 ml-4">
-              <Link
-                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-orange-yellow-crayola transition-colors"
-                aria-label="Share on Facebook"
-              >
-                <LuFacebook className="w-5 h-5" />
-              </Link>
-              <Link
-                href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-orange-yellow-crayola transition-colors"
-                aria-label="Share on Twitter"
-              >
-                <LuTwitter className="w-5 h-5" />
-              </Link>
             </div>
           </div>
         </FadeUp>
@@ -115,7 +97,7 @@ export default async function Post(props: Params) {
               className={cn(
                 "markdown text-light-gray w-[90%] sm:w-[90%] md:w-[90%] lg:w-[80%] xl:w-[80%]",
               )}
-              dangerouslySetInnerHTML={{ __html: content }}
+              dangerouslySetInnerHTML={{ __html: post.processedContent || "" }}
             />
           </div>
         </FadeIn>
