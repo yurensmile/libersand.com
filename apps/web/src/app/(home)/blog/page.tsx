@@ -108,10 +108,7 @@ export default async function Blog() {
                       <Balancer>{post.title}</Balancer>
                     </h3>
                   </div>
-                  <time
-                    className={cn(styles.date)}
-                    dateTime={post.publishedAt}
-                  >
+                  <time className={cn(styles.date)} dateTime={post.publishedAt}>
                     {new Date(post.publishedAt).toLocaleDateString("en-us", {
                       month: "long",
                       day: "numeric",

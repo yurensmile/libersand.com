@@ -7,8 +7,8 @@ import { unified } from "unified";
 import rehypePrettyCode from "rehype-pretty-code";
 import { transformerCopyButton } from "@rehype-pretty/transformers";
 import rehypeImageCaptions from "@/lib/rehype/image-captions";
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypeSlug from 'rehype-slug'
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeSlug from "rehype-slug";
 
 import config from "@/config";
 
@@ -30,7 +30,7 @@ export default async function markdownToHtml(markdown: string) {
       behavior: "wrap",
       properties: {
         className: ["heading-link"],
-        ariaLabel: "Link to heading"
+        ariaLabel: "Link to heading",
       },
     })
     .use(rehypePrettyCode, {

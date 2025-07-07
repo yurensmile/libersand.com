@@ -10,11 +10,7 @@ interface GradientCardProps {
 
 function GradientCard({ children, className = "" }: GradientCardProps) {
   return (
-    <div
-      className={cn(styles.gradientCard, `${className}`)}
-    >
-      {children}
-    </div>
+    <div className={cn(styles.gradientCard, `${className}`)}>{children}</div>
   );
 }
 

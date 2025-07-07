@@ -1,17 +1,24 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { ViewResponseSchema, type ViewResponse } from "@/lib/schemas/page-views"
+import { useEffect, useState } from "react";
+import {
+  ViewResponseSchema,
+  type ViewResponse,
+} from "@/lib/schemas/page-views";
 
 interface ViewCounterProps {
-  slug: string
-  className?: string
-  trackView?: boolean
+  slug: string;
+  className?: string;
+  trackView?: boolean;
 }
 
-export function ViewCounter({ slug, className = "", trackView = false }: ViewCounterProps) {
-  const [views, setViews] = useState<number>(0)
-  const [loading, setLoading] = useState(true)
+export function ViewCounter({
+  slug,
+  className = "",
+  trackView = false,
+}: ViewCounterProps) {
+  const [views, setViews] = useState<number>(0);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchViews = async () => {
@@ -23,45 +30,48 @@ export function ViewCounter({ slug, className = "", trackView = false }: ViewCou
               "Content-Type": "application/json",
             },
             body: JSON.stringify({ slug }),
-          })
+          });
 
           if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`)
+            throw new Error(`HTTP error! status: ${response.status}`);
           }
-          let rawData: ViewResponse | { error: string }
-          rawData = await response.json()
-          const data = ViewResponseSchema.parse(rawData)
-          setViews(data.views)
+          let rawData: ViewResponse | { error: string };
+          rawData = await response.json();
+          const data = ViewResponseSchema.parse(rawData);
+          setViews(data.views);
         } else {
-          const response = await fetch(`/api/views/blog?slug=${encodeURIComponent(slug)}`, {
-            method: "GET",
-          })
+          const response = await fetch(
+            `/api/views/blog?slug=${encodeURIComponent(slug)}`,
+            {
+              method: "GET",
+            },
+          );
 
           if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`)
+            throw new Error(`HTTP error! status: ${response.status}`);
           }
-          let rawData: ViewResponse | { error: string }
-          rawData = await response.json()
-          const data = ViewResponseSchema.parse(rawData)
-          setViews(data.views)
+          let rawData: ViewResponse | { error: string };
+          rawData = await response.json();
+          const data = ViewResponseSchema.parse(rawData);
+          setViews(data.views);
         }
       } catch (error) {
-        console.error("Error fetching views:", error)
+        console.error("Error fetching views:", error);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
+    };
 
-    fetchViews()
-  }, [slug, trackView])
+    fetchViews();
+  }, [slug, trackView]);
 
   if (loading) {
-    return (
-      <p className={className}>{"... views"}</p>
-    )
+    return <p className={className}>{"... views"}</p>;
   }
 
   return (
-    <p className={className}>{`${Number(views).toLocaleString('en-US')} views`}</p>
-  )
+    <p
+      className={className}
+    >{`${Number(views).toLocaleString("en-US")} views`}</p>
+  );
 }

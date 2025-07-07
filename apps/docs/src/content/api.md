@@ -1,3 +1,5 @@
+# API Documentation
+
 # GitHub Users API
 
 Get comprehensive GitHub user statistics and information.
@@ -16,18 +18,20 @@ This endpoint fetches detailed GitHub user information including profile data, r
 
 ### Query Parameters
 
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `user_name` | string | No | Config default username | GitHub username to fetch data for |
+| Parameter   | Type   | Required | Default                 | Description                       |
+| ----------- | ------ | -------- | ----------------------- | --------------------------------- |
+| `user_name` | string | No       | Config default username | GitHub username to fetch data for |
 
 ## Request Examples
 
 ### Get default user (from config)
+
 ```bash
 curl -X GET "https://1chooo.com/api/github/users"
 ```
 
 ### Get specific user
+
 ```bash
 curl -X GET "https://1chooo.com/api/github/users?user_name=octocat"
 ```
@@ -91,35 +95,38 @@ curl -X GET "https://1chooo.com/api/github/users?user_name=octocat"
 ## Response Schema
 
 ### User Object
-| Field | Type | Description |
-|-------|------|-------------|
-| `login` | string | GitHub username |
-| `name` | string | Display name |
-| `bio` | string | User bio |
-| `location` | string | User location |
-| `company` | string | Company name |
-| `blog` | string | Blog/website URL |
-| `avatar_url` | string | Profile picture URL |
-| `html_url` | string | GitHub profile URL |
-| `public_repos` | number | Number of public repositories |
-| `followers` | number | Number of followers |
-| `following` | number | Number of following |
-| `created_at` | string | Account creation date (ISO 8601) |
-| `updated_at` | string | Last profile update date (ISO 8601) |
+
+| Field          | Type   | Description                         |
+| -------------- | ------ | ----------------------------------- |
+| `login`        | string | GitHub username                     |
+| `name`         | string | Display name                        |
+| `bio`          | string | User bio                            |
+| `location`     | string | User location                       |
+| `company`      | string | Company name                        |
+| `blog`         | string | Blog/website URL                    |
+| `avatar_url`   | string | Profile picture URL                 |
+| `html_url`     | string | GitHub profile URL                  |
+| `public_repos` | number | Number of public repositories       |
+| `followers`    | number | Number of followers                 |
+| `following`    | number | Number of following                 |
+| `created_at`   | string | Account creation date (ISO 8601)    |
+| `updated_at`   | string | Last profile update date (ISO 8601) |
 
 ### Stats Object
-| Field | Type | Description |
-|-------|------|-------------|
-| `totalStars` | number | Total stars across all non-fork repositories |
-| `totalForks` | number | Total forks across all repositories |
-| `totalIssues` | number | Total issues created by the user |
-| `totalPRs` | number | Total pull requests created by the user |
-| `publicRepos` | number | Number of public repositories |
-| `totalRepos` | number | Total number of repositories |
-| `followersCount` | number | Number of followers |
-| `followingCount` | number | Number of users following |
+
+| Field            | Type   | Description                                  |
+| ---------------- | ------ | -------------------------------------------- |
+| `totalStars`     | number | Total stars across all non-fork repositories |
+| `totalForks`     | number | Total forks across all repositories          |
+| `totalIssues`    | number | Total issues created by the user             |
+| `totalPRs`       | number | Total pull requests created by the user      |
+| `publicRepos`    | number | Number of public repositories                |
+| `totalRepos`     | number | Total number of repositories                 |
+| `followersCount` | number | Number of followers                          |
+| `followingCount` | number | Number of users following                    |
 
 ### Followers Array
+
 Array of follower objects with:
 | Field | Type | Description |
 |-------|------|-------------|
@@ -130,6 +137,7 @@ Array of follower objects with:
 | `type` | string | Account type (User, Organization) |
 
 ### Top Repos Array
+
 Array of top 10 repositories (by stars) with:
 | Field | Type | Description |
 |-------|------|-------------|
@@ -146,6 +154,7 @@ Array of top 10 repositories (by stars) with:
 ## Error Responses
 
 ### User Not Found (404)
+
 ```json
 {
   "error": "User not found"
@@ -153,6 +162,7 @@ Array of top 10 repositories (by stars) with:
 ```
 
 ### Rate Limited (403)
+
 ```json
 {
   "error": "API rate limit exceeded or access forbidden"
@@ -160,6 +170,7 @@ Array of top 10 repositories (by stars) with:
 ```
 
 ### Server Error (500)
+
 ```json
 {
   "error": "Failed to fetch GitHub data",
@@ -170,10 +181,12 @@ Array of top 10 repositories (by stars) with:
 ## Rate Limiting
 
 This endpoint uses the GitHub API which has rate limiting:
+
 - **Unauthenticated requests**: 60 requests per hour per IP
 - **Authenticated requests**: 5,000 requests per hour
 
 The endpoint makes multiple GitHub API calls:
+
 - 1 call to fetch user profile
 - 1 call to fetch repositories
 - 1 call to fetch followers
@@ -212,6 +225,7 @@ GET /api/github/repos
 ## Description
 
 This endpoint fetches GitHub repository data. It can operate in two modes:
+
 1. **Single Repository Mode**: Fetch specific repository statistics when `repo_name` is provided
 2. **All Repositories Mode**: Fetch all repositories for the configured user when no `repo_name` is provided
 
@@ -219,18 +233,20 @@ This endpoint fetches GitHub repository data. It can operate in two modes:
 
 ### Query Parameters
 
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `repo_name` | string | No | - | Specific repository name to fetch. If omitted, returns all repositories |
+| Parameter   | Type   | Required | Default | Description                                                             |
+| ----------- | ------ | -------- | ------- | ----------------------------------------------------------------------- |
+| `repo_name` | string | No       | -       | Specific repository name to fetch. If omitted, returns all repositories |
 
 ## Request Examples
 
 ### Get all repositories
+
 ```bash
 curl -X GET "https://1chooo.com/api/github/repos"
 ```
 
 ### Get specific repository
+
 ```bash
 curl -X GET "https://1chooo.com/api/github/repos?repo_name=portfolio"
 ```
@@ -286,31 +302,31 @@ When no `repo_name` parameter is provided:
 
 ### Single Repository Mode
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `stars` | number | Number of stars the repository has received |
+| Field        | Type   | Description                                    |
+| ------------ | ------ | ---------------------------------------------- |
+| `stars`      | number | Number of stars the repository has received    |
 | `forksCount` | number | Number of times the repository has been forked |
 
 ### All Repositories Mode
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `repos` | array | Array of repository objects |
+| Field        | Type   | Description                           |
+| ------------ | ------ | ------------------------------------- |
+| `repos`      | array  | Array of repository objects           |
 | `totalCount` | number | Total number of repositories returned |
 
 #### Repository Object
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `name` | string | Repository name |
-| `fullName` | string | Full repository name (owner/repo) |
-| `description` | string | Repository description |
-| `stars` | number | Number of stargazers |
-| `forksCount` | number | Number of forks |
-| `language` | string | Primary programming language |
-| `url` | string | Repository HTML URL |
-| `updatedAt` | string | Last update timestamp (ISO 8601) |
-| `isPrivate` | boolean | Whether the repository is private |
+| Field         | Type    | Description                       |
+| ------------- | ------- | --------------------------------- |
+| `name`        | string  | Repository name                   |
+| `fullName`    | string  | Full repository name (owner/repo) |
+| `description` | string  | Repository description            |
+| `stars`       | number  | Number of stargazers              |
+| `forksCount`  | number  | Number of forks                   |
+| `language`    | string  | Primary programming language      |
+| `url`         | string  | Repository HTML URL               |
+| `updatedAt`   | string  | Last update timestamp (ISO 8601)  |
+| `isPrivate`   | boolean | Whether the repository is private |
 
 ## Error Responses
 
@@ -370,10 +386,12 @@ General server error:
 ## Rate Limiting
 
 This endpoint uses the GitHub API which has rate limiting:
+
 - **Unauthenticated requests**: 60 requests per hour per IP
 - **Authenticated requests**: 5,000 requests per hour
 
 ### API Calls Per Request
+
 - **Single Repository Mode**: 1 GitHub API call
 - **All Repositories Mode**: 1 GitHub API call
 
@@ -385,19 +403,19 @@ This endpoint uses the GitHub API which has rate limiting:
 // Get all repositories
 const getAllRepos = async () => {
   try {
-    const response = await fetch('/api/github/repos');
+    const response = await fetch("/api/github/repos");
     const data = await response.json();
-    
+
     if (response.ok) {
       console.log(`Found ${data.totalCount} repositories`);
-      data.repos.forEach(repo => {
+      data.repos.forEach((repo) => {
         console.log(`${repo.name}: ${repo.stars} stars`);
       });
     } else {
-      console.error('Error:', data.error);
+      console.error("Error:", data.error);
     }
   } catch (error) {
-    console.error('Fetch error:', error);
+    console.error("Fetch error:", error);
   }
 };
 
@@ -406,14 +424,14 @@ const getRepoStats = async (repoName) => {
   try {
     const response = await fetch(`/api/github/repos?repo_name=${repoName}`);
     const data = await response.json();
-    
+
     if (response.ok) {
       console.log(`${repoName}: ${data.stars} stars, ${data.forksCount} forks`);
     } else {
-      console.error('Error:', data.error);
+      console.error("Error:", data.error);
     }
   } catch (error) {
-    console.error('Fetch error:', error);
+    console.error("Fetch error:", error);
   }
 };
 ```
@@ -437,16 +455,19 @@ curl -X GET "https://1chooo.com/api/github/repos" \
 ## Implementation Notes
 
 ### Data Processing
+
 - **All Repositories Mode**: Fetches up to 100 repositories, sorted by last updated
 - **Repository Filtering**: Includes both public and private repositories (if accessible)
 - **Data Transformation**: GitHub API response is transformed to provide cleaner field names
 
 ### Error Handling
+
 - Specific error handling for 404 (not found) scenarios
 - Separate error paths for single repository vs. all repositories modes
 - Detailed error messages include original GitHub API error details
 
 ### Configuration
+
 - Uses `config.about.githubUsername` as the default repository owner
 - GitHub API version is pinned to `2022-11-28` for consistency
 
@@ -456,7 +477,7 @@ Currently operates without authentication. For accessing private repositories or
 
 ```typescript
 const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN
+  auth: process.env.GITHUB_TOKEN,
 });
 ```
 

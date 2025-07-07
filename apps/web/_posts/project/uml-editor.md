@@ -36,6 +36,7 @@ $ ./scripts/run.sh
 - **Chun-Ho (Hugo) Lin** [Website](https://1chooo.com) | [GitHub](https://github.com/1chooo) | [E-mail](mailto:hugo@1chooo.com)
 
 ## License
+
 Released under [MIT](https://github.com/1chooo/uml-editor/blob/main/LICENSE) by [Chun-Ho (Hugo) Lin](https://github.com/1chooo).
 
 This software can be modified and reused without restriction.

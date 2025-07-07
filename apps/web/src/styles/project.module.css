@@ -19,12 +19,12 @@
   animation: scaleUp 0.25s ease forwards;
 }
 
-.project .card>a:hover .title {
+.project .card > a:hover .title {
   color: var(--orange-yellow-crayola);
   font-weight: bold;
 }
 
-.project .card>a {
+.project .card > a {
   width: 100%;
 }
 
@@ -49,12 +49,12 @@
   transition: var(--transition-1);
 }
 
-.project .card>a:hover .iconBox {
+.project .card > a:hover .iconBox {
   --scale: 1;
   opacity: 1;
 }
 
-.project .card>a:hover img {
+.project .card > a:hover img {
   transform: scale(1.1);
 }
 

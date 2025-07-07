@@ -32,7 +32,7 @@
     align-items: center;
   }
 
-  .gradientCard>div:last-child {
+  .gradientCard > div:last-child {
     text-align: left;
   }
 }

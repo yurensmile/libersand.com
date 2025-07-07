@@ -96,9 +96,10 @@ $ python app.py --port 8081 --dev
 
 > [!NOTE]
 > If you want to run the app with the `uvicorn` server, so that you can design your own API and **reload** the app, you can run the following command.
+>
 > ```shell
 > $ ./scripts/run.sh
-> 
+>
 > # or
 > $ uvicorn app.main:app --host 0.0.0.0 --port 8080 --reload
 > ```
@@ -116,7 +117,6 @@ $ docker build -t todam-ticket-system:<TAG_NAME> .
 
 $ docker run -p 8080:8080 todam-ticket-system:<TAG_NAME>
 ```
-
 
 ### Deploy to AWS Lambda Function with AWS CDK
 

@@ -17,7 +17,7 @@
   animation: scaleUp 0.25s ease forwards;
 }
 
-.blog-post-item.active>a {
+.blog-post-item.active > a {
   position: relative;
   background: var(--border-gradient-onyx);
   height: 100%;
@@ -26,7 +26,7 @@
   z-index: 1;
 }
 
-.blog-post-item.active>a::before {
+.blog-post-item.active > a::before {
   content: "";
   position: absolute;
   inset: 1px;
@@ -49,7 +49,7 @@
   transition: var(--transition-1);
 }
 
-.blog-post-item.active>a:hover .blog-banner-box img {
+.blog-post-item.active > a:hover .blog-banner-box img {
   transform: scale(1.1);
 }
 
@@ -108,7 +108,6 @@
   height: 14px;
   margin-top: 8px;
 }
-
 
 @media (min-width: 375px) {
   .blog-banner-box {

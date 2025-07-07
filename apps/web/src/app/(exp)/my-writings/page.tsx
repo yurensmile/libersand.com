@@ -31,7 +31,10 @@ async function About() {
       )}
 
       <AboutSection id="coding-stats" title="Coding Stats">
-        <CodingStats techStacks={config.about.techStacks} githubUsername={config.about.githubUsername} />
+        <CodingStats
+          techStacks={config.about.techStacks}
+          githubUsername={config.about.githubUsername}
+        />
       </AboutSection>
     </article>
   );

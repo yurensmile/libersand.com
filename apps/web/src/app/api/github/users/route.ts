@@ -1,45 +1,41 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { Octokit } from 'octokit';
+import { NextRequest, NextResponse } from "next/server";
+import { Octokit } from "octokit";
 
 import config from "@/config";
 
 export const GET = async (req: NextRequest) => {
   try {
-    const octokit = new Octokit({
-    });
+    const octokit = new Octokit({});
 
-    let username = req.nextUrl.searchParams.get('user_name');
+    let username = req.nextUrl.searchParams.get("user_name");
 
     if (!username) {
       username = config.about.githubUsername;
     }
 
-    const [
-      { data: repos },
-      { data: followers },
-      { data: user }
-    ] = await Promise.all([
-      octokit.request('GET /users/{username}/repos', {
-        headers: {
-          'X-GitHub-Api-Version': '2022-11-28'
-        },
-        username,
-        per_page: 100,
-        sort: 'updated'
-      }),
-      octokit.request('GET /users/{username}/followers', {
-        username,
-        headers: {
-          'X-GitHub-Api-Version': '2022-11-28'
-        },
-      }),
-      octokit.request('GET /users/{username}', {
-        username,
-        headers: {
-          'X-GitHub-Api-Version': '2022-11-28'
-        },
-      })
-    ]);
+    const [{ data: repos }, { data: followers }, { data: user }] =
+      await Promise.all([
+        octokit.request("GET /users/{username}/repos", {
+          headers: {
+            "X-GitHub-Api-Version": "2022-11-28",
+          },
+          username,
+          per_page: 100,
+          sort: "updated",
+        }),
+        octokit.request("GET /users/{username}/followers", {
+          username,
+          headers: {
+            "X-GitHub-Api-Version": "2022-11-28",
+          },
+        }),
+        octokit.request("GET /users/{username}", {
+          username,
+          headers: {
+            "X-GitHub-Api-Version": "2022-11-28",
+          },
+        }),
+      ]);
 
     const stars = repos
       .filter((repo) => !repo.fork)
@@ -56,27 +52,27 @@ export const GET = async (req: NextRequest) => {
 
     try {
       const [issuesResult, prsResult] = await Promise.all([
-        octokit.request('GET /search/issues', {
+        octokit.request("GET /search/issues", {
           q: `author:${username} type:issue`,
           headers: {
-            'X-GitHub-Api-Version': '2022-11-28'
+            "X-GitHub-Api-Version": "2022-11-28",
           },
         }),
-        octokit.request('GET /search/issues', {
+        octokit.request("GET /search/issues", {
           q: `author:${username} type:pr`,
           headers: {
-            'X-GitHub-Api-Version': '2022-11-28'
+            "X-GitHub-Api-Version": "2022-11-28",
           },
-        })
+        }),
       ]);
 
       totalIssues = issuesResult.data.total_count;
       totalPRs = prsResult.data.total_count;
     } catch (searchError) {
-      console.warn('Failed to fetch issues/PRs stats:', searchError);
+      console.warn("Failed to fetch issues/PRs stats:", searchError);
     }
 
-    const publicRepos = repos.filter(repo => !repo.private).length;
+    const publicRepos = repos.filter((repo) => !repo.private).length;
     const totalRepos = user.public_repos;
 
     return NextResponse.json({
@@ -105,7 +101,7 @@ export const GET = async (req: NextRequest) => {
         followersCount: followers.length,
         followingCount: user.following,
       },
-      followers: followers.map(follower => ({
+      followers: followers.map((follower) => ({
         login: follower.login,
         id: follower.id,
         avatar_url: follower.avatar_url,
@@ -113,10 +109,10 @@ export const GET = async (req: NextRequest) => {
         type: follower.type,
       })),
       topRepos: repos
-        .filter(repo => !repo.fork)
+        .filter((repo) => !repo.fork)
         .sort((a, b) => (b.stargazers_count ?? 0) - (a.stargazers_count ?? 0))
         .slice(0, 10)
-        .map(repo => ({
+        .map((repo) => ({
           name: repo.name,
           full_name: repo.full_name,
           description: repo.description,
@@ -128,30 +124,26 @@ export const GET = async (req: NextRequest) => {
           topics: repo.topics,
         })),
     });
-
   } catch (error: any) {
-    console.error('GitHub API Error:', error);
+    console.error("GitHub API Error:", error);
 
     if (error.status === 404) {
-      return NextResponse.json(
-        { error: 'User not found' },
-        { status: 404 }
-      );
+      return NextResponse.json({ error: "User not found" }, { status: 404 });
     }
 
     if (error.status === 403) {
       return NextResponse.json(
-        { error: 'API rate limit exceeded or access forbidden' },
-        { status: 403 }
+        { error: "API rate limit exceeded or access forbidden" },
+        { status: 403 },
       );
     }
 
     return NextResponse.json(
       {
-        error: 'Failed to fetch GitHub data',
-        details: error.message
+        error: "Failed to fetch GitHub data",
+        details: error.message,
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 };

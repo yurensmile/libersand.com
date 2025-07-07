@@ -19,7 +19,7 @@ const TECH_BADGE_CONFIGS: Record<string, TechBadgeConfig> = {
     svgIcon: "typescript",
   },
   NextJS: {
-    name: "Next.js", 
+    name: "Next.js",
     href: "https://nextjs.org",
     svgIcon: "nextjs",
   },
@@ -98,7 +98,7 @@ const TECH_BADGE_CONFIGS: Record<string, TechBadgeConfig> = {
 // Helper function to create a single tech badge
 function createTechBadge(config: TechBadgeConfig): React.JSX.Element {
   const IconComponent = SVGIcons[config.svgIcon];
-  
+
   return (
     <TechBadge href={config.href}>
       <IconComponent />
@@ -108,7 +108,9 @@ function createTechBadge(config: TechBadgeConfig): React.JSX.Element {
 }
 
 // Helper function to create tech badge by name
-function createTechBadgeByName(name: keyof typeof TECH_BADGE_CONFIGS): React.JSX.Element {
+function createTechBadgeByName(
+  name: keyof typeof TECH_BADGE_CONFIGS,
+): React.JSX.Element {
   const config = TECH_BADGE_CONFIGS[name];
   if (!config) {
     throw new Error(`Tech badge configuration not found for: ${name}`);
@@ -117,10 +119,18 @@ function createTechBadgeByName(name: keyof typeof TECH_BADGE_CONFIGS): React.JSX
 }
 
 // 🚀 自動從 TECH_BADGE_CONFIGS 生成所有 badges
-export const TechBadges: Record<keyof typeof TECH_BADGE_CONFIGS, React.JSX.Element> = Object.keys(TECH_BADGE_CONFIGS).reduce((acc, key) => {
-  acc[key as keyof typeof TECH_BADGE_CONFIGS] = createTechBadgeByName(key as keyof typeof TECH_BADGE_CONFIGS);
-  return acc;
-}, {} as Record<keyof typeof TECH_BADGE_CONFIGS, React.JSX.Element>);
+export const TechBadges: Record<
+  keyof typeof TECH_BADGE_CONFIGS,
+  React.JSX.Element
+> = Object.keys(TECH_BADGE_CONFIGS).reduce(
+  (acc, key) => {
+    acc[key as keyof typeof TECH_BADGE_CONFIGS] = createTechBadgeByName(
+      key as keyof typeof TECH_BADGE_CONFIGS,
+    );
+    return acc;
+  },
+  {} as Record<keyof typeof TECH_BADGE_CONFIGS, React.JSX.Element>,
+);
 
 // 🚀 自動生成 AllBadges 陣列
 export const AllBadges: React.JSX.Element[] = Object.values(TechBadges);
@@ -156,11 +166,24 @@ export const BadgeShowcase = () => {
 
 // 🎯 進階用法：按類別分組顯示
 export const BadgeCategories = {
-  Frontend: ['TypeScript', 'NextJS', 'react', 'javascript', 'tailwindcss'] as const,
-  Backend: ['python', 'django', 'java', 'go'] as const,
-  DevOps: ['docker', 'kubernetes', 'aws', 'linux'] as const,
-  Tools: ['vscode', 'github'] as const,
-  Languages: ['cpp', 'python', 'java', 'javascript', 'go', 'TypeScript'] as const,
+  Frontend: [
+    "TypeScript",
+    "NextJS",
+    "react",
+    "javascript",
+    "tailwindcss",
+  ] as const,
+  Backend: ["python", "django", "java", "go"] as const,
+  DevOps: ["docker", "kubernetes", "aws", "linux"] as const,
+  Tools: ["vscode", "github"] as const,
+  Languages: [
+    "cpp",
+    "python",
+    "java",
+    "javascript",
+    "go",
+    "TypeScript",
+  ] as const,
 } as const;
 
 // 按類別渲染的組件
@@ -187,9 +210,9 @@ interface BadgesSelectorProps {
   className?: string;
 }
 
-export const BadgesSelector: React.FC<BadgesSelectorProps> = ({ 
-  selectedBadges, 
-  className = "flex flex-wrap gap-2" 
+export const BadgesSelector: React.FC<BadgesSelectorProps> = ({
+  selectedBadges,
+  className = "flex flex-wrap gap-2",
 }) => {
   return (
     <div className={className}>

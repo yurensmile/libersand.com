@@ -79,7 +79,7 @@
   font-weight: 500;
 }
 
-.markdown :not(pre)>code {
+.markdown :not(pre) > code {
   font-size: 0.875rem;
   color: #f8f8f2;
   background-color: #282a36;
@@ -94,9 +94,9 @@
 }
 
 .markdown hr {
-  border: .125em solid var(--light-gray-70);
+  border: 0.125em solid var(--light-gray-70);
   border-radius: 1rem;
-  height: calc(.25em);
+  height: calc(0.25em);
 }
 
 .markdown .image-with-caption {
@@ -112,7 +112,9 @@
   margin: 0 auto;
   object-fit: contain;
   border-radius: 1rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
   position: relative;
   overflow: hidden;
@@ -156,15 +158,15 @@
   @apply !text-inherit;
 }
 
-.markdown [data-chars-id='v'] {
+.markdown [data-chars-id="v"] {
   @apply !text-pink-300 bg-rose-800/50 border-b-pink-600 font-bold;
 }
 
-.markdown [data-chars-id='s'] {
+.markdown [data-chars-id="s"] {
   @apply !text-yellow-300 bg-yellow-800/50 border-b-yellow-600 font-bold;
 }
 
-.markdown [data-chars-id='i'] {
+.markdown [data-chars-id="i"] {
   @apply !text-purple-200 bg-purple-800/50 border-b-purple-600 font-bold;
 }
 
@@ -172,7 +174,7 @@
   counter-reset: line;
 }
 
-.markdown code[data-line-numbers]>[data-line]::before {
+.markdown code[data-line-numbers] > [data-line]::before {
   counter-increment: line;
   content: counter(line);
 
@@ -183,15 +185,15 @@
   color: gray;
 }
 
-.markdown code[data-line-numbers-max-digits="2"]>[data-line]::before {
+.markdown code[data-line-numbers-max-digits="2"] > [data-line]::before {
   width: 1.25rem;
 }
 
-.markdown code[data-line-numbers-max-digits="3"]>[data-line]::before {
+.markdown code[data-line-numbers-max-digits="3"] > [data-line]::before {
   width: 1.75rem;
 }
 
-.markdown code[data-line-numbers-max-digits="4"]>[data-line]::before {
+.markdown code[data-line-numbers-max-digits="4"] > [data-line]::before {
   width: 2.25rem;
 }
 
