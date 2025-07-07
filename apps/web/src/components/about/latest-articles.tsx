@@ -20,7 +20,7 @@ interface LatestArticlesProps {
   posts: BlogPost[];
 }
 
-export function LatestArticles({ posts }: LatestArticlesProps) {
+function LatestArticles({ posts }: LatestArticlesProps) {
   const [isMounted, setIsMounted] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [visiblePosts, setVisiblePosts] = useState<BlogPost[]>([]);
@@ -110,3 +110,6 @@ export function LatestArticles({ posts }: LatestArticlesProps) {
     </>
   );
 }
+
+export { LatestArticles };
+export default LatestArticles;

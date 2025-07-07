@@ -22,7 +22,7 @@ function parseDate(dateStr: string): Date {
   return new Date(`${month} ${parseInt(day)}, ${year}`);
 }
 
-export default function PostsLoop({ count, posts }: BlogPostsProps) {
+function PostsLoop({ count, posts }: BlogPostsProps) {
   const router = useRouter();
 
   const sortedPosts = posts
@@ -135,3 +135,6 @@ export default function PostsLoop({ count, posts }: BlogPostsProps) {
     </div>
   );
 }
+
+export { PostsLoop };
+export default PostsLoop;

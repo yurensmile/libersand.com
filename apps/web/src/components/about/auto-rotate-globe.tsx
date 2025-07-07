@@ -148,4 +148,5 @@ function AutoRotatingGlobe() {
   );
 }
 
+export { AutoRotatingGlobe };
 export default AutoRotatingGlobe;

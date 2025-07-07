@@ -18,7 +18,7 @@ import {
   Newspaper,
 } from "lucide-react";
 
-export const VercelNavBarMore = () => {
+const VercelNavBarMore = () => {
   type Props = {
     id: number;
     label: string;
@@ -317,3 +317,6 @@ export const VercelNavBarMore = () => {
     </ul>
   );
 };
+
+export default VercelNavBarMore;
+export { VercelNavBarMore };

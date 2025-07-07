@@ -23,4 +23,5 @@ function Comments({ giscusConfig }: { giscusConfig: GiscusProps }) {
   );
 }
 
+export { Comments };
 export default Comments;

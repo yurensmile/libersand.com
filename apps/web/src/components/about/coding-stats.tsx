@@ -101,4 +101,5 @@ function CodingStats({ techStacks, githubUsername }: CodingStatsProps) {
   );
 }
 
+export { CodingStats };
 export default CodingStats;

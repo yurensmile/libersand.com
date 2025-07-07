@@ -53,3 +53,4 @@ function FilterSelectBox({
 }
 
 export default FilterSelectBox;
+export { FilterSelectBox };

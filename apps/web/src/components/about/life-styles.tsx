@@ -40,4 +40,5 @@ function LifeStyles({ lifestyles }: LifeStylesProps) {
   );
 }
 
+export { LifeStyles };
 export default LifeStyles;

@@ -75,7 +75,7 @@ const parseMarkdown = (markdownText: string) => {
   });
 };
 
-export default function ResumeCard({ resumeCard }: ResumeCardProps) {
+function ResumeCard({ resumeCard }: ResumeCardProps) {
   const { institution, institutionImage, title, tags } = resumeCard;
   const [activeResumeCard, setActiveResumeCard] =
     useState<ResumeCardType | null>(null);
@@ -246,3 +246,6 @@ export default function ResumeCard({ resumeCard }: ResumeCardProps) {
     </>
   );
 }
+
+export default ResumeCard;
+export { ResumeCard };

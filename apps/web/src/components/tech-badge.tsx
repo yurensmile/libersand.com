@@ -21,7 +21,7 @@ import Link from "next/link";
  *   Next.js
  * </TechBadge>
  */
-export function TechBadge(props: PropsWithChildren & { href: string }) {
+function TechBadge(props: PropsWithChildren & { href: string }) {
   return (
     <Link
       {...props}
@@ -30,3 +30,6 @@ export function TechBadge(props: PropsWithChildren & { href: string }) {
     />
   );
 }
+
+export { TechBadge };
+export default TechBadge;

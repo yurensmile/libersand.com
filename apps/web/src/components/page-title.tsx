@@ -13,4 +13,6 @@ function PageTitle({ className, title }: PageTitleProps) {
   return <h2 className={cn(styles.pageTitle, className)}>{title}</h2>;
 }
 
+export type { PageTitleProps };
+export { PageTitle };
 export default PageTitle;

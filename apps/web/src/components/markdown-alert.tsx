@@ -43,7 +43,7 @@ const alertConfig = {
   },
 };
 
-export function MarkdownAlert({
+function MarkdownAlert({
   type,
   children,
   className,
@@ -73,7 +73,7 @@ interface HighlightProps {
   variant?: "green" | "blue" | "yellow" | "red" | "purple";
 }
 
-export function Highlight({ children, variant = "blue" }: HighlightProps) {
+function Highlight({ children, variant = "blue" }: HighlightProps) {
   const variants = {
     green: "text-green-400 font-medium",
     blue: "text-blue-400 font-medium",
@@ -84,3 +84,7 @@ export function Highlight({ children, variant = "blue" }: HighlightProps) {
 
   return <span className={variants[variant]}>{children}</span>;
 }
+
+export { Highlight, MarkdownAlert };
+export type { MarkdownAlertProps, HighlightProps };
+export default MarkdownAlert;

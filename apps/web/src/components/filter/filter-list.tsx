@@ -26,3 +26,4 @@ function FilterList({ path, selectedTag, blogTags }: FilterListProps) {
 }
 
 export default FilterList;
+export { FilterList };

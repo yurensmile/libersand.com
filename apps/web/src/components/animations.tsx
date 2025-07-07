@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "motion/react";
-export function PopIn(props: {
+
+function PopIn(props: {
   children: React.ReactNode;
   delay?: number;
   divKey?: any;
@@ -27,7 +28,7 @@ export function PopIn(props: {
   );
 }
 
-export function HoverPop(props: { children: React.ReactNode; scale?: number }) {
+function HoverPop(props: { children: React.ReactNode; scale?: number }) {
   return (
     <motion.div
       whileHover={{
@@ -40,7 +41,7 @@ export function HoverPop(props: { children: React.ReactNode; scale?: number }) {
   );
 }
 
-export function FadeIn(props: {
+function FadeIn(props: {
   children: React.ReactNode;
   delay?: number;
   divKey?: any;
@@ -63,7 +64,7 @@ export function FadeIn(props: {
   );
 }
 
-export function FadeUp(props: {
+function FadeUp(props: {
   children: React.ReactNode;
   delay?: number;
   divKey?: any;
@@ -88,7 +89,7 @@ export function FadeUp(props: {
   );
 }
 
-export function FadeLeft(props: {
+function FadeLeft(props: {
   children: React.ReactNode;
   delay?: number;
   divKey?: any;
@@ -112,3 +113,5 @@ export function FadeLeft(props: {
     </motion.div>
   );
 }
+
+export { PopIn, FadeIn, FadeUp, FadeLeft, HoverPop };

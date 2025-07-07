@@ -39,3 +39,4 @@ function ResumeTimeLine({ icon, title, resumeCards }: ResumeTimeLineProps) {
 }
 
 export default ResumeTimeLine;
+export { ResumeTimeLine };

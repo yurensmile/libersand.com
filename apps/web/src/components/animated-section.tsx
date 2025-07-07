@@ -29,4 +29,5 @@ function AnimatedSection({
   );
 }
 
+export { AnimatedSection };
 export default AnimatedSection;

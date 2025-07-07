@@ -14,4 +14,6 @@ function GradientCard({ children, className = "" }: GradientCardProps) {
   );
 }
 
+export { GradientCard };
+export type { GradientCardProps };
 export default GradientCard;

@@ -5,7 +5,7 @@ interface UmamiAnalyticProps {
   umamiUrl: string;
 }
 
-export function UmamiAnalytic({
+function UmamiAnalytic({
   umamiWebsiteId,
   umamiUrl,
 }: UmamiAnalyticProps) {
@@ -17,3 +17,6 @@ export function UmamiAnalytic({
     />
   );
 }
+
+export default UmamiAnalytic;
+export { UmamiAnalytic };

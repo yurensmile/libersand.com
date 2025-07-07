@@ -14,7 +14,7 @@ interface MyWritingsProps {
   posts?: BlogPost[];
 }
 
-export function MyWritings({ count, posts }: MyWritingsProps) {
+function MyWritings({ count, posts }: MyWritingsProps) {
   return (
     <div className="w-full max-w-4xl mx-auto my-7 xl:px-0">
       <div className="flex flex-col items-start justify-start md:flex-row md:space-x-7">
@@ -113,3 +113,6 @@ export function MyWritings({ count, posts }: MyWritingsProps) {
     </div>
   );
 }
+
+export { MyWritings };
+export default MyWritings;

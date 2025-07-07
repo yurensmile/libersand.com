@@ -24,3 +24,4 @@ function AboutSection({ id, title, children }: AboutSectionProps) {
 }
 
 export default AboutSection;
+export { AboutSection };

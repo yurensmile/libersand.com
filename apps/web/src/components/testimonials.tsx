@@ -167,4 +167,6 @@ function Testimonials({ testimonials }: TestimonialsProps) {
   );
 }
 
+export type { TestimonialsProps, Testimonial };
+export { Testimonials };
 export default Testimonials;

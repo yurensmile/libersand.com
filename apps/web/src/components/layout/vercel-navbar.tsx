@@ -15,7 +15,7 @@ interface VercelNavBarProps {
   navigationLinks: NavigationLink[];
 }
 
-export const VercelNavBar = ({ navigationLinks }: VercelNavBarProps) => {
+const VercelNavBar = ({ navigationLinks }: VercelNavBarProps) => {
   const currentPath = usePathname();
   const [active, setActive] = useState<NavigationLink>(navigationLinks[0]);
   const [isHover, setIsHover] = useState<NavigationLink | null>(null);
@@ -57,9 +57,8 @@ export const VercelNavBar = ({ navigationLinks }: VercelNavBarProps) => {
                 className="text-sm md:text-base lg:text-base"
               >
                 <div
-                  className={`px-2 py-2 relative ${
-                    active.label === item.label ? "font-bold" : "font-medium"
-                  }`}
+                  className={`px-2 py-2 relative ${active.label === item.label ? "font-bold" : "font-medium"
+                    }`}
                 >
                   {item.label}
                   {isHover?.label === item.label && (
@@ -89,3 +88,6 @@ export const VercelNavBar = ({ navigationLinks }: VercelNavBarProps) => {
     </header>
   );
 };
+
+export default VercelNavBar;
+export { VercelNavBar };

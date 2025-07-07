@@ -7,7 +7,7 @@ import { useSpring } from "react-spring";
 /**
  * @see https://github.com/shuding/cobe/tree/main/website/pages/docs/showcases
  */
-export default function Globe() {
+function Globe() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pointerInteracting = useRef<number | null>(null);
   const pointerInteractionMovement = useRef(0);
@@ -128,3 +128,6 @@ export default function Globe() {
     </div>
   );
 }
+
+export default Globe;
+export { Globe };

@@ -44,3 +44,4 @@ function HomeHeader({ navigationLinks }: HomeHeaderProps) {
 }
 
 export default HomeHeader;
+export { HomeHeader };

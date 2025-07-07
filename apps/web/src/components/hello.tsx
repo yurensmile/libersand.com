@@ -23,4 +23,5 @@ Love the design? Star ✨ on https://github.com/1chooo/portfolio
   return null;
 }
 
+export { Hello };
 export default Hello;

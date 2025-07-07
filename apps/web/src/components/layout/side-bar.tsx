@@ -147,3 +147,4 @@ function SideBar({
 }
 
 export default SideBar;
+export { SideBar };

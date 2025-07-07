@@ -87,4 +87,5 @@ function TalkToHugo({ web3formsAccessKey }: TalkToHugoProps) {
   );
 }
 
+export { TalkToHugo };
 export default TalkToHugo;

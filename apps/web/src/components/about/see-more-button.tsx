@@ -32,4 +32,5 @@ function SeeMoreButton({ badge, path, icon: Icon }: SeeMoreButtonProps) {
   );
 }
 
+export { SeeMoreButton };
 export default SeeMoreButton;

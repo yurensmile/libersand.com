@@ -24,7 +24,7 @@ interface SkillsBarProps {
  *
  * <SkillsBar skills={skills}/>
  */
-export default function SkillsBar({ skills }: SkillsBarProps) {
+function SkillsBar({ skills }: SkillsBarProps) {
   return (
     <section className={cn(styles.skillsSection)}>
       <ul className={cn(styles.skillsList, styles.gradientCard)}>
@@ -46,3 +46,6 @@ export default function SkillsBar({ skills }: SkillsBarProps) {
     </section>
   );
 }
+
+export default SkillsBar;
+export { SkillsBar };

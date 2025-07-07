@@ -5,7 +5,7 @@ interface GoogleAnalyticProps {
   googleTagManagerId: string;
 }
 
-export function GoogleAnalytic({
+function GoogleAnalytic({
   googleAnalyticId,
   googleTagManagerId,
 }: GoogleAnalyticProps) {
@@ -16,3 +16,7 @@ export function GoogleAnalytic({
     </>
   );
 }
+
+
+export default GoogleAnalytic;
+export { GoogleAnalytic };
