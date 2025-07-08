@@ -61,7 +61,7 @@ export default async function Post(props: Params) {
         </FadeUp>
 
         <FadeUp delay={0.3 * 2}>
-          <div className="flex items-center justify-between mt-4 text-sm w-full text-light-gray-70">
+          <div className="hidden md:flex items-center justify-between mt-4 text-sm w-full text-light-gray-70">
             <div className="flex items-center space-x-2">
               <span>
                 {post.publishedAt}
@@ -73,6 +73,34 @@ export default async function Post(props: Params) {
               <span>{post.category.toUpperCase()}</span>
             </div>
             <div className="flex items-center space-x-2 ml-4">
+              {post.readingTime && (
+                <>
+                  <span>{post.readingTime}</span>
+                  <span
+                    className="w-1 h-1 bg-current rounded-full"
+                    aria-hidden="true"
+                  ></span>
+                </>
+              )}
+              <Suspense fallback={<div>Loading views...</div>}>
+                <ViewCounter slug={post.slug} trackView />
+              </Suspense>
+            </div>
+          </div>
+          <div className="flex md:hidden items-center justify-between mt-4 text-sm w-full text-light-gray-70">
+            <div className="flex items-center space-x-2">
+              <span>
+                {post.publishedAt}
+              </span>
+              <span
+                className="w-1 h-1 bg-current rounded-full"
+                aria-hidden="true"
+              ></span>
+              <span>{post.category.toUpperCase()}</span>
+              <span
+                className="w-1 h-1 bg-current rounded-full"
+                aria-hidden="true"
+              ></span>
               {post.readingTime && (
                 <>
                   <span>{post.readingTime}</span>
