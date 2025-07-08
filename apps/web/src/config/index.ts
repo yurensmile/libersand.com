@@ -443,8 +443,7 @@ I'm an incoming student at [University of Southern California](https://usc.edu) 
 `,
   techStacks: {
     frontend: ["typescript", "react", "nextjs", "tailwindcss"],
-    backend: ["python", "aws", "django", "go"],
-    devops: ["docker", "kubernetes", "github"],
+    backend: ["python", "aws", "django", "go", "docker", "kubernetes", "github"],
     database: ["redis", "supabase", "firebase"],
   },
 };
