@@ -13,6 +13,30 @@ const nextConfig: NextConfig = {
     "@1chooo/github-calendar",
   ],
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  async redirects() {
+    return [
+      {
+        source: '/feed',
+        destination: '/rss.xml',
+        permanent: true
+      },
+      {
+        source: '/rss',
+        destination: '/rss.xml',
+        permanent: true
+      },
+      {
+        source: '/manifest.webmanifest',
+        destination: '/manifest.json',
+        permanent: true
+      },
+      {
+        source: '/manifest',
+        destination: '/manifest.json',
+        permanent: true
+      },
+    ]
+  },
 };
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
@@ -22,6 +46,10 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 const withMDX = createMDX({
   // Add markdown plugins here, as desired
   extension: /\.(md|mdx)$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+  }
 })
 
 module.exports = withBundleAnalyzer(withMDX(nextConfig));
