@@ -52,23 +52,7 @@ export default async function Post(props: Params) {
 
           <FadeLeft delay={0.3 * 1}>
             <div className="flex items-center gap-2 mb-4 text-light-gray-70 text-sm">
-              <div className="text-light-gray">
-                {post.category}
-              </div>
-              <span
-                className="w-1 h-1 bg-current rounded-full"
-                aria-hidden="true"
-              ></span>
-              <Suspense fallback={<div>Loading views...</div>}>
-                <ViewCounter slug={post.slug} trackView />
-              </Suspense>
-              <span
-                className="w-1 h-1 bg-current rounded-full"
-                aria-hidden="true"
-              ></span>
-              {post.readingTime && (
-                <span>{post.readingTime}</span>
-              )}
+              <div className="text-light-gray">{post.category}</div>
             </div>
             <h1 className="font-semibold text-4xl text-white-2 mb-8">
               <Balancer>{post.title}</Balancer>
@@ -89,14 +73,32 @@ export default async function Post(props: Params) {
                 </div>
               ) : (
                 <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center mr-3 bg-gradient-jet">
-                  <span className="text-sm font-medium text-light-gray">{post.author.name.charAt(0)}</span>
+                  <span className="text-sm font-medium text-light-gray">
+                    {post.author.name.charAt(0)}
+                  </span>
                 </div>
               )}
-              <div className="text-light-gray">
-                <div className="text-sm font-medium leading-none mt-1">
-                  {post.author.name}
+              <div className="flex items-center text-light-gray-70 text-sm">
+                <div className="text-light-gray mr-4">
+                  <div className="text-sm font-medium leading-none mt-1">
+                    {post.author.name}
+                  </div>
+                  <time className="text-xs mt-1">
+                    {new Date(post.publishedAt).toLocaleDateString("en-us", {
+                      month: "long",
+                      day: "numeric",
+                      year: "numeric",
+                    })}
+                  </time>
                 </div>
-                <time className="text-xs mt-1">{post.publishedAt}</time>
+                {post.readingTime && <span>{post.readingTime}</span>}
+                <span
+                  className="w-1 h-1 bg-current rounded-full mx-2"
+                  aria-hidden="true"
+                ></span>
+                <Suspense fallback={<div>Loading views...</div>}>
+                  <ViewCounter slug={post.slug} trackView />
+                </Suspense>
               </div>
             </div>
           </FadeUp>
