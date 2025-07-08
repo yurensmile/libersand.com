@@ -3,7 +3,7 @@ title: "Who is Chun-Ho (Hugo) Lin 👨🏻‍💻"
 excerpt: "I'm Chun-Ho (Hugo) Lin, a graduate with a Bachelor's degree from National Central University (NCU) 🐿️, driven by a sincere passion for Software Engineering 💻."
 thumbnail: "/images/thumbnail/blog/who-is-chun-ho-hugo-lin.webp"
 author:
-  name: Chun-Ho (Hugo) Lin | @1chooo
+  name: Hugo Lin
   avatar: "https://github.com/1chooo.png"
   url: "https://1chooo.com"
 publishedAt: "2025-01-02"

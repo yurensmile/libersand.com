@@ -38,7 +38,7 @@ const VercelNavBar = ({ navigationLinks }: VercelNavBarProps) => {
   }, [currentPath, navigationLinks]);
 
   return (
-    <header className="navbar">
+    <nav className="navbar">
       <BlurFade direction="up">
         <ul className="flex items-center justify-center navbar-list">
           {navigationLinks.map((item) => (
@@ -86,7 +86,7 @@ const VercelNavBar = ({ navigationLinks }: VercelNavBarProps) => {
           ))}
         </ul>
       </BlurFade>
-    </header>
+    </nav>
   );
 };
 

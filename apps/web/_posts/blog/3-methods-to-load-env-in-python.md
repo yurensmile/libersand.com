@@ -3,7 +3,7 @@ title: "3 Methods to Load .env in Python"
 excerpt: "Access environment variables in Python with `os.environ`. Here are three ways to do it."
 thumbnail: "/images/thumbnail/blog/3-methods-to-load-env-in-python.webp"
 author:
-  name: Chun-Ho (Hugo) Lin | @1chooo
+  name: Hugo Lin
   avatar: "https://github.com/1chooo.png"
   url: "https://1chooo.com"
 publishedAt: "2024-12-26"

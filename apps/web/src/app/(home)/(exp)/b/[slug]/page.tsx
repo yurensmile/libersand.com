@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 
 import type { Metadata, ResolvingMetadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Balancer from "react-wrap-balancer";
 import { ViewTransitionsProgressBarLink } from "@/components/progress-bar";
@@ -36,84 +37,70 @@ export default async function Post(props: Params) {
   return (
     <div>
       <article>
-        <FadeUp delay={0.3 * 2}>
-          <ViewTransitionsProgressBarLink
-            href="/b"
-            rel="noopener noreferrer"
-          >
-            <PageTitle
-              className="text-light-gray hover:text-light-gray-70"
-              title="← Back to Blog"
-            />
-          </ViewTransitionsProgressBarLink>
-        </FadeUp>
+        <header className="mb-8">
+          <FadeUp delay={0.3 * 2}>
+            <ViewTransitionsProgressBarLink
+              href="/b"
+              rel="noopener noreferrer"
+            >
+              <PageTitle
+                className="text-light-gray hover:text-light-gray-70"
+                title="← Back to Blog"
+              />
+            </ViewTransitionsProgressBarLink>
+          </FadeUp>
 
-        <FadeLeft delay={0.3 * 1}>
-          <h1 className="font-semibold text-4xl text-white-2 max-w-[650px]">
-            <Balancer>{post.title}</Balancer>
-          </h1>
-        </FadeLeft>
-
-        <FadeUp delay={0.3 * 2}>
-          <div className="flex items-center justify-between mt-4 text-lg w-full text-light-gray-70">
-            {post.excerpt}
-          </div>
-        </FadeUp>
-
-        <FadeUp delay={0.3 * 2}>
-          <div className="hidden md:flex items-center justify-between mt-4 text-sm w-full text-light-gray-70">
-            <div className="flex items-center space-x-2">
-              <span>{post.publishedAt}</span>
+          <FadeLeft delay={0.3 * 1}>
+            <div className="flex items-center gap-2 mb-4 text-light-gray-70 text-sm">
+              <div className="text-light-gray">
+                {post.category}
+              </div>
               <span
                 className="w-1 h-1 bg-current rounded-full"
                 aria-hidden="true"
               ></span>
-              <span>{post.category.toUpperCase()}</span>
-            </div>
-            <div className="flex items-center space-x-2 ml-4">
-              {post.readingTime && (
-                <>
-                  <span>{post.readingTime}</span>
-                  <span
-                    className="w-1 h-1 bg-current rounded-full"
-                    aria-hidden="true"
-                  ></span>
-                </>
-              )}
               <Suspense fallback={<div>Loading views...</div>}>
                 <ViewCounter slug={post.slug} trackView />
               </Suspense>
-            </div>
-          </div>
-          <div className="flex md:hidden items-center justify-between mt-4 text-sm w-full text-light-gray-70">
-            <div className="flex items-center space-x-2">
-              <span>{post.publishedAt}</span>
-              <span
-                className="w-1 h-1 bg-current rounded-full"
-                aria-hidden="true"
-              ></span>
-              <span>{post.category.toUpperCase()}</span>
               <span
                 className="w-1 h-1 bg-current rounded-full"
                 aria-hidden="true"
               ></span>
               {post.readingTime && (
-                <>
-                  <span>{post.readingTime}</span>
-                  <span
-                    className="w-1 h-1 bg-current rounded-full"
-                    aria-hidden="true"
-                  ></span>
-                </>
+                <span>{post.readingTime}</span>
               )}
-              <Suspense fallback={<div>Loading views...</div>}>
-                <ViewCounter slug={post.slug} trackView />
-              </Suspense>
             </div>
-          </div>
-        </FadeUp>
+            <h1 className="font-semibold text-4xl text-white-2 mb-8">
+              <Balancer>{post.title}</Balancer>
+            </h1>
+          </FadeLeft>
 
-        <div className="separator" />
+          <FadeUp delay={0.3 * 2}>
+            <div className="flex items-center">
+              {post.author.avatar ? (
+                <div className="h-10 w-10 rounded-full overflow-hidden mr-3">
+                  <Image
+                    src={post.author.avatar}
+                    alt={post.author.name}
+                    width={40}
+                    height={40}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+              ) : (
+                <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center mr-3 bg-gradient-jet">
+                  <span className="text-sm font-medium text-light-gray">{post.author.name.charAt(0)}</span>
+                </div>
+              )}
+              <div className="text-light-gray">
+                <div className="text-sm font-medium leading-none mt-1">
+                  {post.author.name}
+                </div>
+                <time className="text-xs mt-1">{post.publishedAt}</time>
+              </div>
+            </div>
+          </FadeUp>
+        </header>
 
         <FadeIn delay={0.3 * 3}>
           <div className="flex justify-center">

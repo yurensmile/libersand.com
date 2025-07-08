@@ -3,7 +3,7 @@ title: "Hugo's Stack & Standards"
 excerpt: "5,000+ contributions in 2024 — here's my stack and standards for clean, scalable code."
 thumbnail: "/images/thumbnail/blog/hugos-stack-standards.webp"
 author:
-  name: Chun-Ho (Hugo) Lin | @1chooo
+  name: Hugo Lin
   avatar: "https://github.com/1chooo.png"
   url: "https://1chooo.com"
 publishedAt: "2025-01-09"
