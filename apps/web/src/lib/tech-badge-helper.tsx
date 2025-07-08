@@ -13,12 +13,12 @@ interface TechBadgeConfig {
 
 // 🎯 唯一需要維護的配置 - 所有其他內容都從這裡自動生成
 const TECH_BADGE_CONFIGS: Record<string, TechBadgeConfig> = {
-  TypeScript: {
+  typescript: {
     name: "TypeScript",
     href: "https://www.typescriptlang.org/",
     svgIcon: "typescript",
   },
-  NextJS: {
+  nextjs: {
     name: "Next.js",
     href: "https://nextjs.org",
     svgIcon: "nextjs",
@@ -93,6 +93,21 @@ const TECH_BADGE_CONFIGS: Record<string, TechBadgeConfig> = {
     href: "https://aws.amazon.com",
     svgIcon: "aws",
   },
+  redis: {
+    name: "Redis",
+    href: "https://redis.io",
+    svgIcon: "redis",
+  },
+  supabase: {
+    name: "Supabase",
+    href: "https://supabase.com",
+    svgIcon: "supabase",
+  },
+  firebase: {
+    name: "Firebase",
+    href: "https://firebase.google.com",
+    svgIcon: "firebase",
+  }
 } as const;
 
 // Helper function to create a single tech badge
@@ -136,8 +151,8 @@ export const TechBadges: Record<
 export const AllBadges: React.JSX.Element[] = Object.values(TechBadges);
 
 // 🚀 自動生成個別的 badge exports (可選)
-export const TypeScriptBadge = TechBadges.TypeScript;
-export const NextjsBadge = TechBadges.NextJS;
+export const TypeScriptBadge = TechBadges.typescript;
+export const NextjsBadge = TechBadges.nextjs;
 export const ReactBadge = TechBadges.react;
 export const CppBadge = TechBadges.cpp;
 export const PythonBadge = TechBadges.python;
@@ -224,7 +239,7 @@ export const BadgesSelector: React.FC<BadgesSelectorProps> = ({
 };
 
 // 使用範例：
-// <BadgesSelector selectedBadges={['TypeScript', 'NextJS', 'react']} />
+// <BadgesSelector selectedBadges={['typescript', 'nextjs', 'react']} />
 
 export { SVGIcons, createTechBadge, createTechBadgeByName, TECH_BADGE_CONFIGS };
 export type { SVGIconProps, TechBadgeConfig };

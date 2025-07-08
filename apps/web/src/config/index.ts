@@ -441,6 +441,12 @@ I'm an incoming student at [University of Southern California](https://usc.edu) 
 
 - [Source Code](https://github.com/1chooo/portfolio): The source code for the 1chooo.com website is available on GitHub.
 `,
+  techStacks: {
+    frontend: ["typescript", "react", "nextjs", "tailwindcss"],
+    backend: ["python", "aws", "django", "go"],
+    devops: ["docker", "kubernetes", "github"],
+    database: ["redis", "supabase", "firebase"],
+  }
 };
 
 export default config;

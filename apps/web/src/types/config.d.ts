@@ -62,6 +62,7 @@ export type Config = {
   robots: MetadataRoute.Robots;
   llmsTxtContent?: string;
   llmsFullTxtContent?: string;
+  techStacks: TechStackCategory
 };
 
 type AnalyticPlatforms = "google-analytics" | "vercel" | "umami";
@@ -76,3 +77,29 @@ export type Analytics = {
   umamiWebsiteId?: string;
   umamiUrl?: string;
 };
+
+export type TechStackCategory = {
+  [key: string]: string[];
+}
+
+
+export const BadgeCategories = {
+  Frontend: [
+    "TypeScript",
+    "NextJS",
+    "react",
+    "javascript",
+    "tailwindcss",
+  ] as const,
+  Backend: ["python", "django", "java", "go"] as const,
+  DevOps: ["docker", "kubernetes", "aws", "linux"] as const,
+  Tools: ["vscode", "github"] as const,
+  Languages: [
+    "cpp",
+    "python",
+    "java",
+    "javascript",
+    "go",
+    "TypeScript",
+  ] as const,
+} as const;
