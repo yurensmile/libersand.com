@@ -446,7 +446,7 @@ I'm an incoming student at [University of Southern California](https://usc.edu) 
     backend: ["python", "aws", "django", "go"],
     devops: ["docker", "kubernetes", "github"],
     database: ["redis", "supabase", "firebase"],
-  }
+  },
 };
 
 export default config;

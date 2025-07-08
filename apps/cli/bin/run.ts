@@ -16,4 +16,5 @@ for (const command of commands) {
   run.command(command as CommandModule);
 }
 
-run.demandCommand(1, "You need at least one command before moving on").help().argv;
+run.demandCommand(1, "You need at least one command before moving on").help()
+  .argv;

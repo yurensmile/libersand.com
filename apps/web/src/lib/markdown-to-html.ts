@@ -22,7 +22,9 @@ export interface ProcessedMarkdown {
   readingTime: string;
 }
 
-export default async function markdownToHtml(markdown: string): Promise<ProcessedMarkdown> {
+export default async function markdownToHtml(
+  markdown: string,
+): Promise<ProcessedMarkdown> {
   if (cache.has(markdown)) {
     return cache.get(markdown)!;
   }
@@ -60,11 +62,11 @@ export default async function markdownToHtml(markdown: string): Promise<Processe
     .process(markdown);
 
   const htmlContent = result.toString();
-  const readingTime = result.data.readingTime as string || "0 min read";
+  const readingTime = (result.data.readingTime as string) || "0 min read";
 
   const processedContent = {
     html: htmlContent,
-    readingTime: readingTime
+    readingTime: readingTime,
   };
 
   cache.set(markdown, processedContent);

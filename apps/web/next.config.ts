@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-import createMDX from '@next/mdx'
+import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -12,30 +12,30 @@ const nextConfig: NextConfig = {
     "@1chooo/activity-calendar",
     "@1chooo/github-calendar",
   ],
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   async redirects() {
     return [
       {
-        source: '/feed',
-        destination: '/rss.xml',
-        permanent: true
+        source: "/feed",
+        destination: "/rss.xml",
+        permanent: true,
       },
       {
-        source: '/rss',
-        destination: '/rss.xml',
-        permanent: true
+        source: "/rss",
+        destination: "/rss.xml",
+        permanent: true,
       },
       {
-        source: '/manifest.webmanifest',
-        destination: '/manifest.json',
-        permanent: true
+        source: "/manifest.webmanifest",
+        destination: "/manifest.json",
+        permanent: true,
       },
       {
-        source: '/manifest',
-        destination: '/manifest.json',
-        permanent: true
+        source: "/manifest",
+        destination: "/manifest.json",
+        permanent: true,
       },
-    ]
+    ];
   },
 };
 
@@ -49,7 +49,7 @@ const withMDX = createMDX({
   options: {
     remarkPlugins: [],
     rehypePlugins: [],
-  }
-})
+  },
+});
 
 module.exports = withBundleAnalyzer(withMDX(nextConfig));

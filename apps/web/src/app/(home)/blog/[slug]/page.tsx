@@ -8,7 +8,7 @@ import { ViewCounter } from "@/app/(home)/blog/view-counter";
 import { FadeLeft, FadeUp, FadeIn } from "@/components/animations";
 import PageTitle from "@/components/page-title";
 import Comments from "@/components/comments";
-import { getBlogPostBySlugWithProcessedContent } from '@/lib/api/blog';
+import { getBlogPostBySlugWithProcessedContent } from "@/lib/api/blog";
 import { getBlogPosts, getBlogPostBySlug } from "@/lib/api/blog";
 
 import config from "@/config";
@@ -63,9 +63,7 @@ export default async function Post(props: Params) {
         <FadeUp delay={0.3 * 2}>
           <div className="hidden md:flex items-center justify-between mt-4 text-sm w-full text-light-gray-70">
             <div className="flex items-center space-x-2">
-              <span>
-                {post.publishedAt}
-              </span>
+              <span>{post.publishedAt}</span>
               <span
                 className="w-1 h-1 bg-current rounded-full"
                 aria-hidden="true"
@@ -89,9 +87,7 @@ export default async function Post(props: Params) {
           </div>
           <div className="flex md:hidden items-center justify-between mt-4 text-sm w-full text-light-gray-70">
             <div className="flex items-center space-x-2">
-              <span>
-                {post.publishedAt}
-              </span>
+              <span>{post.publishedAt}</span>
               <span
                 className="w-1 h-1 bg-current rounded-full"
                 aria-hidden="true"

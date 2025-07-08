@@ -17,6 +17,5 @@ function GoogleAnalytic({
   );
 }
 
-
 export default GoogleAnalytic;
 export { GoogleAnalytic };

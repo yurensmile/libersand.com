@@ -107,7 +107,7 @@ const TECH_BADGE_CONFIGS: Record<string, TechBadgeConfig> = {
     name: "Firebase",
     href: "https://firebase.google.com",
     svgIcon: "firebase",
-  }
+  },
 } as const;
 
 // Helper function to create a single tech badge

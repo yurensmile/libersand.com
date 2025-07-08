@@ -62,7 +62,7 @@ export type Config = {
   robots: MetadataRoute.Robots;
   llmsTxtContent?: string;
   llmsFullTxtContent?: string;
-  techStacks: TechStackCategory
+  techStacks: TechStackCategory;
 };
 
 type AnalyticPlatforms = "google-analytics" | "vercel" | "umami";
@@ -80,8 +80,7 @@ export type Analytics = {
 
 export type TechStackCategory = {
   [key: string]: string[];
-}
-
+};
 
 export const BadgeCategories = {
   Frontend: [

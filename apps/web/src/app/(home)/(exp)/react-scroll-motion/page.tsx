@@ -72,7 +72,9 @@ export default function Home() {
           >
             <span style={{ fontSize: 40 }}>
               <Animator animation={MoveIn(-1000, 0)}>Hello Guys 👋🏻</Animator>
-              <Animator animation={MoveIn(1000, 0)}>Nice to meet you 🙋🏻‍♀️</Animator>
+              <Animator animation={MoveIn(1000, 0)}>
+                Nice to meet you 🙋🏻‍♀️
+              </Animator>
               - I&apos;m Dante Chun -
               <Animator animation={MoveOut(1000, 0)}>Good bye ✋🏻</Animator>
               <Animator animation={MoveOut(-1000, 0)}>See you 💛</Animator>

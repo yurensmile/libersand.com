@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import PageTitle from "@/components/page-title";
 
 import markdownToHtml from "@/lib/markdown-to-html";
-import { getBlogPostsWithReadingTime } from '@/lib/api/blog';
+import { getBlogPostsWithReadingTime } from "@/lib/api/blog";
 
 import { MyWritings } from "@/components/about/my-writings";
 import GitHubCalendar from "@1chooo/github-calendar";

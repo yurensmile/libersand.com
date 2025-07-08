@@ -5,10 +5,7 @@ interface UmamiAnalyticProps {
   umamiUrl: string;
 }
 
-function UmamiAnalytic({
-  umamiWebsiteId,
-  umamiUrl,
-}: UmamiAnalyticProps) {
+function UmamiAnalytic({ umamiWebsiteId, umamiUrl }: UmamiAnalyticProps) {
   return (
     <Script
       async

@@ -43,11 +43,7 @@ const alertConfig = {
   },
 };
 
-function MarkdownAlert({
-  type,
-  children,
-  className,
-}: MarkdownAlertProps) {
+function MarkdownAlert({ type, children, className }: MarkdownAlertProps) {
   const config = alertConfig[type];
   const Icon = config.icon;
 

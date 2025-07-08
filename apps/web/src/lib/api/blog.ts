@@ -20,14 +20,16 @@ export function getBlogPostBySlug(slug: string): BlogPost {
 }
 
 // New function to get blog post with processed content
-export async function getBlogPostBySlugWithProcessedContent(slug: string): Promise<BlogPost> {
+export async function getBlogPostBySlugWithProcessedContent(
+  slug: string,
+): Promise<BlogPost> {
   const post = getBlogPostBySlug(slug);
   const { html, readingTime } = await markdownToHtml(post.content);
-  
+
   return {
     ...post,
     processedContent: html,
-    readingTime
+    readingTime,
   };
 }
 
@@ -50,13 +52,15 @@ export async function getBlogPostsWithProcessedContent(): Promise<BlogPost[]> {
       return {
         ...post,
         processedContent: html,
-        readingTime
+        readingTime,
       };
-    })
+    }),
   );
-  
+
   // sort posts by date in descending order
-  return posts.sort((post1, post2) => (post1.publishedAt > post2.publishedAt ? -1 : 1));
+  return posts.sort((post1, post2) =>
+    post1.publishedAt > post2.publishedAt ? -1 : 1,
+  );
 }
 
 // Helper function to get reading time without processing full HTML (for listing pages)
@@ -68,11 +72,13 @@ export async function getBlogPostsWithReadingTime(): Promise<BlogPost[]> {
       const { readingTime } = await markdownToHtml(post.content);
       return {
         ...post,
-        readingTime
+        readingTime,
       };
-    })
+    }),
   );
-  
+
   // sort posts by date in descending order
-  return posts.sort((post1, post2) => (post1.publishedAt > post2.publishedAt ? -1 : 1));
+  return posts.sort((post1, post2) =>
+    post1.publishedAt > post2.publishedAt ? -1 : 1,
+  );
 }
