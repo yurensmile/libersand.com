@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import createMDX from '@next/mdx'
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -11,10 +12,16 @@ const nextConfig: NextConfig = {
     "@1chooo/activity-calendar",
     "@1chooo/github-calendar",
   ],
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 };
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
-module.exports = withBundleAnalyzer(nextConfig);
+const withMDX = createMDX({
+  // Add markdown plugins here, as desired
+  extension: /\.(md|mdx)$/,
+})
+
+module.exports = withBundleAnalyzer(withMDX(nextConfig));
