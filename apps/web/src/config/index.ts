@@ -115,6 +115,8 @@ const config: Config = {
   about: {
     preferredName: "黄沙",
     firstName: "libersand",
+    middleName: "",
+    lastName: "",
     additionalName: "libersand",
     pronouns: "He/Him",
     githubUsername: "yurensmile",
@@ -186,7 +188,7 @@ const config: Config = {
             {
               key: "money",
               value: "学业奖学金",
-              icon: ICON_NAMES.MONEY,
+              icon: ICON_NAMES.AWARD,
             },
             {
               key: "period",
