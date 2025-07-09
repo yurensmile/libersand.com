@@ -5,6 +5,7 @@ import { Config } from "@/types/config";
 const config: Config = {
   avatar: "/images/profile.webp",
   title: "黄沙 - libersand",
+  author: "libersand",
   description:
     "",
   keywords: [
