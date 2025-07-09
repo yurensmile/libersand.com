@@ -55,19 +55,9 @@ function Contact() {
 
   return (
     <article>
-      <PageTitle title="Contact Me" />
+      <PageTitle title="联系我" />
       <section className="mb-[10px]">
-        <div className="mapbox" data-mapbox="true">
-          <figure>
-            <iframe
-              title="map address"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1653.447790694502!2d-118.29153251133746!3d34.02089114329221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c7fb61e73c2d%3A0xe6fd0a5832af7b29!2sUSC%20Viterbi%20School%20of%20Engineering!5e0!3m2!1sen!2stw!4v1749014215095!5m2!1sen!2stw"
-              width="400"
-              height="300"
-              loading="lazy"
-            ></iframe>
-          </figure>
-        </div>
+       
 
         <h3 className="text-white-2 text-2xl font-bold mb-[20px]">
           Contact Form
@@ -104,11 +94,11 @@ function Contact() {
             <Send />
             <span>
               {result === ""
-                ? "Send Message"
+                ? "发送消息"
                 : result === "Sending...."
-                  ? "Sending..."
+                  ? "发送中..."
                   : result === "Form Submitted Successfully"
-                    ? "Message Sent!"
+                    ? "消息已发送!"
                     : result}
             </span>
           </button>

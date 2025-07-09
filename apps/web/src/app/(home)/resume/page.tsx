@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function Resume() {
   return (
     <article>
-      <PageTitle title="Hugo's Resume" />
+      <PageTitle title="黄沙的简历" />
       {(Object.entries(resumes) as [string, ResumeTimeLineType][]).map(
         ([key, resumeTimeLine]) => (
           <ResumeTimeLine

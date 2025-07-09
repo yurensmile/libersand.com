@@ -7,22 +7,13 @@ function Footer() {
     <footer className="footer">
       <div className="copyright">
         &copy; {new Date().getFullYear()}{" "}
-        <Link className="footer-link" href="https://1chooo.com">
-          1chooo
+        <Link className="footer-link" href="https://libersand.com">
+          libersand
         </Link>
       </div>
       <div className="footer-links">
-        <Link
-          className="footer-link"
-          href="https://github.com/1chooo/portfolio"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Code
-        </Link>
-        <Link className="footer-link" href="/terms">
-          Terms
-        </Link>
+      
+{/*        
         <Link
           className="footer-link"
           href="https://docs.1chooo.com"
@@ -30,7 +21,7 @@ function Footer() {
           rel="noopener noreferrer"
         >
           Docs
-        </Link>
+        </Link> */}
       </div>
     </footer>
   );

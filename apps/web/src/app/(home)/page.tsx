@@ -32,8 +32,8 @@ async function About() {
   };
 
   let title = preferredName
-    ? `About ${preferredName} 👨🏻‍💻`
-    : `About ${firstName} ${lastName} 👨🏻‍💻`;
+    ? `关于 ${preferredName} 👨🏻‍💻`
+    : `关于 ${firstName} ${lastName} 👨🏻‍💻`;
 
   const processedIntroduction = introduction
     ? await markdownToHtml(introduction)
@@ -72,11 +72,11 @@ async function About() {
         </BlurFade>
       </AboutSection>
 
-      <AboutSection id="my-writings" title="My Writings">
+      <AboutSection id="my-writings" title="黄沙的博客">
         <MyWritings count={3} posts={allPosts} />
       </AboutSection>
 
-      <AboutSection id="talk-to-hugo" title="Talk To Hugo">
+      <AboutSection id="talk-to-hugo" title="联系黄沙">
         <TalkToHugo web3formsAccessKey={web3formsAccessKey} />
       </AboutSection>
     </article>

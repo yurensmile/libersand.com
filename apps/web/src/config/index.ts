@@ -4,66 +4,45 @@ import { Config } from "@/types/config";
 
 const config: Config = {
   avatar: "/images/profile.webp",
-  title: "Chun-Ho (Hugo) Lin - 1chooo",
+  title: "黄沙 - libersand",
   description:
-    "I'm Chun-Ho (Hugo) Lin, an incoming student at University of Southern California (USC) ✌️. Previously, I obtained my Bachelor's degree from National Central University (NCU) 🐿️.",
-  author: "Chun-Ho (Hugo) Lin - 1chooo",
+    "",
   keywords: [
-    "Chun-Ho (Hugo) Lin",
-    "1chooo",
-    "Software Engineering",
-    "University of Southern California",
-    "National Central University",
+    "黄沙",
+    "libersand",
+    "研发工程师"
   ],
   status: "Fight on ✌️",
-  siteURL: "https://1chooo.com",
+  siteURL: "https://libersand.com",
   navigationLinks: [
-    { path: "/", label: "About" },
-    { path: "/resume", label: "Resume" },
-    { path: "/project", label: "Project" },
-    { path: "/blog", label: "Blog" },
+    { path: "/", label: "关于我" },
+    { path: "/resume", label: "简历" },
+    { path: "/project", label: "项目" },
+    { path: "/blog", label: "博客" },
   ],
   contacts: [
     {
       icon: ICON_NAMES.MAP_PIN_LU,
-      title: "Location",
-      content: "Los Angeles, CA 🇺🇸",
+      title: "位置",
+      content: "中国，重庆",
     },
     {
       icon: ICON_NAMES.MAIL_LU,
-      title: "Email",
-      link: "mailto:hugo@1chooo.com",
-      content: "hugo@1chooo.com",
+      title: "邮箱",
+      link: "mailto:hugo@libersand.com",
+      content: "hugo@libersand.com",
     },
     {
       icon: ICON_NAMES.GITHUB_LU,
       title: "GitHub",
-      link: "https://github.com/1chooo",
-      content: "@1chooo",
-    },
-    {
-      icon: ICON_NAMES.LINKEDIN_LU,
-      title: "LinkedIn",
-      link: "https://www.linkedin.com/in/1chooo/",
-      content: "in/1chooo",
-    },
+      link: "https://github.com/pingtang'on",
+      content: "@pingtang'on",
+    }
   ],
   socialLinks: [
     {
-      url: "https://github.com/1chooo",
+      url: "https://github.com/pingtang'on",
       icon: ICON_NAMES.GITHUB_LU,
-    },
-    {
-      url: "https://www.linkedin.com/in/1chooo/",
-      icon: ICON_NAMES.LINKEDIN_LU,
-    },
-    {
-      url: "https://medium.com/@1chooo",
-      icon: ICON_NAMES.MEDIUM_PI,
-    },
-    {
-      url: "https://twitter.com/1chooo___",
-      icon: ICON_NAMES.TWITTER_FA,
     },
     {
       url: `/rss.xml`,
@@ -75,24 +54,24 @@ const config: Config = {
     },
   ],
   homeMetaData: {
-    metadataBase: new URL("https://1chooo.com"),
-    title: "Chun-Ho (Hugo) Lin - 1chooo",
+    metadataBase: new URL("https://libersand.com"),
+    title: "Zhang HongTao - libersand",
     description:
-      "I'm Chun-Ho (Hugo) Lin, an incoming student at University of Southern California (USC) ✌️. Previously, I obtained my Bachelor's degree from National Central University (NCU) 🐿️.",
-    authors: [{ name: "Chun-Ho (Hugo) Lin" }],
-    creator: "Chun-Ho (Hugo) Lin",
+      "I'm Zhang HongTao, a student at University of Southern California (USC) ✌️. Previously, I obtained my Bachelor's degree from National Central University (NCU) 🐿️.",
+    authors: [{ name: "Zhang HongTao" }],
+    creator: "Zhang HongTao",
     keywords: [
-      "Chun-Ho (Hugo) Lin",
-      "1chooo",
+      "Zhang HongTao",
+      "libersand",
       "Software Engineering",
       "University of Southern California",
       "National Central University",
     ],
     openGraph: {
-      url: "https://1chooo.com/",
+      url: "https://libersand.com/",
       type: "website",
-      siteName: "Chun-Ho (Hugo) Lin - 1chooo",
-      title: "Chun-Ho (Hugo) Lin - 1chooo",
+      siteName: "黄沙 - libersand",
+      title: "黄沙 - libersand",
       locale: "en_US",
       description:
         "I'm Chun-Ho (Hugo) Lin, an incoming student at University of Southern California (USC) ✌️. Previously, I obtained my Bachelor's degree from National Central University (NCU) 🐿️.",
@@ -134,15 +113,12 @@ const config: Config = {
     },
   },
   about: {
-    firstName: "Chun-Ho",
-    lastName: "Lin",
-    middleName: "",
-    preferredName: "Hugo",
-    additionalName: "Hugo",
+    preferredName: "黄沙",
+    firstName: "libersand",
+    additionalName: "libersand",
     pronouns: "He/Him",
-    githubUsername: "1chooo",
+    githubUsername: "yurensmile",
     introduction: `
-I'm an incoming student at [University of Southern California](https://usc.edu) ✌️. Previously, I obtained my Bachelor's degree from [National Central University](https://www.ncu.edu.tw/) 🐿️.
     `,
     lifestyles: [
       {
@@ -199,51 +175,42 @@ I'm an incoming student at [University of Southern California](https://usc.edu) 
   resumes: {
     educations: {
       icon: ICON_NAMES.GRADUATION_CAP,
-      title: "Education",
+      title: "教育",
       iconName: ICON_NAMES.GRADUATION_CAP,
       resumeCards: [
         {
-          institution: "University of Southern California",
-          institutionImage: "/images/logos/usc.jpg",
-          title: "Master of Science in Computer Science",
+          institution: "硕士---重庆大学",
+          institutionImage: "/images/logos/cqu.png",
+          title: "计算机科学与技术",
           tags: [
             {
-              key: "school",
-              value: "Viterbi School of Engineering",
-              icon: ICON_NAMES.GRADUATION_CAP,
-            },
-            {
-              key: "location",
-              value: "Los Angeles, CA 🇺🇸",
-              icon: ICON_NAMES.MAP_PIN,
+              key: "money",
+              value: "学业奖学金",
+              icon: ICON_NAMES.MONEY,
             },
             {
               key: "period",
-              value: "Aug. 2025 - Present",
+              value: "2020.06 - 2023.06",
               icon: ICON_NAMES.CALENDAR,
             },
           ],
           details: [],
         },
         {
-          institution: "National Central University",
-          institutionImage: "/images/logos/ncu.png",
-          title: "Bachelors of Science in Atmospheric Sciences",
+          institution: "学士---重庆大学",
+          institutionImage: "/images/logos/cqu.png",
+          title: "通信工程",
           tags: [
-            {
-              key: "school",
-              value: "College of Earth Sciences",
-              icon: ICON_NAMES.GRADUATION_CAP,
-            },
-            {
-              key: "location",
-              value: "Taoyuan, Taiwan 🇹🇼",
-              icon: ICON_NAMES.MAP_PIN,
-            },
+           
             {
               key: "period",
-              value: "Sep. 2020 - Jun. 2024",
+              value: "2016.09 - 2020.06",
               icon: ICON_NAMES.CALENDAR,
+            },
+            {
+              key: "school",
+              value: "保研硕士",
+              icon: ICON_NAMES.GRADUATION_CAP,
             },
           ],
           details: [],
@@ -253,22 +220,16 @@ I'm an incoming student at [University of Southern California](https://usc.edu) 
     experiences: {
       icon: ICON_NAMES.BRIEFCASE,
       iconName: ICON_NAMES.BRIEFCASE,
-      title: "Professional Experiences",
+      title: "工作经历",
       resumeCards: [
         {
-          institution: "eCloudvalley Digital Technology",
-          institutionImage: "/images/logos/ecv.png",
-          title: "Cloud Engineer",
+          institution: "蚂蚁集团",
+          institutionImage: "/images/logos/antgroup.png",
+          title: "Java研发工程师",
           tags: [
-            { key: "type", value: "Intern", icon: ICON_NAMES.BRIEFCASE },
-            {
-              key: "location",
-              value: "New Taipei, Taiwan 🇹🇼",
-              icon: ICON_NAMES.MAP_PIN,
-            },
             {
               key: "period",
-              value: "Mar. 2024 - May. 2024",
+              value: "2023.07 - 至今",
               icon: ICON_NAMES.CALENDAR,
             },
           ],
@@ -276,72 +237,6 @@ I'm an incoming student at [University of Southern California](https://usc.edu) 
             "Led a team of 5 to enhance issue pools with AWS Bedrock, boosting cloud support efficiency by 80% through multi-language support and 95% accurate image recognition. Honored as the top-achieving internship team.",
             "Utilized a serverless architecture on AWS Lambda, performing troubleshooting with CloudWatch, deployed via AWS CDK, and integrated with DynamoDB and Bedrock services.",
             "Documented issues in 10+ mock cases, such as VPC entry failures, EC2 Apache server restarts, and S3 photo access problems, and provided detailed solutions for interns. Refer [here](https://github.com/1chooo/ecv-training-materials/tree/main/msp/aws_challenge) for a comprehensive list.",
-          ],
-        },
-        {
-          institution: "Amazon Web Services",
-          institutionImage: "/images/logos/aws.svg",
-          title: "Campus Ambassador",
-          tags: [
-            { key: "type", value: "Contract", icon: ICON_NAMES.BRIEFCASE },
-            {
-              key: "location",
-              value: "Taipei, Taiwan 🇹🇼",
-              icon: ICON_NAMES.MAP_PIN,
-            },
-            {
-              key: "period",
-              value: "Aug. 2023 - Feb. 2024",
-              icon: ICON_NAMES.CALENDAR,
-            },
-          ],
-          details: [
-            "Educated 700+ cloud developers and achieved 96% user satisfaction by conducting 2 technical workshops, developing an open-source project, and 1 UAD with AWS cloud services. Refer [here](https://github.com/aws-educate-tw/aws-line-business-card-workshop) for the source code.",
-            "Conducted a comprehensive 35+ page market research study on cloud suppliers as part of an 11-member team.",
-          ],
-        },
-        {
-          institution: "PEGATRON",
-          institutionImage: "/images/logos/pegatron.png",
-          title: "AI Engineer",
-          tags: [
-            { key: "type", value: "Intern", icon: ICON_NAMES.BRIEFCASE },
-            {
-              key: "location",
-              value: "Taipei, Taiwan 🇹🇼",
-              icon: ICON_NAMES.MAP_PIN,
-            },
-            {
-              key: "period",
-              value: "Jul. 2023 - Aug. 2023",
-              icon: ICON_NAMES.CALENDAR,
-            },
-          ],
-          details: [
-            "Executed a POC, adapting an LLM model for Smart Manufacturing, and was awarded Silver internship team.",
-            "Collaborated with a team of 5, utilized Git, a CI/CD pipeline, and followed an agile Scrum workflow.",
-            "Implemented Prompt Engineering and LangChain for the NVIDIA Ominerve visual robot, enabling seamless speech/text operation, boosting test support by 83% across 6-11 scenarios with 85% stability.",
-          ],
-        },
-        {
-          institution: "National Central University",
-          institutionImage: "/images/logos/ncu.png",
-          title: "Website Developer",
-          tags: [
-            { key: "type", value: "Part-time", icon: ICON_NAMES.BRIEFCASE },
-            {
-              key: "location",
-              value: "Taoyuan, Taiwan 🇹🇼",
-              icon: ICON_NAMES.MAP_PIN,
-            },
-            {
-              key: "period",
-              value: "Jul. 2022 - Jan. 2023",
-              icon: ICON_NAMES.CALENDAR,
-            },
-          ],
-          details: [
-            "Partnered with a team of 2 to develop a multi-user score management system for the Center for Teacher Education, reducing credit exemption processing time by 80% and remotely maintaining the server via SSH.",
           ],
         },
       ],
@@ -380,7 +275,6 @@ I'm an incoming student at [University of Southern California](https://usc.edu) 
     url: "https://1chooo.com",
     sameAs: [
       "https://www.linkedin.com/in/1chooo/",
-      "http://github.com/1chooo",
       "https://medium.com/@1chooo",
     ],
   },
@@ -412,17 +306,17 @@ I'm an incoming student at [University of Southern California](https://usc.edu) 
         userAgent: "*",
       },
     ],
-    sitemap: "https://1chooo.com/sitemap.xml",
-    host: "https://1chooo.com",
+    sitemap: "https://libersand.com/sitemap.xml",
+    host: "https://libersand.com",
   },
-  llmsTxtContent: `# 1chooo.com
+  llmsTxtContent: `# libersand.com
 
 ## Section Name
 
-- [About](https://1chooo.com): A brief introduction to the site and its creator, showcasing skills and interests.
-- [Resume](https://1chooo.com/resume): A detailed resume highlighting professional experience, education, and skills.
-- [Blog](https://1chooo.com/blog): A collection of articles and tutorials on web development, programming, and technology.
-- [Project](https://1chooo.com/project): Showcases various projects and contributions.
+- [About](https://libersand.com): A brief introduction to the site and its creator, showcasing skills and interests.
+- [Resume](https://libersand.com/resume): A detailed resume highlighting professional experience, education, and skills.
+- [Blog](https://libersand.com/blog): A collection of articles and tutorials on web development, programming, and technology.
+- [Project](https://libersand.com/project): Showcases various projects and contributions.
 
 ## Optional
 
@@ -442,9 +336,9 @@ I'm an incoming student at [University of Southern California](https://usc.edu) 
 - [Source Code](https://github.com/1chooo/portfolio): The source code for the 1chooo.com website is available on GitHub.
 `,
   techStacks: {
+    backend: ["java", "python", "sofaboot", "sun'chuan'neng", "docker", "kubernetes", "github"],
     frontend: ["typescript", "react", "nextjs", "tailwindcss"],
-    backend: ["python", "aws", "django", "go", "docker", "kubernetes", "github"],
-    database: ["redis", "supabase", "firebase"],
+    database: ["oceanbase", "supabase", "firebase"]
   },
 };
 

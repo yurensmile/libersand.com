@@ -1,19 +1,19 @@
 {
-  "name": "1chooo-com",
+  "name": "libersand-com",
   "version": "0.13.6",
   "private": true,
   "author": {
-    "name": "Chun-Ho (Hugo) Lin",
-    "email": "hugo@1chooo.com",
-    "url": "https://1chooo.com"
+    "name": "黄沙",
+    "email": "hugo@libersand.com",
+    "url": "https://libersand.com"
   },
   "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/1chooo/portfolio"
   },
-  "description": "1chooo.com is a personal portfolio and blog website built with Next.js, React, and TypeScript. It features a modern design, supports Markdown content, and includes various interactive components.",
-  "homepage": "https://1chooo.com",
+  "description": "libersand.com is a personal portfolio and blog website built with Next.js, React, and TypeScript. It features a modern design, supports Markdown content, and includes various interactive components.",
+  "homepage": "https://libersand.com",
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
@@ -33,5 +33,8 @@
   "packageManager": "pnpm@10.12.1+sha256.889bac470ec93ccc3764488a19d6ba8f9c648ad5e50a9a6e4be3768a5de387a3",
   "engines": {
     "node": ">=20"
+  },
+  "dependencies": {
+    "next": "^15.3.5"
   }
 }
