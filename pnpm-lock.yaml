@@ -56,8 +56,8 @@ importers:
         specifier: ^18.6.1
         version: 18.6.1(@types/node@20.19.4)(typescript@5.8.3)
       '@commitlint/config-conventional':
-        specifier: ^18.6.3
-        version: 18.6.3
+        specifier: ^19.8.1
+        version: 19.8.1
       '@jest/globals':
         specifier: ^29.7.0
         version: 29.7.0
@@ -765,8 +765,8 @@ packages:
     engines: {node: '>=v18'}
     hasBin: true
 
-  '@commitlint/config-conventional@18.6.3':
-    resolution: {integrity: sha512-8ZrRHqF6je+TRaFoJVwszwnOXb/VeYrPmTwPhf0WxpzpGTcYy1p0SPyZ2eRn/sRi/obnWAcobtDAq6+gJQQNhQ==}
+  '@commitlint/config-conventional@19.8.1':
+    resolution: {integrity: sha512-/AZHJL6F6B/G959CsMAzrPKKZjeEiAVifRyEwXxcT6qtqbPwGw+iQxmNS+Bu+i09OCtdNRW6pNpBvgPrtMr9EQ==}
     engines: {node: '>=v18'}
 
   '@commitlint/config-validator@18.6.1':
@@ -8553,9 +8553,9 @@ snapshots:
       - '@types/node'
       - typescript
 
-  '@commitlint/config-conventional@18.6.3':
+  '@commitlint/config-conventional@19.8.1':
     dependencies:
-      '@commitlint/types': 18.6.1
+      '@commitlint/types': 19.8.1
       conventional-changelog-conventionalcommits: 7.0.2
 
   '@commitlint/config-validator@18.6.1':
@@ -8690,7 +8690,6 @@ snapshots:
     dependencies:
       '@types/conventional-commits-parser': 5.0.1
       chalk: 5.4.1
-    optional: true
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -10474,7 +10473,6 @@ snapshots:
   '@types/conventional-commits-parser@5.0.1':
     dependencies:
       '@types/node': 20.19.4
-    optional: true
 
   '@types/d3-array@3.2.1': {}
 
@@ -10608,7 +10606,7 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 6.0.0
-      '@types/node': 24.0.10
+      '@types/node': 20.19.4
 
   '@types/graceful-fs@4.1.9':
     dependencies:
@@ -10715,7 +10713,7 @@ snapshots:
 
   '@types/through@0.0.33':
     dependencies:
-      '@types/node': 24.0.10
+      '@types/node': 20.19.4
 
   '@types/tinycolor2@1.4.6': {}
 
