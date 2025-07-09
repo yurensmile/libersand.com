@@ -9,9 +9,6 @@ const config: Config = {
   description:
     "",
   keywords: [
-    "黄沙",
-    "libersand",
-    "研发工程师"
   ],
   status: "Fight on ✌️",
   siteURL: "https://libersand.com",
@@ -30,19 +27,19 @@ const config: Config = {
     {
       icon: ICON_NAMES.MAIL_LU,
       title: "邮箱",
-      link: "mailto:hugo@libersand.com",
-      content: "hugo@libersand.com",
+      link: "mailto:libersand@libersand.com",
+      content: "libersand@libersand.com",
     },
     {
       icon: ICON_NAMES.GITHUB_LU,
       title: "GitHub",
-      link: "https://github.com/pingtang'on",
-      content: "@pingtang'on",
+      link: "https://github.com/yurensmile",
+      content: "yurensmile",
     }
   ],
   socialLinks: [
     {
-      url: "https://github.com/pingtang'on",
+      url: "https://github.com/yurensmile",
       icon: ICON_NAMES.GITHUB_LU,
     },
     {
