@@ -11,7 +11,9 @@ export function getPostSlugs() {
 }
 
 export function getBlogPostBySlug(slug: string): BlogPost {
-  const realSlug = slug.replace(/\.md$/, "");
+  // 对 slug 进行 URL 解码以处理中文字符
+  const decodedSlug = decodeURIComponent(slug);
+  const realSlug = decodedSlug.replace(/\.md$/, "");
   const fullPath = join(blogPostsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
