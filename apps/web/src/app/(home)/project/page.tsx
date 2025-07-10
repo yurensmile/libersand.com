@@ -8,7 +8,7 @@ import { getProjects } from "@/lib/api/project";
 import { cn } from "@1chooo/ui/lib/utils";
 
 import config from "@/config";
-import { LuEye } from "react-icons/lu";
+import { LuEye, LuExternalLink } from "react-icons/lu";
 
 import styles from "@/styles/project.module.css";
 import { ProjectPost } from "@/types/project";
@@ -82,32 +82,63 @@ export default async function Project() {
               className={cn(styles.card, styles.cardActive)}
               data-category={post.category}
             >
-              <ViewTransitionsProgressBarLink
-                href={`/project/${post.slug}`}
-                rel="noopener noreferrer"
-              >
-                <figure className={cn(styles.bannerBox)}>
-                  <div className={cn(styles.iconBox)}>
-                    <LuEye />
-                  </div>
-                  <Image
-                    src={
-                      post.thumbnail ||
-                      "https://docs.1chooo.com/images/cover-with-1chooo-com.png"
-                    }
-                    alt={post.title || "Portfolio post image"}
-                    width={480}
-                    height={270}
-                    priority
-                    placeholder="blur"
-                    loading="eager"
-                    quality={50}
-                    blurDataURL="https://docs.1chooo.com/images/cover-with-1chooo-com.png"
-                  />
-                </figure>
-                <h3 className={cn(styles.title)}>{post.title}</h3>
-                <p className={cn(styles.category)}>{post.category}</p>
-              </ViewTransitionsProgressBarLink>
+              {post.url ? (
+                <a
+                  href={post.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <figure className={cn(styles.bannerBox)}>
+                    <div className={cn(styles.iconBox)}>
+                      <LuExternalLink />
+                    </div>
+                    <Image
+                      src={post.thumbnail}
+                      alt={post.title || "Portfolio post image"}
+                      width={480}
+                      height={270}
+                      priority
+                      placeholder="blur"
+                      loading="eager"
+                      quality={50}
+                      blurDataURL={post.thumbnail}
+                    />
+                  </figure>
+                  <h3 className={cn(styles.title)}>{post.title}</h3>
+                  <p className={cn(styles.category)}>{post.category}</p>
+                  {post.description && (
+                    <p className={cn(styles.description)}>{post.description}</p>
+                  )}
+                </a>
+              ) : (
+                <ViewTransitionsProgressBarLink
+                  href={`/project/${post.slug}`}
+                  rel="noopener noreferrer"
+                >
+                  <figure className={cn(styles.bannerBox)}>
+                    <div className={cn(styles.iconBox)}>
+                      <LuEye />
+                    </div>
+                    <Image
+                      src={post.thumbnail}
+                      alt={post.title || "Portfolio post image"}
+                      width={480}
+                      height={270}
+                      priority
+                      placeholder="blur"
+                      loading="eager"
+                      quality={50}
+                      blurDataURL={post.thumbnail}
+                    />
+                  </figure>
+                  <h3 className={cn(styles.title)}>{post.title}</h3>
+                  <p className={cn(styles.category)}>{post.category}</p>
+                  {post.description && (
+                    <p className={cn(styles.description)}>{post.description}</p>
+                  )}
+                </ViewTransitionsProgressBarLink>
+              )}
             </li>
           ))}
         </ul>

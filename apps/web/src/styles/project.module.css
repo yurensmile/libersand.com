@@ -87,7 +87,8 @@
 }
 
 .project .title,
-.project .category {
+.project .category,
+.project .description {
   margin-inline-start: 10px;
 }
 
@@ -102,6 +103,18 @@
   color: var(--light-gray-70);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
+}
+
+.project .description {
+  color: var(--light-gray);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-300);
+  line-height: 1.4;
+  margin-top: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .project .filters {
