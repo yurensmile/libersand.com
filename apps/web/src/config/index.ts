@@ -27,8 +27,8 @@ const config: Config = {
     {
       icon: ICON_NAMES.MAIL_LU,
       title: "邮箱",
-      link: "mailto:libersand@libersand.com",
-      content: "libersand@libersand.com",
+      link: "mailto:liber@libersand.com",
+      content: "liber@libersand.com",
     },
     {
       icon: ICON_NAMES.GITHUB_LU,

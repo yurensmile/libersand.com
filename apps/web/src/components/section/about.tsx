@@ -14,7 +14,7 @@ function AboutSection({ id, title, children }: AboutSectionProps) {
   return (
     <section id={id} className={styles.section}>
       {title && (
-        <BlurFade inView delay={0.4} direction="down">
+        <BlurFade inView delay={0.1} direction="down">
           <h2 className={styles.title}>{title}</h2>
         </BlurFade>
       )}

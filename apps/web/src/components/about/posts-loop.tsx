@@ -131,7 +131,7 @@ function PostsLoop({ count, posts }: BlogPostsProps) {
         ))}
       </ul>
 
-      <BlurFade inView delay={0.4} direction="up">
+      <BlurFade inView delay={0.1} direction="up">
         <div className="flex items-center justify-center w-full py-4">
           <ViewTransitionsProgressBarLink
             href="/blog"

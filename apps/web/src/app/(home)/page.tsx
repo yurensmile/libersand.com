@@ -54,7 +54,7 @@ async function About() {
       </AnimatedSection>
 
       <AboutSection id="github-calendar">
-        <BlurFade inView delay={0.4} direction="up">
+        <BlurFade inView delay={0.1} direction="up">
           <section id="github-calendar" className="text-light-gray">
             {githubUsername && (
               <GitHubCalendar
