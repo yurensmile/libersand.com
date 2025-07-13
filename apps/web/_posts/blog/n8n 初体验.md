@@ -1,7 +1,7 @@
 ---
 title: "n8n 初体验"
 excerpt: "人生总是充满了未知，谁知道下一步会发生什么呢"
-thumbnail: "/images/thumbnail/blog/向着新目标迈进.png"
+thumbnail: "/images/thumbnail/blog/n8n初体验封面.png"
 author:
   name: 黄沙
   avatar: "https://github.com/yurensmile.png"
