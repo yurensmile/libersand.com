@@ -87,8 +87,7 @@ const config: Config = {
       site: "@1chooo___",
       card: "summary_large_image",
       title: "Chun-Ho (Hugo) Lin - 1chooo",
-      description:
-        "I'm Chun-Ho (Hugo) Lin, an incoming student at University of Southern California (USC) ✌️. Previously, I obtained my Bachelor's degree from National Central University (NCU) 🐿️.",
+      description:"",
       images: [
         {
           url: "/twitter-image",
@@ -118,8 +117,7 @@ const config: Config = {
     additionalName: "libersand",
     pronouns: "He/Him",
     githubUsername: "yurensmile",
-    introduction: `
-    `,
+    introduction: `黄沙, 一个热爱生活, 热爱编程的年轻人，喜欢研究各种新事物，也正在探寻自己真正喜欢的事情`,
     lifestyles: [
       {
         icon: ICON_NAMES.GITHUB_LU,
