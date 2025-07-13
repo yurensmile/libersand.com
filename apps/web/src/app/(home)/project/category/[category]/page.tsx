@@ -92,7 +92,7 @@ export default async function ProjectCategory({
 
   return (
     <article>
-      <PageTitle title="Hugo's Project" />
+      <PageTitle title="黄沙的项目" />
 
       <section className={cn(styles.project)}>
         <ul className={styles.filters}>
